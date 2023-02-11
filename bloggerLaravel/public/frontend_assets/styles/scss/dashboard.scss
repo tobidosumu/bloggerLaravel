@@ -1,0 +1,302 @@
+@import "./reset";
+@import "./myBootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+body {
+    .myAlert {
+        div {
+            display: flex;
+            align-items: center;
+            i {
+                font-size: 25px;
+                margin-right: 10px;
+            }
+        }
+        margin-top: 95px !important;
+        color: $black;
+        background-color: $primaryColor;
+    }
+
+    .mainContainer {
+        max-width: 100%;
+        background-color: $white;
+
+        header {
+            @include header;
+            .profile { 
+                .profileLinkWrapper {
+                        
+                    border-radius: 50px;
+                    background-color: $veryLightGreenColor;
+        
+                    .caretIcon {
+                        background-color: $white;
+                    }
+
+                  i { // caret dropdown icon
+                        color: $veryLightGrey;
+                        margin-left: -12px;
+                        border: 2px solid $white;
+                        @include veryLittleFont;
+                        padding: 4px 6.5px;
+                        border-radius: 50%;
+                        background-color: $white ;
+                    }
+                }
+            }
+        } 
+
+        .hero { // hero
+            width: 100% !important;
+            height: 270px;
+            display: flex;
+            flex-direction: column;
+            background-color: $lightGreenColor;
+
+            .caption {  // hero caption
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+
+                .dashboardView { // For logged in user
+                    width: 100%;
+                    height: 100%;
+
+                    .userProfile {
+                        
+                        .userProfileAvatar {
+                            .likeCount {
+                                color: $black;
+                                margin-left: -40px;
+                                margin-bottom: -60px;
+                                border-radius: 50px;
+                                border: 2px solid $white;
+                                background-color: $lightGreen;
+                            }
+                            
+                            img {
+                                width: 120px;
+                                border-radius: 50%;
+                                border: 2px solid $white;
+                                box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+                            }
+                        }
+
+                        p {
+                            color: $lightBlack;
+                            @include semiTinyFont;
+                        }
+
+                    }
+                }
+
+                .notLoggedIndashboardView { // For unlogged in user
+                    text-align: center;
+                    width: 100%;
+                    // border: 1px solid red;
+
+                    div {
+                        .actionBtn { 
+                            @include actionBtn;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .blogContents { // blog contents container start here
+
+            background-color: $white;
+
+            .blogContentContainer {
+
+                padding-bottom: 150px;
+
+                .blogPostContainer {
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding-top: 2px; 
+                    min-height: 30vh;
+                    justify-content: space-between;
+                    div {
+                        p {
+                            @include semiTinyFont;
+                            color: $lightBlack;
+                        }
+                    }
+
+                    .postCard { // blog post card starts here
+                        width: 240px;
+                        word-break: break-all;
+                        hyphens: auto;
+                        margin-bottom: 24px;
+                        overflow: hidden;
+                        transition: translate 0.5s ease;
+                        background-color: $white;
+                        &:hover {
+                            translate: 0 -2%;
+                            box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.123);
+                        }
+                        
+                        .postPhoto {
+
+                            .upperInfo {
+                                width: 70%;
+                                color: $lightBlack;
+                                position: absolute;
+                                top: 10px;
+                                right: 0;
+                                .postTime {
+                                    @include tinyFont;
+                                    border-radius: 50px;
+                                    padding: 3px 8px;
+                                    background-color: $transparentWhite;
+                                }
+    
+                                .moreInfo {
+                                    position: absolute;
+                                    top: 2px;
+                                    right: 10px;
+                                    @include semiTinyFont;
+                                    border-radius: 50px;
+                                    padding: 8px;
+                                    background-color: $transparentWhite;
+                                    &:hover {
+                                        background-color: $white
+                                    }
+                                }
+                            }
+        
+                            .rightSideInfo {
+                                position: absolute;
+                                top: 60px;
+                                right: 0;
+                                color: $lightBlack;
+                                .iconDiv {
+                                    @include semiPrimaryFont;
+                                    border-radius: 50px;
+                                    padding: 9px 8px 6px 8px;
+                                    background-color: $transparentWhite;
+                                    &:hover {
+                                        background-color: $white
+                                    }
+                                }
+                            }
+                            .upperInfo {
+                                width: 100%;
+                                &:hover {
+                                    color: $lightBlack;
+                                    position: absolute;
+                                    top: 10px;
+                                    right: 0;
+                                    // border: 1px solid red;
+                                    .postTime {
+                                        @include tinyFont;
+                                        border-radius: 50px;
+                                        padding: 3px 8px;
+                                        background-color: $transparentWhite;
+                                    }
+        
+                                    .moreInfo {
+                                        position: absolute;
+                                        top: 2px;
+                                        right: 10px;
+                                        @include semiTinyFont;
+                                        border-radius: 50px;
+                                        padding: 8px;
+                                        background-color: $transparentWhite;
+                                        &:hover {
+                                            background-color: $white
+                                        }
+                                    }
+                                }
+            
+                                .rightSideInfo {
+
+                                    position: absolute;
+                                    top: 60px;
+                                    right: 0;
+                                    color: $lightBlack;
+                                    .iconDiv {
+                                        @include semiPrimaryFont;
+                                        border-radius: 50px;
+                                        padding: 9px 8px 6px 8px;
+                                        background-color: $transparentWhite;
+                                        &:hover {
+                                            background-color: $white
+                                        }
+                                    }
+                                }
+                            }
+
+                            a {
+                                
+                                img {
+                                    width: 100%;
+                                    height: 200px;
+                                    object-fit: cover;
+                                }
+
+                            }
+                        }
+
+                        .postCategory {
+                            @include veryLittleFont;
+                            font-weight: 500;
+                            color: $lightBlack;
+                            background-color: $lightGreenColor;
+
+                            p:first-child {
+                                @include veryLittleFont;
+                                letter-spacing: 2px;
+                                text-transform: uppercase;
+                                font-weight: 600;
+                            }
+
+                            p:last-child {
+                                color: $veryLightGrey;
+                                @include veryLittleFont;
+                            }
+                        }
+
+                        .postTitle {
+                            h6 {
+                                @include tinyFont;
+                                color: $black;
+                                font-weight: 600;
+                                margin-top: -12px;
+                                margin-bottom: 4px;
+                            }
+                        }
+    
+                        .postParagraph {
+                            @include tinyFont;
+                            font-weight: 400;
+                            line-height: 1rem;
+                            color: $grey;
+                            margin-bottom: 4px;
+                        }   
+                    }
+                }
+            }
+
+            .dropUsAmessage { // this block styles the div before the footer
+              
+                @include dropUsAmessage;
+                @include blogContents;
+                width: 75%
+
+            }
+        }
+    }
+
+    footer { // footer
+        @include footer;
+    }
+ 
+}

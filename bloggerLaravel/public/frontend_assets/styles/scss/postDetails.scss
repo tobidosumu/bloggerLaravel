@@ -1,0 +1,728 @@
+@import "./reset";
+@import "./myBootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+body {
+    .myAlert {
+        div {
+            display: flex;
+            align-items: center;
+            i {
+                font-size: 25px;
+                margin-right: 10px;
+            }
+        }
+        margin-top: 95px !important;
+        color: $black;
+        background-color: $primaryColor;
+    }
+
+    .mainContainer {
+        max-width: 100%;
+        background-color: $white;
+
+        header {
+            @include widthPadding; // provides left and right padding for hero
+            height: 70px;
+            background-color: $white;
+            .logoContainer {
+                img {
+                    width: 60%;
+                }
+            }
+
+            nav { // main navigation
+                width: 50%;
+                ul {
+                    li {
+                        a {
+                            color: black;
+                            @include primaryFont;
+                            font-weight: 500;
+                        }
+                    }
+                    .home {
+                        a {
+                            span {
+                                position: absolute;
+                                margin-left: -10px;
+                                @include tinyFont;
+                                border-radius: 50%;
+                                padding: 2px 8px;
+                                border: 2px solid $white;
+                                background-color: $lightGrey;
+                            }
+
+                            i {
+                                @include mainNavIcon
+                            }
+                        }
+                    }
+
+                    .cart {
+                        a {
+                            padding-top: 23px;
+                            padding-bottom: 21px;
+
+                            span {
+                                position: absolute;
+                                margin-left: -10px;
+                                @include tinyFont;
+                                border-radius: 50%;
+                                padding: 2px 8px;
+                                border: 2px solid $white;
+                                background-color: $lightGrey;
+                            }
+
+                            i {
+                                @include mainNavIcon
+                            }
+                        }
+                    }
+
+                    .profile { // user account profile li 
+                        .profileLinkWrapper {
+                            padding: 4px;
+                            padding-right: 0;
+                            border-radius: 50px;
+                            background-color: $veryLightGreenColor;
+                            i { // caret dropdown icon
+                                color: $veryLightGrey;
+                                margin-left: -12px;
+                                border: 2px solid $white;
+                                @include veryLittleFont;
+                                padding: 4px 6.5px;
+                                border-radius: 50%;
+                                background-color: $white;
+
+                                &:hover { // user account li hover
+                                    color: $black;
+                                    background-color: $veryLightRedColor;
+                                }
+                            }
+
+                            a {
+                                img {
+                                    width: 40px;
+                                    height: 40px;
+                                    object-fit: cover;
+                                    border-radius: 50px;
+                                    border: 1px solid $white;
+                                }
+    
+                                &:hover {
+                                    border: none;
+                                }
+                            }
+                            &:hover {
+                                border-radius: 50px;
+                                background-color: $veryLightGreenColor;
+
+                                .caretIcon {
+                                    background-color: $white;
+                                }
+                            }
+                        }
+
+                        form { // Log out form button
+                            button {
+                                width: 100%;
+                                margin-top: 10px;
+                                
+                                i { // logout icon
+                                    color: $black;
+                                    @include primaryFont;
+                                }
+                                span {
+                                    @include tinyFont;
+                                }
+                            }
+                        }
+                        &:hover { // user account li hover
+                            .caretIcon {
+                                color: $black;
+                                background-color: $veryLightRedColor;
+
+                                &:hover {
+                                    background-color: $veryLightRedColor;
+                                }
+                            }
+                        } 
+
+                        .profileDropdown {
+                            display: none;
+                            position: absolute;
+                            top: 70px;
+                            right: 21%;
+                            width: 10%;
+                            padding-left: 0;
+                            border-bottom-left-radius: 4px;
+                            border-bottom-right-radius: 4px;
+                            background-color: $white;
+                            box-shadow: 0 0 4px rgba(0, 0, 0, 0.089);
+                            transition: all 1s ease;
+                            ul {
+                                a {
+                                    width: 100%;
+                                    color: $black;
+                                    display: flex;
+                                    margin: 7px 0;
+                                    margin-bottom: 0;
+                                    @include primaryFont;
+                                    padding: 7px 20px 0 20px;
+                                    border-left: 2px solid $white;
+                                    i {
+                                        color: $black;
+                                        @include semiPrimaryFont;
+                                    }
+                                }
+                                .logout {
+                                    @include tinyFont;
+                                    padding: 8px 20px;
+                                    border: none !important;
+                                    border-bottom-left-radius: 4px;
+                                    border-bottom-right-radius: 4px;
+                                    background-color: $veryLightRedColor;
+                                    &:hover {
+                                        color: $white;
+                                        background-color: $accentHoverColor;
+                                        i {
+                                            color: $white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:hover {
+                            .caretIcon {
+                                color: $black !important;
+                                background-color: $veryLightGreenColor !important;
+                            }
+                        }
+
+                        .notLoggedIn { // For not notLoggedInAvatar
+                            @include notLoggedInAvatar;
+                            .userIcon {
+                                color: $black;
+                            }
+                            background-color: $veryLightGreenColor;
+                        }
+
+                        .notLoggedInProfileDropdown {
+                            display: none;
+                            position: absolute;
+                            top: 70px;
+                            right: 21%;
+                            width: 10%;
+                            padding-left: 0;
+                            border-bottom-left-radius: 4px;
+                            border-bottom-right-radius: 4px;
+                            background-color: $white;
+                            box-shadow: 0 0 4px rgba(0, 0, 0, 0.089);
+                            transition: all 1s ease;
+                            ul {
+                                li {
+                                    border-bottom-left-radius: 4px;
+                                    border-bottom-right-radius: 4px;
+                                    border-bottom: 1px solid $borderGrey;
+                                    a {
+                                        width: 100%;
+                                        border: none;
+                                        @include tinyFont;
+                                        padding: 10px;
+
+                                      i {
+                                        @include semiPrimaryFont;
+                                      }
+                                    }
+                                    &:hover {
+                                        color: $black;
+                                        background-color: $lightGreenColor;
+                                        border-bottom: 1px solid $black;
+                                    }
+                                    &:first-child {
+                                        border-radius: 0 !important;
+                                        span {
+                                            margin-right: 14px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                    .search { // li for search icon
+                        i {
+                            color: $white;
+                            font-size: 13px;
+                            text-align: center;
+                            padding: 14px 25px;
+                            background-color: $black;
+                            -webkit-text-stroke: .5px;
+                            border-radius: 4px;
+                            &:hover {
+                                background-color: $lightBlack;
+                                transition: all 0.3s ease-in-out;
+                            }
+                        }
+                    }
+
+                    a {
+                        width: 100px;
+                        text-align: center;
+                        padding: 23px 8px; // targets the height and width of main nav <a> tags
+                        @include primaryFont;
+                        color: $black;
+                        letter-spacing: .5px;
+                        font-weight: 600;
+                        @include navLinkHover;
+                        &:hover {
+                            color: $black;
+                            font-weight: 600;
+                            transition: all 0.1s ease;
+                        }
+                    }
+                }
+            }
+
+            .searchDropDown {
+                display: none;
+                position: absolute;
+                top: 75px;
+                right: 12%;
+                width: 34.7%;
+                height: 50px;
+                padding: 6px;
+                background-color: $white;
+                border-bottom-left-radius: 3px;
+                border-bottom-right-radius: 3px;
+                // border: 1px solid red;
+
+                form {
+                    width: 100%;
+                    // border: 1px solid red;
+                    input {
+                        width: 100%;
+                        height: 100%;
+                        padding: 3px 10px;
+                        color: $black;
+                        border: 1px solid $lightGrey;
+                        border-radius: 4px;
+                        &::placeholder {
+                            @include semiTinyFont;
+                            font-weight: 400;
+                            color: $veryLightGrey;
+                        }
+    
+                        &:focus-within {
+                            border: 1px solid $borderGrey;
+                            outline: none;
+                            border-radius: 3px;
+                        }
+                    }
+                    button {
+                        width: 10%;
+                        border: none;
+                        border-radius: 3px;
+                        margin-left: 5px;
+                        &:hover {
+                            background-color: $borderGrey;
+                        }
+                    }
+                }
+
+                span {
+                    width: 40px;
+                }
+            }
+        }
+
+        .blogContents { // (section) blog contents container start here
+            width: 100%;
+            @include widthPadding;
+
+            nav {
+                ul {
+                    li {
+                        i {
+                            @include veryLittleFont;
+                            color: $lightBlack;
+                        }
+                        a {
+                            @include primaryFont;
+                            color: $primaryColor;
+                            &:hover {
+                                color: $green;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            section {
+                
+                .mainContentContainer {
+                    width: 67.5%;
+                    position: sticky;
+                    padding-bottom: 150px;
+
+                    nav {
+                        ul {
+                            li {
+                                @include primaryFont;
+                                color: $grey;
+                            }
+                        }
+                    }
+
+                    .innerContainer { // photo, title, category div
+                        margin-right: 43px;
+                        .postImage {
+                            img {
+                                height: 60vh;
+                                object-fit: cover;
+                            }
+
+                            p {
+                                position: absolute;
+                                top: 70px;
+                                left: 15px;
+                                @include tinyFont;
+                                color: $lightBlack;
+                                text-transform: none;
+                                border-radius: 50px;
+                                background-color: $slightTransparentWhite;
+                                // border: 1px solid red;
+                            }
+                        }
+
+                        .rightIconsDiv {
+                            position: absolute;
+                            right: 65px;
+                            top: 160px;
+                            height: 28vh;
+                            div {
+                                display: flex;
+                                justify-content: center;
+                                flex-direction: column;
+                                align-items: center;
+
+                                a {
+                                    i {
+                                        @include postIcon;
+                                        font-size: 1.3rem;
+                                        padding: 6px 8px 2px 8px;
+                                        &:hover {
+                                          background-color: $white !important;
+                                        }
+                                    }
+                                    margin-bottom: 0.6px;
+                                }
+                                
+                                i {
+                                    @include postIcon;
+                                    // outline: 1px solid red;
+                                    margin-bottom: 0px;
+                                    transition: all .4s; 
+                                }
+
+                                p {
+                                    @include veryLittleFont;
+                                    font-weight: 600;
+                                    color: $black;
+                                    background-color: $slightTransparentWhite;
+                                    padding: 0 7px; 
+                                    border-radius: 3px;
+                                }
+
+                                &:hover {
+                                    i {
+                                        background-color: $white;
+                                    }
+                                }
+                                &:hover {
+                                    p {
+                                        background-color: $white;
+                                    }
+                                }
+                            }
+
+                            .shares {
+                                i {
+                                    transform: scaleX(-1);
+                                    transform-origin: 50% 50%;
+                                    -webkit-transform: scaleX(-1); /* Safari and Chrome */
+                                    -moz-transform: scaleX(-1); /* Firefox */
+                                    -ms-transform: scaleX(-1); /* Internet Explorer */
+                                    -o-transform: scaleX(-1); /* Opera */
+                                }
+                            }
+                        }
+
+                        .categoryTitleContainer { // title, category container
+                            width: 85%;
+                            position: relative;
+                            bottom: 40px;
+                            background: $white;
+                            // border: 1px solid red;
+
+                            .categoryReadTimeContainer { // category and read time div
+                                width: 50%;
+                                position: relative;
+                                bottom: 30px;
+                                background: $transparentWhite;
+                                // border: 1px solid red;
+
+                                h5 { 
+                                    @include tinyFont;
+                                    color: $lightBlack;
+                                    font-weight: 600;
+                                    letter-spacing: 1.5px;
+                                    text-transform: uppercase;
+                                }
+
+                                h6 {
+                                    @include veryLittleFont;
+                                    color: $grey;
+
+                                    span {
+                                        color: $grey;
+                                    }
+                                }
+                            }
+                           
+                        }
+                        .titleContainer { // title div 
+                            h4 {
+                                @include semiTertiaryFont;
+                                color: $lightBlack;
+                                margin-top: -10px;
+                                &::first-letter {
+                                    @include tertiaryFont;
+                                }
+                            }
+                        }
+
+                        .commentSection {
+                            width: 100%;
+                            // border: 1px solid red;
+
+                            .iconsWrapper {
+                                div {
+                                    i {
+                                        @include semiPrimaryFont;
+                                        color: $black;
+                                    }
+
+                                    p {
+                                        @include tinyFont;
+                                        color: $black;
+                                    }
+                                }
+
+                                .shares {
+                                    i {
+                                        transform: scaleX(-1);
+                                        transform-origin: 50% 50%;
+                                        -webkit-transform: scaleX(-1); /* Safari and Chrome */
+                                        -moz-transform: scaleX(-1); /* Firefox */
+                                        -ms-transform: scaleX(-1); /* Internet Explorer */
+                                        -o-transform: scaleX(-1); /* Opera */
+                                    }
+                                }
+                            }
+
+                            
+                            .userComment {
+                                border: 1px solid $borderGrey;
+
+                                .userAvatar {
+                                    // border: 1px solid red;
+                                    a {
+                                        img {
+                                            width: 50px;
+                                            width: 50px;
+                                            border-radius: 50px;
+                                            object-fit: cover;
+                                            // border: 1px solid red;
+                                        }
+                                    }
+                                }
+                                .commentContainer {
+                                    margin-left: 20px;
+
+                                    .userStats {
+                                        h6 {
+                                            color: $black;
+                                            @include semiTinyFont;
+                                            text-transform: capitalize;
+                                        }
+                                    }
+
+                                    p {
+                                        @include primaryFont;
+                                        color: $lightBlack;
+                                    }
+                                }
+                            }
+
+                            .commentWrapper {
+                                textarea {
+                                    width: 100%;
+                                    height: 150px;
+                                    resize: none;
+                                    padding: 7px;
+                                    border: 1px solid $borderGrey;
+                                    @include tinyFont;
+                                    color: $black;
+                                    line-height: 1rem;
+                                    &::placeholder {
+                                        @include tinyFont;
+                                        color: $veryLightGrey;
+                                    }
+
+                                    &:focus {
+                                        outline: none;
+                                        border: 1px solid $lightGreen;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .postDescription { // description div 
+                        width: 100%;
+                        margin-top: -12px;
+                        padding-bottom: 70px;
+                        border-bottom: 1px solid $borderGrey;
+
+                        p {
+                            @include primaryFont;
+                            color: $lightBlack;
+                        }
+                    }
+                }
+
+                .rightSideContentContainer { // (aside) aside starts here
+                    width: 30%;
+                    height: 100vh;
+                    top: 100px;
+                    position: sticky;
+                    // border: 1px solid red;
+                    .captionCard { // captionCard link
+                        width: 100%;
+                        height: 50px;
+                        i:first-child {
+                            font-size: 30px;
+                            color: $veryLightGrey;
+                            background-color: $lightGreenColor
+                        } 
+                        i:last-child {
+                            @include primaryFont;
+                            color: $veryLightGrey;
+                        }
+                        h4 {
+                            @include primaryFont;
+                            letter-spacing: 2px;
+                            font-weight: 500;
+                            text-transform: uppercase;
+                            color: $veryLightGrey;
+                        }
+                        &:hover {
+                            h4 {
+                                color: $black;
+                            }
+                            background-color: $veryLightGreenColor;
+                        }
+                    }       
+                    
+                    .productCard {
+                        @include productCard;
+                        // border: 1px solid red;
+                    }
+                }
+            }
+
+            .dropUsAmessage { // this block styles the div before the footer
+              
+                @include dropUsAmessage;
+
+            }
+        }
+    }
+
+    footer { // footer starts here
+        height: 350px;
+        background-color: $black;
+        @include widthPadding;
+
+        div {
+            width: 25%;
+            display: flex;
+            margin-top: 100px;
+
+            ul {
+                p {
+                    color: $white;
+                    margin-bottom: 16px;
+                    @include secondaryFont;
+                }
+
+                li {
+                    a {
+                        @include tinyFont;
+                        color: $grey;
+
+                        &:hover {
+                            color: $green;
+                        }
+                    }
+                }
+            }
+        }
+
+        div:last-child {
+            ul {
+                li {
+                    ul {
+                        width: 150px;
+                        display: flex;
+                        justify-content: space-between;
+                        li {
+                            a {
+                                width: 20px;
+                                img {
+                                    width: 18px;                   
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .logoList {
+                    a {
+                        img {
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .postBtn {
+        position: fixed;
+        bottom: 70px;
+        right: 45px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50px;
+        font-size: 30px;
+        color: $white;
+        box-shadow: 0px 0px 30px #c70021;
+        @include accentColorBtn;
+    }
+ 
+}

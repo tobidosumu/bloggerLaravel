@@ -1,0 +1,750 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+*, img, a, ul, li, p, h2, h3, h4, h5, h6, input, textarea {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  resize: none !important;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}
+.form-control:focus {
+  box-shadow: none !important;
+}
+.form-control input[type=search]::-webkit-search-decoration,
+.form-control input[type=search]::-webkit-search-cancel-button,
+.form-control input[type=search]::-webkit-search-results-button,
+.form-control input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%239D9D9D' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #9d9d9d;
+  font-weight: 400;
+}
+.form-select option {
+  color: rgba(0, 0, 0, 0.7176470588);
+  font-weight: 500;
+}
+.form-select:focus {
+  box-shadow: none !important;
+  border-width: 1px !important;
+}
+
+body .myAlert {
+  margin-top: 95px !important;
+  color: #121d2a;
+  background-color: #00e87c;
+}
+body .myAlert div {
+  display: flex;
+  align-items: center;
+}
+body .myAlert div i {
+  font-size: 25px;
+  margin-right: 10px;
+}
+body .mainContainer {
+  max-width: 100%;
+  background-color: #ffffff;
+}
+body .mainContainer header {
+  padding: 0 12%;
+  height: 70px;
+  background-color: #ffffff;
+}
+body .mainContainer header .logoContainer img {
+  width: 60%;
+}
+body .mainContainer header nav {
+  width: 50%;
+}
+body .mainContainer header nav ul li a {
+  color: black;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+body .mainContainer header nav ul .home a span {
+  position: absolute;
+  margin-left: -10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 50%;
+  padding: 2px 8px;
+  border: 2px solid #ffffff;
+  background-color: #f4f4f5;
+}
+body .mainContainer header nav ul .home a i {
+  font-size: 1.5rem;
+}
+body .mainContainer header nav ul .cart a {
+  padding-top: 23px;
+  padding-bottom: 21px;
+}
+body .mainContainer header nav ul .cart a span {
+  position: absolute;
+  margin-left: -10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 50%;
+  padding: 2px 8px;
+  border: 2px solid #ffffff;
+  background-color: #f4f4f5;
+}
+body .mainContainer header nav ul .cart a i {
+  font-size: 1.5rem;
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper {
+  padding: 4px;
+  padding-right: 0;
+  border-radius: 50px;
+  background-color: rgb(215, 252, 246);
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper i {
+  color: #9d9d9d;
+  margin-left: -12px;
+  border: 2px solid #ffffff;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 4px 6.5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper i:hover {
+  color: #121d2a;
+  background-color: rgba(235, 37, 63, 0.2666666667);
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper a img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50px;
+  border: 1px solid #ffffff;
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper a:hover {
+  border: none;
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper:hover {
+  border-radius: 50px;
+  background-color: rgb(215, 252, 246);
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper:hover .caretIcon {
+  background-color: #ffffff;
+}
+body .mainContainer header nav ul .profile form button {
+  width: 100%;
+  margin-top: 10px;
+}
+body .mainContainer header nav ul .profile form button i {
+  color: #121d2a;
+  font-size: 0.9rem;
+}
+body .mainContainer header nav ul .profile form button span {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+body .mainContainer header nav ul .profile:hover .caretIcon {
+  color: #121d2a;
+  background-color: rgba(235, 37, 63, 0.2666666667);
+}
+body .mainContainer header nav ul .profile:hover .caretIcon:hover {
+  background-color: rgba(235, 37, 63, 0.2666666667);
+}
+body .mainContainer header nav ul .profile .profileDropdown {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 21%;
+  width: 10%;
+  padding-left: 0;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.089);
+  transition: all 1s ease;
+}
+body .mainContainer header nav ul .profile .profileDropdown ul a {
+  width: 100%;
+  color: #121d2a;
+  display: flex;
+  margin: 7px 0;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  padding: 7px 20px 0 20px;
+  border-left: 2px solid #ffffff;
+}
+body .mainContainer header nav ul .profile .profileDropdown ul a i {
+  color: #121d2a;
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+body .mainContainer header nav ul .profile .profileDropdown ul .logout {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 8px 20px;
+  border: none !important;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: rgba(235, 37, 63, 0.2666666667);
+}
+body .mainContainer header nav ul .profile .profileDropdown ul .logout:hover {
+  color: #ffffff;
+  background-color: #eb253f;
+}
+body .mainContainer header nav ul .profile .profileDropdown ul .logout:hover i {
+  color: #ffffff;
+}
+body .mainContainer header nav ul .profile:hover .caretIcon {
+  color: #121d2a !important;
+  background-color: rgb(215, 252, 246) !important;
+}
+body .mainContainer header nav ul .profile .notLoggedIn {
+  border-radius: 50px;
+  padding: 3px !important;
+  background-color: rgb(215, 252, 246);
+}
+body .mainContainer header nav ul .profile .notLoggedIn .caretIcon {
+  position: relative;
+  top: -8px;
+  left: -14px;
+  margin-left: 2px;
+  border-radius: 50px;
+  color: #9d9d9d;
+  padding: 4px 6.5px !important;
+  font-size: 0.7rem;
+  font-weight: 500;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+}
+body .mainContainer header nav ul .profile .notLoggedIn .caretIcon:hover {
+  color: #121d2a;
+}
+body .mainContainer header nav ul .profile .notLoggedIn a {
+  padding: 4px 3px !important;
+  color: #9d9d9d;
+}
+body .mainContainer header nav ul .profile .notLoggedIn a .userIcon {
+  position: relative;
+  top: 2px;
+  font-size: 2.3rem;
+}
+body .mainContainer header nav ul .profile .notLoggedIn a:hover {
+  border: 0 !important;
+}
+body .mainContainer header nav ul .profile .notLoggedIn:hover {
+  background-color: rgb(215, 252, 246);
+}
+body .mainContainer header nav ul .profile .notLoggedIn:hover .userIcon {
+  color: #121d2a;
+}
+body .mainContainer header nav ul .profile .notLoggedIn .userIcon {
+  color: #121d2a;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 21%;
+  width: 10%;
+  padding-left: 0;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.089);
+  transition: all 1s ease;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom: 1px solid #ced4da;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li a {
+  width: 100%;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 10px;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li a i {
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li:hover {
+  color: #121d2a;
+  background-color: rgb(242, 254, 255);
+  border-bottom: 1px solid #121d2a;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li:first-child {
+  border-radius: 0 !important;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li:first-child span {
+  margin-right: 14px;
+}
+body .mainContainer header nav ul .search i {
+  color: #ffffff;
+  font-size: 13px;
+  text-align: center;
+  padding: 14px 25px;
+  background-color: #121d2a;
+  -webkit-text-stroke: 0.5px;
+  border-radius: 4px;
+}
+body .mainContainer header nav ul .search i:hover {
+  background-color: rgba(0, 0, 0, 0.7176470588);
+  transition: all 0.3s ease-in-out;
+}
+body .mainContainer header nav ul a {
+  width: 100px;
+  text-align: center;
+  padding: 23px 8px;
+  font-size: 0.9rem;
+  color: #121d2a;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+body .mainContainer header nav ul a:hover {
+  color: #121d2a;
+  font-weight: 500;
+  border-bottom: 2px solid #121d2a;
+}
+body .mainContainer header nav ul a:hover {
+  color: #121d2a;
+  font-weight: 600;
+  transition: all 0.1s ease;
+}
+body .mainContainer header .searchDropDown {
+  display: none;
+  position: absolute;
+  top: 75px;
+  right: 12%;
+  width: 34.7%;
+  height: 50px;
+  padding: 6px;
+  background-color: #ffffff;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+body .mainContainer header .searchDropDown form {
+  width: 100%;
+}
+body .mainContainer header .searchDropDown form input {
+  width: 100%;
+  height: 100%;
+  padding: 3px 10px;
+  color: #121d2a;
+  border: 1px solid #f4f4f5;
+  border-radius: 4px;
+}
+body .mainContainer header .searchDropDown form input::placeholder {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-weight: 400;
+  color: #9d9d9d;
+}
+body .mainContainer header .searchDropDown form input:focus-within {
+  border: 1px solid #ced4da;
+  outline: none;
+  border-radius: 3px;
+}
+body .mainContainer header .searchDropDown form button {
+  width: 10%;
+  border: none;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+body .mainContainer header .searchDropDown form button:hover {
+  background-color: #ced4da;
+}
+body .mainContainer header .searchDropDown span {
+  width: 40px;
+}
+body .mainContainer .blogContents {
+  width: 100%;
+  padding: 0 12%;
+}
+body .mainContainer .blogContents nav ul li i {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7176470588);
+}
+body .mainContainer .blogContents nav ul li a {
+  font-size: 0.9rem;
+  color: #00e87c;
+}
+body .mainContainer .blogContents nav ul li a:hover {
+  color: #00835c;
+}
+body .mainContainer .blogContents section .mainContentContainer {
+  width: 67.5%;
+  position: sticky;
+  padding-bottom: 150px;
+}
+body .mainContainer .blogContents section .mainContentContainer nav ul li {
+  font-size: 0.9rem;
+  color: #7a7a7a;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer {
+  margin-right: 43px;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .postImage img {
+  height: 60vh;
+  object-fit: cover;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .postImage p {
+  position: absolute;
+  top: 70px;
+  left: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7176470588);
+  text-transform: none;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.527);
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv {
+  position: absolute;
+  right: 65px;
+  top: 160px;
+  height: 28vh;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv div a {
+  margin-bottom: 0.6px;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv div a i {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: black;
+  border-radius: 50%;
+  padding: 8px 6px 3px 6px;
+  background-color: rgba(255, 255, 255, 0.527);
+  transition: all 0.4s;
+  font-size: 1.3rem;
+  padding: 6px 8px 2px 8px;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv div a i:hover {
+  background-color: rgb(215, 252, 246);
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv div a i:hover {
+  background-color: #ffffff !important;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv div i {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: black;
+  border-radius: 50%;
+  padding: 8px 6px 3px 6px;
+  background-color: rgba(255, 255, 255, 0.527);
+  transition: all 0.4s;
+  margin-bottom: 0px;
+  transition: all 0.4s;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv div i:hover {
+  background-color: rgb(215, 252, 246);
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv div p {
+  font-size: 0.7rem;
+  font-weight: 500;
+  font-weight: 600;
+  color: #121d2a;
+  background-color: rgba(255, 255, 255, 0.527);
+  padding: 0 7px;
+  border-radius: 3px;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv div:hover i {
+  background-color: #ffffff;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv div:hover p {
+  background-color: #ffffff;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv .shares i {
+  transform: scaleX(-1);
+  transform-origin: 50% 50%;
+  -webkit-transform: scaleX(-1); /* Safari and Chrome */
+  -moz-transform: scaleX(-1); /* Firefox */
+  -ms-transform: scaleX(-1); /* Internet Explorer */
+  -o-transform: scaleX(-1); /* Opera */
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .categoryTitleContainer {
+  width: 85%;
+  position: relative;
+  bottom: 40px;
+  background: #ffffff;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .categoryTitleContainer .categoryReadTimeContainer {
+  width: 50%;
+  position: relative;
+  bottom: 30px;
+  background: rgba(255, 255, 255, 0.678);
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .categoryTitleContainer .categoryReadTimeContainer h5 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7176470588);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .categoryTitleContainer .categoryReadTimeContainer h6 {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #7a7a7a;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .categoryTitleContainer .categoryReadTimeContainer h6 span {
+  color: #7a7a7a;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .titleContainer h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.7176470588);
+  margin-top: -10px;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .titleContainer h4::first-letter {
+  font-size: 2rem;
+  font-weight: 600;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .commentSection {
+  width: 100%;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .commentSection .iconsWrapper div i {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #121d2a;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .commentSection .iconsWrapper div p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #121d2a;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .commentSection .iconsWrapper .shares i {
+  transform: scaleX(-1);
+  transform-origin: 50% 50%;
+  -webkit-transform: scaleX(-1); /* Safari and Chrome */
+  -moz-transform: scaleX(-1); /* Firefox */
+  -ms-transform: scaleX(-1); /* Internet Explorer */
+  -o-transform: scaleX(-1); /* Opera */
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .commentSection .userComment {
+  border: 1px solid #ced4da;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .commentSection .userComment .userAvatar a img {
+  width: 50px;
+  width: 50px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .commentSection .userComment .commentContainer {
+  margin-left: 20px;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .commentSection .userComment .commentContainer .userStats h6 {
+  color: #121d2a;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .commentSection .userComment .commentContainer p {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.7176470588);
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .commentSection .commentWrapper textarea {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  padding: 7px;
+  border: 1px solid #ced4da;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #121d2a;
+  line-height: 1rem;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .commentSection .commentWrapper textarea::placeholder {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #9d9d9d;
+}
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .commentSection .commentWrapper textarea:focus {
+  outline: none;
+  border: 1px solid rgba(79, 227, 183, 0.768627451);
+}
+body .mainContainer .blogContents section .mainContentContainer .postDescription {
+  width: 100%;
+  margin-top: -12px;
+  padding-bottom: 70px;
+  border-bottom: 1px solid #ced4da;
+}
+body .mainContainer .blogContents section .mainContentContainer .postDescription p {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.7176470588);
+}
+body .mainContainer .blogContents section .rightSideContentContainer {
+  width: 30%;
+  height: 100vh;
+  top: 100px;
+  position: sticky;
+}
+body .mainContainer .blogContents section .rightSideContentContainer .captionCard {
+  width: 100%;
+  height: 50px;
+}
+body .mainContainer .blogContents section .rightSideContentContainer .captionCard i:first-child {
+  font-size: 30px;
+  color: #9d9d9d;
+  background-color: rgb(242, 254, 255);
+}
+body .mainContainer .blogContents section .rightSideContentContainer .captionCard i:last-child {
+  font-size: 0.9rem;
+  color: #9d9d9d;
+}
+body .mainContainer .blogContents section .rightSideContentContainer .captionCard h4 {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #9d9d9d;
+}
+body .mainContainer .blogContents section .rightSideContentContainer .captionCard:hover {
+  background-color: rgb(215, 252, 246);
+}
+body .mainContainer .blogContents section .rightSideContentContainer .captionCard:hover h4 {
+  color: #121d2a;
+}
+body .mainContainer .blogContents section .rightSideContentContainer .productCard {
+  width: 90%;
+}
+body .mainContainer .blogContents section .rightSideContentContainer .productCard a div:nth-child(1) {
+  width: 100%;
+}
+body .mainContainer .blogContents section .rightSideContentContainer .productCard a div:nth-child(1) img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+body .mainContainer .blogContents section .rightSideContentContainer .productCard a div:nth-child(2) {
+  width: 100%;
+}
+body .mainContainer .blogContents section .rightSideContentContainer .productCard a div:nth-child(2) h2:nth-child(1) {
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-weight: 600;
+  color: #9d9d9d;
+  text-transform: capitalize;
+}
+body .mainContainer .blogContents section .rightSideContentContainer .productCard a div:nth-child(2) h2:nth-child(2) {
+  font-size: 1.05rem;
+  font-weight: 400;
+  font-weight: 700;
+  color: #9d9d9d;
+}
+body .mainContainer .blogContents section .rightSideContentContainer .productCard a div:nth-child(2) .addToCart button {
+  width: 100%;
+  height: 35px;
+  border: none;
+  font-size: 0.9rem;
+  background-color: rgb(215, 252, 246);
+  transition: all 0.3s ease;
+}
+body .mainContainer .blogContents section .rightSideContentContainer .productCard a div:nth-child(2) .addToCart button:hover {
+  color: #ffffff;
+  background-color: #00835c;
+}
+body .mainContainer .blogContents .dropUsAmessage {
+  width: 87%;
+  position: relative;
+  bottom: -90px;
+  margin: 0 auto;
+  margin-top: -110px;
+  background-color: rgb(242, 254, 255);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+body .mainContainer .blogContents .dropUsAmessage .textBlockContainer p {
+  width: 72%;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7176470588);
+}
+body .mainContainer .blogContents .dropUsAmessage .textBlockContainer a {
+  border-radius: 4px;
+  padding: 9px 12px;
+  font-size: 0.9rem;
+  color: #121d2a;
+  background-color: #00e87c;
+}
+body .mainContainer .blogContents .dropUsAmessage .textBlockContainer a:hover {
+  color: #ffffff;
+  background-color: #00835c;
+}
+body footer {
+  height: 350px;
+  background-color: #121d2a;
+  padding: 0 12%;
+}
+body footer div {
+  width: 25%;
+  display: flex;
+  margin-top: 100px;
+}
+body footer div ul p {
+  color: #ffffff;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+body footer div ul li a {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #7a7a7a;
+}
+body footer div ul li a:hover {
+  color: #00835c;
+}
+body footer div:last-child ul li ul {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+body footer div:last-child ul li ul li a {
+  width: 20px;
+}
+body footer div:last-child ul li ul li a img {
+  width: 18px;
+}
+body footer div:last-child ul .logoList a img {
+  width: 100px;
+}
+body .postBtn {
+  position: fixed;
+  bottom: 70px;
+  right: 45px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  font-size: 30px;
+  color: #ffffff;
+  box-shadow: 0px 0px 30px #c70021;
+  background-color: #eb253f;
+}
+body .postBtn:hover {
+  background-color: #6025eb;
+}
+
+/*# sourceMappingURL=postDetails.css.map */

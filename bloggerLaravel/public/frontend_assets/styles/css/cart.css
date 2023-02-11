@@ -1,0 +1,621 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+*, img, a, ul, li, p, h2, h3, h4, h5, h6, input, textarea {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  resize: none !important;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}
+.form-control:focus {
+  box-shadow: none !important;
+}
+.form-control input[type=search]::-webkit-search-decoration,
+.form-control input[type=search]::-webkit-search-cancel-button,
+.form-control input[type=search]::-webkit-search-results-button,
+.form-control input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%239D9D9D' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #9d9d9d;
+  font-weight: 400;
+}
+.form-select option {
+  color: rgba(0, 0, 0, 0.7176470588);
+  font-weight: 500;
+}
+.form-select:focus {
+  box-shadow: none !important;
+  border-width: 1px !important;
+}
+
+body .myAlert {
+  margin-top: 95px !important;
+  color: #121d2a;
+  background-color: #00e87c;
+}
+body .myAlert div {
+  display: flex;
+  align-items: center;
+}
+body .myAlert div i {
+  font-size: 25px;
+  margin-right: 10px;
+}
+body .mainContainer {
+  max-width: 100%;
+  background-color: #f4f4f5;
+}
+body .mainContainer header {
+  padding: 0 12%;
+  height: 70px;
+  background-color: #ffffff;
+}
+body .mainContainer header .logoContainer img {
+  width: 60%;
+}
+body .mainContainer header nav {
+  width: 50%;
+}
+body .mainContainer header nav ul li a {
+  color: black;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+body .mainContainer header nav ul .home a {
+  padding-top: 23px;
+  padding-bottom: 20px;
+}
+body .mainContainer header nav ul .home a i {
+  font-size: 1.5rem;
+}
+body .mainContainer header nav ul .cart a {
+  padding-top: 23px;
+  padding-bottom: 20px;
+}
+body .mainContainer header nav ul .cart a span {
+  position: absolute;
+  margin-left: -10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 50%;
+  padding: 2px 8px;
+  border: 2px solid #ffffff;
+  background-color: #f4f4f5;
+}
+body .mainContainer header nav ul .cart a i {
+  font-size: 1.5rem;
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper {
+  padding: 4px;
+  padding-right: 0;
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper i {
+  color: #9d9d9d;
+  margin-left: -12px;
+  border: 2px solid #ffffff;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 4px 6.5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper i:hover {
+  color: #121d2a;
+  background-color: rgba(235, 37, 63, 0.2666666667);
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper a img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50px;
+  border: 1px solid #ffffff;
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper a:hover {
+  border: none;
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper:hover {
+  border-radius: 50px;
+  background-color: rgb(215, 252, 246);
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper:hover .caretIcon {
+  background-color: #ffffff;
+}
+body .mainContainer header nav ul .profile form button {
+  width: 100%;
+  margin-top: 10px;
+}
+body .mainContainer header nav ul .profile form button i {
+  color: #121d2a;
+  font-size: 0.9rem;
+}
+body .mainContainer header nav ul .profile form button span {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+body .mainContainer header nav ul .profile:hover .caretIcon {
+  color: #121d2a;
+  background-color: rgba(235, 37, 63, 0.2666666667);
+}
+body .mainContainer header nav ul .profile:hover .caretIcon:hover {
+  background-color: rgba(235, 37, 63, 0.2666666667);
+}
+body .mainContainer header nav ul .profile .profileDropdown {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 21%;
+  width: 10%;
+  padding-left: 0;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.089);
+  transition: all 1s ease;
+}
+body .mainContainer header nav ul .profile .profileDropdown ul a {
+  width: 100%;
+  color: #121d2a;
+  display: flex;
+  margin: 7px 0;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  padding: 7px 20px 0 20px;
+  border-left: 2px solid #ffffff;
+}
+body .mainContainer header nav ul .profile .profileDropdown ul a i {
+  color: #121d2a;
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+body .mainContainer header nav ul .profile .profileDropdown ul .logout {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 8px 20px;
+  border: none !important;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: rgba(235, 37, 63, 0.2666666667);
+}
+body .mainContainer header nav ul .profile .profileDropdown ul .logout:hover {
+  color: #ffffff;
+  background-color: #eb253f;
+}
+body .mainContainer header nav ul .profile .profileDropdown ul .logout:hover i {
+  color: #ffffff;
+}
+body .mainContainer header nav ul .profile:hover .caretIcon {
+  color: #121d2a !important;
+  background-color: rgb(215, 252, 246) !important;
+}
+body .mainContainer header nav ul .profile .notLoggedIn {
+  border-radius: 50px;
+  padding: 3px !important;
+}
+body .mainContainer header nav ul .profile .notLoggedIn .caretIcon {
+  position: relative;
+  top: -8px;
+  left: -14px;
+  margin-left: 2px;
+  border-radius: 50px;
+  color: #9d9d9d;
+  padding: 4px 6.5px !important;
+  font-size: 0.7rem;
+  font-weight: 500;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+}
+body .mainContainer header nav ul .profile .notLoggedIn .caretIcon:hover {
+  color: #121d2a;
+}
+body .mainContainer header nav ul .profile .notLoggedIn a {
+  padding: 4px 3px !important;
+  color: #9d9d9d;
+}
+body .mainContainer header nav ul .profile .notLoggedIn a .userIcon {
+  position: relative;
+  top: 2px;
+  font-size: 2.3rem;
+}
+body .mainContainer header nav ul .profile .notLoggedIn a:hover {
+  border: 0 !important;
+}
+body .mainContainer header nav ul .profile .notLoggedIn:hover {
+  background-color: rgb(215, 252, 246);
+}
+body .mainContainer header nav ul .profile .notLoggedIn:hover .userIcon {
+  color: #121d2a;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 21%;
+  width: 10%;
+  padding-left: 0;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.089);
+  transition: all 1s ease;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom: 1px solid #ced4da;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li a {
+  width: 100%;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 10px;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li a i {
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li:hover {
+  color: #121d2a;
+  background-color: rgb(242, 254, 255);
+  border-bottom: 1px solid #121d2a;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li:first-child {
+  border-radius: 0 !important;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li:first-child span {
+  margin-right: 14px;
+}
+body .mainContainer header nav ul .search i {
+  color: #ffffff;
+  font-size: 13px;
+  text-align: center;
+  padding: 14px 25px;
+  background-color: #121d2a;
+  -webkit-text-stroke: 0.5px;
+  border-radius: 4px;
+}
+body .mainContainer header nav ul .search i:hover {
+  background-color: rgba(0, 0, 0, 0.7176470588);
+  transition: all 0.3s ease-in-out;
+}
+body .mainContainer header nav ul a {
+  width: 100px;
+  text-align: center;
+  padding: 23px 8px;
+  font-size: 0.9rem;
+  color: #121d2a;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+body .mainContainer header nav ul a:hover {
+  color: #121d2a;
+  font-weight: 500;
+  border-bottom: 2px solid #121d2a;
+}
+body .mainContainer header nav ul a:hover {
+  color: #121d2a;
+  font-weight: 600;
+  transition: all 0.1s ease;
+}
+body .mainContainer header .searchDropDown {
+  display: none;
+  position: absolute;
+  top: 75px;
+  right: 12%;
+  width: 34.7%;
+  height: 50px;
+  padding: 6px;
+  background-color: #ffffff;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+body .mainContainer header .searchDropDown form {
+  width: 100%;
+}
+body .mainContainer header .searchDropDown form input {
+  width: 100%;
+  height: 100%;
+  padding: 3px 10px;
+  color: #121d2a;
+  border: 1px solid #f4f4f5;
+  border-radius: 4px;
+}
+body .mainContainer header .searchDropDown form input::placeholder {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-weight: 400;
+  color: #9d9d9d;
+}
+body .mainContainer header .searchDropDown form input:focus-within {
+  border: 1px solid #ced4da;
+  outline: none;
+  border-radius: 3px;
+}
+body .mainContainer header .searchDropDown form button {
+  width: 10%;
+  border: none;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+body .mainContainer header .searchDropDown form button:hover {
+  background-color: #ced4da;
+}
+body .mainContainer header .searchDropDown span {
+  width: 40px;
+}
+body .mainContainer header .cart a {
+  border-bottom: 2px solid #121d2a;
+}
+body .mainContainer .blogContents {
+  width: 87%;
+  margin: auto;
+}
+body .mainContainer .blogContents section .mainContentContainer {
+  padding: 30px 0 150px 0;
+}
+body .mainContainer .blogContents section .mainContentContainer .notLoggedIndashboardView {
+  min-height: 80vh;
+  text-align: center;
+  background-color: #ffffff;
+}
+body .mainContainer .blogContents section .mainContentContainer .notLoggedIndashboardView div .actionBtn {
+  width: 14%;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 25px;
+  color: #ffffff;
+  background-color: #121d2a;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+}
+body .mainContainer .blogContents section .mainContentContainer .notLoggedIndashboardView div .actionBtn:hover {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.7176470588);
+}
+body .mainContainer .blogContents section .mainContentContainer .notLoggedIndashboardView p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7176470588);
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents {
+  min-height: 80vh;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents main {
+  width: 67.2%;
+  color: #121d2a;
+  padding: 0 40px;
+  background-color: #ffffff;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents main .contentTitle {
+  padding: 30px 0 20px 0px;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents main .contentTitle h3 {
+  font-size: 1.05rem;
+  font-weight: 400;
+  font-weight: 600;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents main .contentTitle h5 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-weight: 600;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents main table thead tr th {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #ced4da;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents main table tbody tr {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents main table tbody tr td {
+  width: 100%;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents main table tbody tr td .productPhoto img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents main table tbody tr td .productInfo h6 {
+  max-width: 90%;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-weight: 600;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents main table tbody tr td .productInfo p a {
+  color: #eb253f;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents main table tbody tr .productQuantity {
+  width: 20%;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents main table tbody tr .productQuantity div button {
+  border: none;
+  background: none;
+  padding: 2px 14px;
+  font-size: 1.05rem;
+  font-weight: 400;
+  font-weight: 600;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents main table tbody tr .productQuantity div h2 {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  box-shadow: 0px 0px 1.5px rgba(0, 0, 0, 0.2);
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents main table tbody tr .productPrice {
+  width: 30%;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents main table tbody tr .totalPrice {
+  width: 30%;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents aside {
+  width: 32.8%;
+  padding: 0 40px;
+  background-color: rgb(242, 254, 255);
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents aside .contentTitle {
+  padding: 30px 0 20px 0px;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents aside .contentTitle h3 {
+  font-size: 1.05rem;
+  font-weight: 400;
+  font-weight: 600;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents aside .orderSummary {
+  color: #7a7a7a;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-top: 19px;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents aside .orderShipping {
+  color: #7a7a7a;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents aside .orderShipping p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents aside .orderShipping select {
+  color: #7a7a7a;
+  border-color: #ced4da;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents aside .promoCode p {
+  color: #7a7a7a;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents aside .promoCode input {
+  width: 100%;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 5px 10px;
+  border: 1px solid #ced4da;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents aside .promoCode input:focus {
+  outline: 0px solid #ced4da;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents aside .promoCode button {
+  width: 40%;
+  padding: 7px;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #eb253f;
+  transition: 0.4s ease;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents aside .promoCode button:hover {
+  background-color: #6025eb;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents aside .orderFooter .totalCost {
+  color: rgba(0, 0, 0, 0.7176470588);
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents aside .orderFooter button {
+  width: 100%;
+  padding: 8px;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #121d2a;
+  transition: 0.4s ease;
+}
+body .mainContainer .blogContents section .mainContentContainer .loggedInCartContents aside .orderFooter button:hover {
+  background-color: rgba(0, 0, 0, 0.7176470588);
+}
+body .mainContainer .blogContents .dropUsAmessage {
+  width: 87%;
+  position: relative;
+  bottom: -90px;
+  margin: 0 auto;
+  margin-top: -110px;
+  background-color: rgb(242, 254, 255);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+body .mainContainer .blogContents .dropUsAmessage .textBlockContainer p {
+  width: 72%;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7176470588);
+}
+body .mainContainer .blogContents .dropUsAmessage .textBlockContainer a {
+  border-radius: 4px;
+  padding: 9px 12px;
+  font-size: 0.9rem;
+  color: #121d2a;
+  background-color: #00e87c;
+}
+body .mainContainer .blogContents .dropUsAmessage .textBlockContainer a:hover {
+  color: #ffffff;
+  background-color: #00835c;
+}
+body footer {
+  height: 350px;
+  background-color: #121d2a;
+  padding: 0 12%;
+}
+body footer div {
+  width: 25%;
+  display: flex;
+  margin-top: 100px;
+}
+body footer div ul p {
+  color: #ffffff;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+body footer div ul li a {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #7a7a7a;
+}
+body footer div ul li a:hover {
+  color: #00835c;
+}
+body footer div:last-child ul li ul {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+body footer div:last-child ul li ul li a {
+  width: 20px;
+}
+body footer div:last-child ul li ul li a img {
+  width: 18px;
+}
+body footer div:last-child ul .logoList a img {
+  width: 100px;
+}
+
+/*# sourceMappingURL=cart.css.map */

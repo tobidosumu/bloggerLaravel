@@ -1,0 +1,111 @@
+@import './myBootstrap';
+@import './reset';
+
+body {
+    .myAlert {
+        color: $black;
+        background-color: $veryLightGreenColor;
+        box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.151);
+    }
+
+    .failAlert {
+        border: none;
+        background-color: $lightRedColor;
+        box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.151);
+        p {
+            color: $white;
+            @include primaryFont;
+        }
+    }
+
+    section {
+        aside {
+            width: 50%;
+            height: 100vh;
+        }
+        .leftAside {
+            background-color: $primaryColor;
+            padding-bottom: 25px;
+            img {
+                width: 80%;
+                object-fit: cover;
+            }
+
+            div { // left section: welcome to blogger icon
+                width: 100%;
+                h2 {
+                    @include semiTertiaryFont;
+                    color: $white;
+                }
+                img {
+                    width: 120px;
+                }
+            }
+        }
+        #rightAside {
+            padding: 7%;
+            padding-top: 2%;
+            .header {
+                p {
+                    @include tinyFont;
+                    color: $primaryColor;
+                    padding-right: 20px;
+                }
+                a {
+                    color: $white !important;
+                    @include tinyFont;
+                    background-color: $primaryColor;
+                    &:hover {
+                        background-color:  $accentColor;
+                    }
+                }
+            }
+            .formWrapper {
+                .formContents {
+                    h2 {
+                        @include tertiaryFont;
+                    }
+                    form {
+                        width: 80%;
+                        div {
+                            display: flex;
+                            flex-direction: column;
+                            label {
+                                color: $grey;
+                                padding: 14px 0 4px 12px;
+                                @include primaryFont;
+
+                            }
+                            input {
+                                height: 40px;
+                                border: none;
+                                color: $black;
+                                font-weight: 500;
+                                border-radius: 4px;
+                                padding-left: 12px;
+                                box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.151);
+                                &::placeholder {
+                                    color: $grey;
+                                    @include tinyFont;
+                                }
+                                &:focus {
+                                    @include focusInput;
+                                }
+                            }
+                        }
+                        .createAcctBtn {
+                            input {
+                                font-weight: 600;
+                                color: $white;
+                                background-color: $primaryColor;
+                                &:hover {
+                                    background-color: $accentColor;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

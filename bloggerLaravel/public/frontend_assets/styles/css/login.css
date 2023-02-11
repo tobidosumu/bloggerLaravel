@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+*, img, a, ul, li, p, h2, h3, h4, h5, h6, input, textarea {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  resize: none !important;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}
+.form-control:focus {
+  box-shadow: none !important;
+}
+.form-control input[type=search]::-webkit-search-decoration,
+.form-control input[type=search]::-webkit-search-cancel-button,
+.form-control input[type=search]::-webkit-search-results-button,
+.form-control input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%239D9D9D' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #9d9d9d;
+  font-weight: 400;
+}
+.form-select option {
+  color: rgba(0, 0, 0, 0.7176470588);
+  font-weight: 500;
+}
+.form-select:focus {
+  box-shadow: none !important;
+  border-width: 1px !important;
+}
+
+body .myAlert {
+  color: #121d2a;
+  background-color: rgb(215, 252, 246);
+  box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.151);
+}
+body .failAlert {
+  border: none;
+  background-color: rgba(235, 37, 63, 0.5764705882);
+  box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.151);
+}
+body .failAlert p {
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+body section aside {
+  width: 50%;
+  height: 100vh;
+}
+body section .leftAside {
+  background-color: #00e87c;
+  padding-bottom: 25px;
+}
+body section .leftAside img {
+  width: 80%;
+  object-fit: cover;
+}
+body section .leftAside div {
+  width: 100%;
+}
+body section .leftAside div h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+body section .leftAside div img {
+  width: 120px;
+}
+body section #rightAside {
+  padding: 7%;
+  padding-top: 2%;
+}
+body section #rightAside .header p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #00e87c;
+  padding-right: 20px;
+}
+body section #rightAside .header a {
+  color: #ffffff !important;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background-color: #00e87c;
+}
+body section #rightAside .header a:hover {
+  background-color: #6025eb;
+}
+body section #rightAside .formWrapper .formContents h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+body section #rightAside .formWrapper .formContents form {
+  width: 80%;
+}
+body section #rightAside .formWrapper .formContents form div {
+  display: flex;
+  flex-direction: column;
+}
+body section #rightAside .formWrapper .formContents form div label {
+  color: #7a7a7a;
+  padding: 14px 0 4px 12px;
+  font-size: 0.9rem;
+}
+body section #rightAside .formWrapper .formContents form div input {
+  height: 40px;
+  border: none;
+  color: #121d2a;
+  font-weight: 500;
+  border-radius: 4px;
+  padding-left: 12px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.151);
+}
+body section #rightAside .formWrapper .formContents form div input::placeholder {
+  color: #7a7a7a;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+body section #rightAside .formWrapper .formContents form div input:focus {
+  outline: 1px solid #00e87c;
+}
+body section #rightAside .formWrapper .formContents form .createAcctBtn input {
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #00e87c;
+}
+body section #rightAside .formWrapper .formContents form .createAcctBtn input:hover {
+  background-color: #6025eb;
+}
+body section #rightAside .formWrapper .formContents form .createAcctBtn a {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #00e87c;
+}
+body section #rightAside .formWrapper .formContents form .createAcctBtn a:hover {
+  color: #6025eb;
+}
+
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,211 @@
+@import "./reset";
+@import "./myBootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+body {
+
+    .mainContainer {
+        max-width: 100%;
+        background-color: $white;
+
+        header {
+            @include header;
+        } 
+
+        .blogContents {
+
+            @include blogContents;
+
+            section {
+                .mainContentContainer {
+                    width: 100%;
+                    padding-top: 70px;
+                    padding-bottom: 100px;
+        
+                    table {
+                        tbody {
+                            width: 100%;
+                            tr {
+                                td {
+                                   a {
+                                    border-radius: 50px;
+                                    background-color: $transparentWhite;
+                                    &:first-child {
+                                        padding: 4px 5.8px;
+                                        color: $green;
+                                        &:hover {
+                                            color: $white;
+                                            background-color: $primaryColor;
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        padding: 4px 8px;
+                                        color: $accentHoverColor;
+                                        &:hover {
+                                            color: $white;
+                                            background-color: $accentHoverColor;
+                                        }
+                                    }
+                                   }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .dropUsAmessage { // this block styles the div before the footer
+                  
+                @include dropUsAmessage;
+    
+            }
+        }
+    }
+
+    footer { // footer
+        @include footer;
+    }
+
+    .modal-dialog { // for Category form
+        max-width: none !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .modalContent {
+            width: 600px;
+
+            form {
+
+                .modal-body {
+
+                    .input-group {
+                        span {
+                            i {
+                                color: $accentColor;
+                            }
+                        }
+                        input {
+                            color: $lightBlack !important;
+                            &::placeholder {
+                                color: $veryLightGrey;
+                                @include primaryFont;
+                                font-weight: 400;
+                            }
+                        }
+                        textarea {
+                            color: $lightBlack !important;
+                            &::placeholder {
+                                color: $veryLightGrey;
+                                @include primaryFont;
+                                font-weight: 400;
+                                position: relative;
+                                top: 33px;
+                            }
+                        }
+                        select {
+                            display: none;
+                        }
+
+                        .custom-select {
+                            width: 92.5% !important;
+                            position: relative;
+                            padding: 7px 4px;
+                            padding-left: 12px;
+                            color: $veryLightGrey;
+                            @include primaryFont;
+                            font-weight: 400;
+                            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%239D9D9D' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+                            
+                              &-selected {
+                                background-color: $accentColor;
+                            
+                                &:after {
+                                    position: absolute;
+                                    content: "";
+                                    top: 14px;
+                                    right: 10px;
+                                    width: 0;
+                                    height: 0;
+                                    &.select-arrow-active:after {
+                                        top: 7px;
+                                    }
+                                }
+                              }
+                            
+                              .select-items {
+                                position: absolute;
+                                background-color: $white;
+                                top: 100%;
+                                left: 0;
+                                right: 0;
+                                z-index: 99;
+                                margin-top: 3px;
+                                border-bottom-right-radius: 6px;
+                                border-bottom-left-radius: 6px;
+                                border: 1px solid $borderGrey;
+                                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.103), 0px -2px 3px rgba(0, 0, 0, 0.103);
+                                div, &-selected {
+                                    color: $lightBlack;
+                                    @include primaryFont;
+                                    font-weight: 400;
+                                    padding: 8px 14px;
+                                    cursor: pointer;
+                                    user-select: none;
+                                    border-bottom-right-radius: 6px;
+                                    border-bottom-left-radius: 6px;
+                                    border-top: 1px solid $borderGrey;
+                                    &:hover {
+                                        color: $accentHoverColor;
+                                        background-color: $lightGrey;
+                                    }
+                                    &.same-as-selected {
+                                        color: $accentColor;
+                                        background-color: $lightGrey;
+                                    }
+                                }
+                            
+                                &.select-hide {
+                                  display: none;
+                                }
+  
+                                .otherOptions {
+                                    font-weight: 500;
+                                    color: $lightBlack;
+                                }
+                            }
+                            
+                            .form-control {
+                                color: $veryLightGrey;
+                                @include primaryFont;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+                .modal-footer {
+                    .sendPostBtn {
+                        padding: 7px 20px;
+                        @include accentColorBtn;
+                        border: none;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .postBtn {
+        position: fixed;
+        bottom: 70px;
+        right: 45px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50px;
+        font-size: 30px;
+        color: $white;
+        box-shadow: 0px 0px 30px $accentHoverColor;
+        @include accentColorBtn;
+    }
+}

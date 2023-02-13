@@ -1,0 +1,796 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+*, img, a, ul, li, p, h2, h3, h4, h5, h6, input, textarea {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  resize: none !important;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}
+.form-control:focus {
+  box-shadow: none !important;
+}
+.form-control input[type=search]::-webkit-search-decoration,
+.form-control input[type=search]::-webkit-search-cancel-button,
+.form-control input[type=search]::-webkit-search-results-button,
+.form-control input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%239D9D9D' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #9d9d9d;
+  font-weight: 400;
+}
+.form-select option {
+  color: rgba(0, 0, 0, 0.7176470588);
+  font-weight: 500;
+}
+.form-select:focus {
+  box-shadow: none !important;
+  border-width: 1px !important;
+}
+
+body .mainContainer {
+  max-width: 100%;
+  background-color: #f4f4f5;
+}
+body .mainContainer header {
+  padding: 0 12%;
+  height: 70px;
+  background-color: #ffffff;
+}
+body .mainContainer header .logoContainer img {
+  width: 60%;
+}
+body .mainContainer header nav {
+  width: 50%;
+}
+body .mainContainer header nav ul li a {
+  color: black;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+body .mainContainer header nav ul .home a {
+  padding-top: 23px;
+  padding-bottom: 20px;
+}
+body .mainContainer header nav ul .home a i {
+  font-size: 1.5rem;
+}
+body .mainContainer header nav ul .cart a {
+  padding-top: 23px;
+  padding-bottom: 20px;
+}
+body .mainContainer header nav ul .cart a span {
+  position: absolute;
+  margin-left: -10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 50%;
+  padding: 2px 8px;
+  border: 2px solid #ffffff;
+  background-color: #f4f4f5;
+}
+body .mainContainer header nav ul .cart a i {
+  font-size: 1.5rem;
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper {
+  padding: 4px;
+  padding-right: 0;
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper i {
+  color: #9d9d9d;
+  margin-left: -12px;
+  border: 2px solid #ffffff;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 4px 6.5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper i:hover {
+  color: #121d2a;
+  background-color: rgba(235, 37, 63, 0.2666666667);
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper a img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50px;
+  border: 1px solid #ffffff;
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper a:hover {
+  border: none;
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper:hover {
+  border-radius: 50px;
+  background-color: rgb(215, 252, 246);
+}
+body .mainContainer header nav ul .profile .profileLinkWrapper:hover .caretIcon {
+  background-color: #ffffff;
+}
+body .mainContainer header nav ul .profile form button {
+  width: 100%;
+  margin-top: 10px;
+}
+body .mainContainer header nav ul .profile form button i {
+  color: #121d2a;
+  font-size: 0.9rem;
+}
+body .mainContainer header nav ul .profile form button span {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+body .mainContainer header nav ul .profile:hover .caretIcon {
+  color: #121d2a;
+  background-color: rgba(235, 37, 63, 0.2666666667);
+}
+body .mainContainer header nav ul .profile:hover .caretIcon:hover {
+  background-color: rgba(235, 37, 63, 0.2666666667);
+}
+body .mainContainer header nav ul .profile .profileDropdown {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 21%;
+  width: 10%;
+  padding-left: 0;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.089);
+  transition: all 1s ease;
+}
+body .mainContainer header nav ul .profile .profileDropdown ul a {
+  width: 100%;
+  color: #121d2a;
+  display: flex;
+  margin: 7px 0;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  padding: 7px 20px 0 20px;
+  border-left: 2px solid #ffffff;
+}
+body .mainContainer header nav ul .profile .profileDropdown ul a i {
+  color: #121d2a;
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+body .mainContainer header nav ul .profile .profileDropdown ul .logout {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 8px 20px;
+  border: none !important;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: rgba(235, 37, 63, 0.2666666667);
+}
+body .mainContainer header nav ul .profile .profileDropdown ul .logout:hover {
+  color: #ffffff;
+  background-color: #eb253f;
+}
+body .mainContainer header nav ul .profile .profileDropdown ul .logout:hover i {
+  color: #ffffff;
+}
+body .mainContainer header nav ul .profile:hover .caretIcon {
+  color: #121d2a !important;
+  background-color: rgb(215, 252, 246) !important;
+}
+body .mainContainer header nav ul .profile .notLoggedIn {
+  border-radius: 50px;
+  padding: 3px !important;
+}
+body .mainContainer header nav ul .profile .notLoggedIn .caretIcon {
+  position: relative;
+  top: -8px;
+  left: -14px;
+  margin-left: 2px;
+  border-radius: 50px;
+  color: #9d9d9d;
+  padding: 4px 6.5px !important;
+  font-size: 0.7rem;
+  font-weight: 500;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+}
+body .mainContainer header nav ul .profile .notLoggedIn .caretIcon:hover {
+  color: #121d2a;
+}
+body .mainContainer header nav ul .profile .notLoggedIn a {
+  padding: 4px 3px !important;
+  color: #9d9d9d;
+}
+body .mainContainer header nav ul .profile .notLoggedIn a .userIcon {
+  position: relative;
+  top: 2px;
+  font-size: 2.3rem;
+}
+body .mainContainer header nav ul .profile .notLoggedIn a:hover {
+  border: 0 !important;
+}
+body .mainContainer header nav ul .profile .notLoggedIn:hover {
+  background-color: rgb(215, 252, 246);
+}
+body .mainContainer header nav ul .profile .notLoggedIn:hover .userIcon {
+  color: #121d2a;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 21%;
+  width: 10%;
+  padding-left: 0;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.089);
+  transition: all 1s ease;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom: 1px solid #ced4da;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li a {
+  width: 100%;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 10px;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li a i {
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li:hover {
+  color: #121d2a;
+  background-color: rgb(242, 254, 255);
+  border-bottom: 1px solid #121d2a;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li:first-child {
+  border-radius: 0 !important;
+}
+body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li:first-child span {
+  margin-right: 14px;
+}
+body .mainContainer header nav ul .search i {
+  color: #ffffff;
+  font-size: 13px;
+  text-align: center;
+  padding: 14px 25px;
+  background-color: #121d2a;
+  -webkit-text-stroke: 0.5px;
+  border-radius: 4px;
+}
+body .mainContainer header nav ul .search i:hover {
+  background-color: rgba(0, 0, 0, 0.7176470588);
+  transition: all 0.3s ease-in-out;
+}
+body .mainContainer header nav ul a {
+  width: 100px;
+  text-align: center;
+  padding: 23px 8px;
+  font-size: 0.9rem;
+  color: #121d2a;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+body .mainContainer header nav ul a:hover {
+  color: #121d2a;
+  font-weight: 500;
+  border-bottom: 2px solid #121d2a;
+}
+body .mainContainer header nav ul a:hover {
+  color: #121d2a;
+  font-weight: 600;
+  transition: all 0.1s ease;
+}
+body .mainContainer header .searchDropDown {
+  display: none;
+  position: absolute;
+  top: 75px;
+  right: 12%;
+  width: 34.7%;
+  height: 50px;
+  padding: 6px;
+  background-color: #ffffff;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+body .mainContainer header .searchDropDown form {
+  width: 100%;
+}
+body .mainContainer header .searchDropDown form input {
+  width: 100%;
+  height: 100%;
+  padding: 3px 10px;
+  color: #121d2a;
+  border: 1px solid #f4f4f5;
+  border-radius: 4px;
+}
+body .mainContainer header .searchDropDown form input::placeholder {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-weight: 400;
+  color: #9d9d9d;
+}
+body .mainContainer header .searchDropDown form input:focus-within {
+  border: 1px solid #ced4da;
+  outline: none;
+  border-radius: 3px;
+}
+body .mainContainer header .searchDropDown form button {
+  width: 10%;
+  border: none;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+body .mainContainer header .searchDropDown form button:hover {
+  background-color: #ced4da;
+}
+body .mainContainer header .searchDropDown span {
+  width: 40px;
+}
+body .mainContainer header .home a {
+  border-bottom: 2px solid #121d2a;
+}
+body .mainContainer .blogContents {
+  width: 87%;
+  margin: auto;
+}
+body .mainContainer .blogContents section .mainContentContainer {
+  width: 50%;
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard {
+  width: 100%;
+  word-break: break-all;
+  hyphens: auto;
+  margin-bottom: 30px;
+  transition: translate 0.5s ease;
+  background-color: #ffffff;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard:hover {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.123);
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .userAvater {
+  display: flex;
+  align-items: center;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .userAvater img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50px;
+  border: 1px solid #f4f4f5;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .userAvater .avaterDetails {
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #121d2a;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo {
+  display: flex;
+  align-items: center;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo p {
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-right: 5px;
+  color: #9d9d9d;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo i {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #7a7a7a;
+  padding: 10px;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo i:hover {
+  color: #121d2a;
+  border-radius: 50%;
+  background-color: #f4f4f5;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog {
+  width: 27%;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog .modal-body {
+  padding: 0;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog .modal-body form {
+  width: 100%;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog .modal-body form button {
+  width: 100%;
+  border: none;
+  background: none;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog .modal-body form button li {
+  color: #eb253f;
+  padding: 14px 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-weight: 600;
+  border-bottom: 1px solid #ced4da;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog .modal-body form button li:hover {
+  background-color: #f4f4f5;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog .modal-body form a li {
+  width: 100%;
+  color: #121d2a;
+  padding: 14px 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-weight: 400;
+  border-bottom: 1px solid #ced4da;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog .modal-body form a li:hover {
+  background-color: #f4f4f5;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog .modal-body form a .nthChild {
+  color: #eb253f;
+  font-weight: 600;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog .modal-body form a .lastChild {
+  border-bottom: none;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postPhoto {
+  overflow: hidden;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postPhoto img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postPhoto img:hover {
+  transform: scale(1.01);
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postPhoto .timeAgo {
+  background-color: rgba(255, 255, 255, 0.678);
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postPhoto .timeAgo h4 {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postIconsContainer .rightIconsDiv {
+  position: relative;
+  bottom: 60px;
+  margin: -180px 20px 0 0;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postIconsContainer .rightIconsDiv div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postIconsContainer .rightIconsDiv div i {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: black;
+  border-radius: 50%;
+  padding: 8px 6px 3px 6px;
+  background-color: rgba(255, 255, 255, 0.527);
+  transition: all 0.4s;
+  margin-bottom: 0px;
+  transition: all 0.4s;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postIconsContainer .rightIconsDiv div i:hover {
+  background-color: rgb(215, 252, 246);
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postIconsContainer .rightIconsDiv div p {
+  font-size: 0.7rem;
+  font-weight: 500;
+  font-weight: 600;
+  color: #121d2a;
+  background-color: rgba(255, 255, 255, 0.527);
+  padding: 0 7px;
+  border-radius: 3px;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postIconsContainer .rightIconsDiv div:hover i {
+  background-color: #ffffff;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postIconsContainer .rightIconsDiv div:hover p {
+  background-color: #ffffff;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postIconsContainer .rightIconsDiv .shares i {
+  transform: scaleX(-1);
+  transform-origin: 50% 50%;
+  -webkit-transform: scaleX(-1); /* Safari and Chrome */
+  -moz-transform: scaleX(-1); /* Firefox */
+  -ms-transform: scaleX(-1); /* Internet Explorer */
+  -o-transform: scaleX(-1); /* Opera */
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postTextWrapper {
+  padding: 10px 15px;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postTextWrapper .postCategory {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #121d2a;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postTextWrapper .postParagraph {
+  display: flex;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding-bottom: 10px;
+  color: #7a7a7a;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postTextWrapper .postParagraph button {
+  color: #7a7a7a;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-weight: 400;
+  border: none;
+  background: none;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postTextWrapper .commentsCount {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #9d9d9d;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postCommentWrapper {
+  padding: 12px 15px;
+  border-top: 1px solid #f4f4f5;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postCommentWrapper .emojiWrapper {
+  width: 6%;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postCommentWrapper .emojiWrapper i {
+  font-weight: 700;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #121d2a;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postCommentWrapper .commentWrapper {
+  width: 84%;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postCommentWrapper .commentWrapper textarea {
+  width: 100%;
+  height: 20px;
+  border: none;
+  resize: none;
+  padding-right: 4.4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #121d2a;
+  line-height: 1rem;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postCommentWrapper .commentWrapper textarea::placeholder {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #9d9d9d;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postCommentWrapper .commentWrapper textarea:focus {
+  outline: none;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postCommentWrapper .postBtnWrapper {
+  width: 10%;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postCommentWrapper .postBtnWrapper button {
+  width: 100%;
+  border: none;
+  background: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-weight: 500;
+  color: rgba(79, 227, 183, 0.768627451);
+}
+body .mainContainer .blogContents section .rightSideContentContainer {
+  display: flex;
+  width: 45.7%;
+  height: 100vh;
+  top: 70px;
+  position: sticky;
+  padding-left: 4%;
+  align-items: center;
+  flex-direction: column;
+}
+body .mainContainer .blogContents .dropUsAmessage {
+  width: 87%;
+  position: relative;
+  bottom: -90px;
+  margin: 0 auto;
+  margin-top: -110px;
+  background-color: rgb(242, 254, 255);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+body .mainContainer .blogContents .dropUsAmessage .textBlockContainer p {
+  width: 72%;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7176470588);
+}
+body .mainContainer .blogContents .dropUsAmessage .textBlockContainer a {
+  border-radius: 4px;
+  padding: 9px 12px;
+  font-size: 0.9rem;
+  color: #121d2a;
+  background-color: #00e87c;
+}
+body .mainContainer .blogContents .dropUsAmessage .textBlockContainer a:hover {
+  color: #ffffff;
+  background-color: #00835c;
+}
+body footer {
+  height: 350px;
+  background-color: #121d2a;
+  padding: 0 12%;
+}
+body footer div {
+  width: 25%;
+  display: flex;
+  margin-top: 100px;
+}
+body footer div ul p {
+  color: #ffffff;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+body footer div ul li a {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #7a7a7a;
+}
+body footer div ul li a:hover {
+  color: #00835c;
+}
+body footer div:last-child ul li ul {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+body footer div:last-child ul li ul li a {
+  width: 20px;
+}
+body footer div:last-child ul li ul li a img {
+  width: 18px;
+}
+body footer div:last-child ul .logoList a img {
+  width: 100px;
+}
+body .postModal {
+  width: 37%;
+  z-index: 100;
+  display: none;
+  margin-top: 250px;
+  background-color: #ffffff;
+}
+body .postModal .modal-dialog {
+  max-width: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .postModal .modal-dialog .modalContent {
+  width: 600px;
+}
+body .postModal .modal-dialog .modalContent form .modal-body label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-weight: 400;
+  color: #9d9d9d;
+}
+body .postModal .modal-dialog .modalContent form .modal-body .addCatBtn {
+  color: #6025eb;
+  border-color: #6025eb;
+}
+body .postModal .modal-dialog .modalContent form .modal-body .addCatBtn:hover {
+  color: #ffffff;
+  background-color: #6025eb;
+}
+body .postModal .modal-dialog .modalContent form .modal-body .input-group span i {
+  color: #6025eb;
+}
+body .postModal .modal-dialog .modalContent form .modal-body .input-group input {
+  color: rgba(0, 0, 0, 0.7176470588) !important;
+}
+body .postModal .modal-dialog .modalContent form .modal-body .input-group input::placeholder {
+  color: #9d9d9d;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+body .postModal .modal-dialog .modalContent form .modal-body .input-group textarea {
+  color: rgba(0, 0, 0, 0.7176470588) !important;
+}
+body .postModal .modal-dialog .modalContent form .modal-body .input-group textarea::placeholder {
+  color: #9d9d9d;
+  font-size: 0.9rem;
+  font-weight: 400;
+  position: relative;
+  top: 33px;
+}
+body .postModal .modal-dialog .modalContent form .modal-footer .sendPostBtn {
+  padding: 7px 20px;
+  background-color: #eb253f;
+  border: none;
+}
+body .postModal .modal-dialog .modalContent form .modal-footer .sendPostBtn:hover {
+  background-color: #6025eb;
+}
+body .postBtn {
+  position: fixed;
+  bottom: 70px;
+  right: 45px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  font-size: 30px;
+  color: #ffffff;
+  box-shadow: 0px 0px 30px #eb253f;
+  background-color: #eb253f;
+  z-index: 2;
+}
+body .postBtn:hover {
+  background-color: #6025eb;
+}
+body .createPostTooltip {
+  position: fixed;
+  bottom: 80px;
+  right: 45px;
+  width: 200px;
+  padding: 12px 0 12px 20px;
+  border-radius: 50px;
+  border: 1px solid #eb253f;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.192);
+  z-index: 1;
+  transition: right 1.4s, width 1.4s;
+  visibility: visible;
+}
+body .createPostTooltip p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #121d2a;
+  visibility: visible;
+}
+body .createPostTooltip.hide {
+  right: -250px;
+  width: 0px;
+  visibility: hidden;
+}
+body .createPostTooltip.hide p {
+  visibility: hidden;
+}
+body .postModalBackground {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.7176470588);
+}
+
+/*# sourceMappingURL=index.css.map */

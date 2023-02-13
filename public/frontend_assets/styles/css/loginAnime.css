@@ -1,0 +1,46 @@
+svg#freepik_stories-mobile-login:not(.animated) .animable {
+  opacity: 0;
+}
+svg#freepik_stories-mobile-login.animated
+  #freepik--background-simple--inject-1--inject-4 {
+  animation: 1.7s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn,
+    6s Infinite linear floating;
+  animation-delay: 0.1s, 2.3s;
+  opacity: 0;
+}
+svg#freepik_stories-mobile-login.animated #freepik--Plant--inject-1--inject-4 {
+  animation: 6s Infinite linear wind;
+  animation-delay: 0.5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes floating {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes wind {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(1deg);
+  }
+  75% {
+    transform: rotate(-1deg);
+  }
+}

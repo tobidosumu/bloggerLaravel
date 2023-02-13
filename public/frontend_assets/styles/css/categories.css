@@ -68,14 +68,14 @@ body .mainContainer header nav ul li a {
 }
 body .mainContainer header nav ul .home a {
   padding-top: 23px;
-  padding-bottom: 20px;
+  padding-bottom: 21px;
 }
 body .mainContainer header nav ul .home a i {
   font-size: 1.5rem;
 }
 body .mainContainer header nav ul .cart a {
   padding-top: 23px;
-  padding-bottom: 20px;
+  padding-bottom: 21px;
 }
 body .mainContainer header nav ul .cart a span {
   position: absolute;
@@ -379,6 +379,14 @@ body .mainContainer .blogContents section .mainContentContainer table tbody tr t
 body .mainContainer .blogContents section .mainContentContainer table tbody tr td a:nth-child(2):hover {
   color: #ffffff;
   background-color: #eb253f;
+}
+body .mainContainer .blogContents .updateModalContainer {
+  margin: auto;
+  width: 50%;
+}
+body .mainContainer .blogContents .updateModalContainer label {
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 body .mainContainer .blogContents .dropUsAmessage {
   width: 87%;

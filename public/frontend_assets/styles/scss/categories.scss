@@ -55,6 +55,17 @@ body {
                 }
             }
 
+            .updateModalContainer {
+                margin: auto;
+                width: 50%;
+                // border: 1px solid red;
+
+                label {
+                    @include primaryFont;
+                    font-weight: 500;
+                }
+            }
+
             .dropUsAmessage { // this block styles the div before the footer
                   
                 @include dropUsAmessage;

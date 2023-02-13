@@ -68,14 +68,14 @@ body .mainContainer header nav ul li a {
 }
 body .mainContainer header nav ul .home a {
   padding-top: 23px;
-  padding-bottom: 20px;
+  padding-bottom: 21px;
 }
 body .mainContainer header nav ul .home a i {
   font-size: 1.5rem;
 }
 body .mainContainer header nav ul .cart a {
   padding-top: 23px;
-  padding-bottom: 20px;
+  padding-bottom: 21px;
 }
 body .mainContainer header nav ul .cart a span {
   position: absolute;
@@ -791,6 +791,7 @@ body .postModalBackground {
   display: none;
   top: 0px;
   background-color: rgba(0, 0, 0, 0.7176470588);
+  z-index: 100;
 }
 
 /*# sourceMappingURL=index.css.map */

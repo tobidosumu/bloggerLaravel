@@ -159,7 +159,7 @@ $lightBlack: #000000b7;
       .home {
         a {
           padding-top: 23px;
-          padding-bottom: 20px;
+          padding-bottom: 21px;
 
           i {
             @include mainNavIcon
@@ -170,7 +170,7 @@ $lightBlack: #000000b7;
       .cart {
         a {
           padding-top: 23px;
-          padding-bottom: 20px;
+          padding-bottom: 21px;
 
           span {
             position: absolute;
@@ -653,4 +653,5 @@ $lightBlack: #000000b7;
   display: none;
   top: 0px;
   background-color: $lightBlack;
+  z-index: 100;
 }

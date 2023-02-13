@@ -14,6 +14,9 @@
 
         <section class="mainContentContainer">   
 
+            <!-- Update category modal -->
+            <x-updateCatModal/>
+
             <table class="table table-striped table-hover">
 
                 <thead>
@@ -49,6 +52,9 @@
             </table>
 
         </section>
+
+        <!-- Create category Modal -->
+        <x-addCatModal/>
 
     </section>
 

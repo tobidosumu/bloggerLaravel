@@ -106,6 +106,9 @@
             
         </section>
 
+        <!-- Create post Modal -->
+        <x-addPostModal/>
+        
     </section>
 
 @endsection

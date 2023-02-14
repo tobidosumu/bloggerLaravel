@@ -37,31 +37,36 @@ class CustomAuthController extends Controller
     public function customRegistration(Request $request)
     {
         $request->validate([
-            'name' => 'required|min:3|max:20',
-            'email' => 'required|email|min:2|unique:users',
-            'password' => 'required|min:8|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z\d]).+$/',
-            'password_confirmation' => 'required_with:password|same:password',
+            'name' => 'required|min:3|max:50',
+            'email' => 'required|email|min:5|unique:users',
+            'password' => [
+                'required',
+                'min:8',
+                'regex:/^(?=.*[a-z])/m',
+                'regex:/^(?=.*[A-Z])/m',
+                'regex:/^(?=.*\d)/m',
+                // 'regex:/^(?=.*[^a-zA-Z\d])/m'
+            ],
+            // 'password_confirmation' => 'required_with:password|same:password',
         ], [
             'name.required' => 'Name cannot be empty.',
             'name.min' => 'Name must be at least :min characters.',
-            'name.max' => 'The name may not be greater than :max characters.',
-
+            'name.max' => 'Name cannot be greater than :max characters.',
             'email.required' => 'Email cannot be empty.',
-            'email.email' => 'The email must be a valid email address.',
-            'email.min' => 'The email must be at least :min characters.',
-            'email.unique' => 'The email has already been taken.',
-
+            'email.email' => 'Email must be a valid email address.',
+            'email.min' => 'Email must be at least :min characters.',
+            'email.unique' => 'Email has already been taken.',
             'password.required' => 'Password cannot be empty.',
             'password.min' => 'Password must be at least :min characters.',
-            'password.regex' => 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.',
+            'password.regex' => 'Password must contain at least one uppercase letter, one lowercase letter and one number',
             'password_confirmation.required_with' => 'Password confirmation field is required.',
-            'password_confirmation.same' => 'The password confirmation does not match the password.'
+            'password_confirmation.same' => 'Password confirmation does not match the password.'
         ]);
     
         $data = $request->all();
         $check = $this->create($data);
     
-        return redirect('dashboard');
+        return redirect('dashboard')->withSuccess('You have signed-in');
     }    
 
     public function create(array $data)
@@ -83,7 +88,7 @@ class CustomAuthController extends Controller
     }
     
     public function signOut() {
-        // Session::flush();
+        Session::flush();
         Auth::logout();
   
         return Redirect('login');

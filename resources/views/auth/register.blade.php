@@ -1,52 +1,106 @@
-<x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
+@extends('auth.guest')
 
-        <!-- Name -->
-        <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
-        </div>
+<!-- Style/title for index page -->
+@section('styles')
+    <link rel="stylesheet" type="text/css" href="{{ asset('frontend_assets/styles/css/signup.css') }}">
+    <title>{{ 'Blogger | Register' }}</title>
+@endsection
 
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
+<!-- Signup left side content wrapper -->
+@section('leftAside')
+    <img class="img-fluid" src="{{ ('frontend_assets/assets/svg/signupBgIcon.svg') }}" alt="Registration image">
+    <div class="d-flex justify-content-center align-items-center"><h2>Welcome to </h2><img class="img-fluid ms-1" src="{{ ('frontend_assets/assets/svg/bloggerLogoWhite.svg') }}" alt="blogger logo"></div>
+@endsection
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+<!-- Register right side content wrapper -->
+@section('rightAside')
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
+    <div class="header d-flex justify-content-end align-items-center">
 
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
+        @section('headerTexts')
+            Already have an account?
+        @endsection
 
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+        @section('headerLink')
+            {{ url('/login') }}
+        @endsection
 
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
+        @section('headerLinkTexts')
+            Login
+        @endsection
 
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
+        <!-- User registration form -->
+        @section('formContents')
 
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
+            <h2 class="py-4">Create your free account</h2>
+            <form action="{{ route('register.custom') }}" method="POST"> 
 
-            <x-primary-button class="ml-4">
-                {{ __('Register') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+                @csrf
+
+                <!-- Name input -->
+                <div class="inputContentsWrapper">
+
+                    <label for="name">
+                        Name <b class="text-danger">*</b>
+                        @if ($errors->has('name'))
+                            <span class="text-danger">{{ $errors->first('name') }}</span>
+                        @endif
+                    </label>
+
+                    <input type="text" name="name" placeholder="Enter name">
+                
+                </div>
+                
+                <!-- Email input -->
+                <div class="inputContentsWrapper">
+
+                    <label for="email">
+                        Email address <b class="text-danger">*</b>
+                        @if ($errors->has('email'))
+                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                        @endif
+                    </label>
+
+                    <input type="text" name="email" placeholder="Enter email address">
+
+                </div>
+                
+                <!-- Password input -->
+                <div class="inputContentsWrapper">
+
+                    <label for="password">
+                        Password <b class="text-danger">*</b>
+                        @if ($errors->has('password'))
+                            <span class="text-danger">{{ $errors->first('password') }}</span>
+                        @endif
+                    </label>
+
+                    <input type="password" name="password" placeholder="Enter password">
+
+                </div>
+                
+                <!-- Comfirm Password input -->
+                <div class="inputContentsWrapper">
+                    <label for="confirmPassword">
+                        Comfirm password <b class="text-danger">*</b>
+                        @if ($errors->has('confirmPassword'))
+                            <span class="text-danger">{{ $errors->first('confirmPassword') }}</span>
+                        @endif
+                    </label>
+
+                    <input type="password" name="confirmPassword" placeholder="Confirm password">
+
+                </div>
+                
+                <!-- Submit button -->
+                <div class="createAcctBtn mt-4">
+                    <button type="submit" class="btn rounded-1">Create your account</button>
+                </div>
+                
+            </form>
+
+        @endsection
+
+    </div>
+
+@endsection

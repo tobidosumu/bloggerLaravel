@@ -12,19 +12,11 @@
     <section class="blogContents d-flex justify-content-between">
 
         <!-- Hero contents -->
-        <section class="hero border-bottom">
+        <section class="dashboard border-bottom">
 
             <section class="caption">
-            
-                <!-- Logged out user view -->
-                <!-- <div class="notLoggedIndashboardView">
-                    <div class="d-flex justify-content-evenly">
-                        <a href="./signup.php" class="actionBtn rounded-1">Sign up</a> 
-                        <a href="./login.php" class="actionBtn rounded-1">Login</a> 
-                    </div>
-                </div> -->
 
-                <!-- Logged in user view -->
+                <!-- Logged in user dashboard view -->
                 <div class="dashboardView d-flex justify-content-center align-items-center"> <!--- Signed in Dashboard -->
                     <div class="userProfile d-flex flex-column align-items-center">
                         <div class="userProfileAvatar d-flex justify-content-between align-items-center">

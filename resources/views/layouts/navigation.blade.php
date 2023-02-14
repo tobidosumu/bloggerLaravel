@@ -16,24 +16,45 @@
 
     <!-- User profile link -->
     <li class="profile d-flex justify-content-between align-items-center">
+
+        <!-- Caret Link -->
         <div class="profileLinkWrapper" class="d-flex justify-content-between align-items-center">
             <i class="bi bi-caret-down-fill caretIcon" onclick="revealProfileDropdown()"></i>
-        
+            
+            <!-- User avater Link -->
             <a href="{{ url('/dashboard') }}">
                 <img src="{{ asset('frontend_assets/assets/images/moji.png') }}" alt="user account">
             </a>
         </div>
 
         <!-- User profile login/logout dropdown menu -->
-        <div id="profileDropdown" class="profileDropdown">
+        <div id="profileDropdown" class="profileDropdown pb-2">
+
             <ul class="d-flex flex-column">
-                <form action="" method="post">
-                    <button type="submit" name="logOutUser" class="logout d-flex justify-content-even align-items-center">
-                        <i class="bi bi-power"></i><span class="ps-2">Log out</span>
-                    </button>
-                </form>
+
+                @guest
+                    <li>
+                        <a class="d-flex justify-content-even align-items-center" href="{{ route('login') }}">
+                            <i class="bi bi-box-arrow-in-right pe-2"></i>Login
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-flex justify-content-even align-items-center border-top" href="{{ route('register-user') }}">
+                            <i class="bi bi-box-arrow-in-right pe-2"></i>Register
+                        </a>
+                    </li>
+                @else
+                    <li class="logout">
+                        <a class="d-flex justify-content-even align-items-center" href="{{ route('signout') }}">
+                            <i class="bi bi-power pe-2"></i> Logout
+                        </a>
+                    </li>
+                @endguest
+
             </ul>
+
         </div>
+
     </li>
 
     <!-- Search box-->

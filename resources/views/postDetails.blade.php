@@ -50,7 +50,7 @@
                     
                     <!-- Post comments -->
                     <div class="comments">
-                        <a href="#scrollspyAboutMe"><i class="bi bi-chat-square"></i></a>
+                        <a href="#scrollspyComment"><i class="bi bi-chat-square"></i></a>
                         <p>1907</p>
                     </div>
                     
@@ -79,7 +79,7 @@
                     <p>description</p>
                 </div>
 
-                <div id="scrollspyAboutMe" class="commentSection pt-3">
+                <div id="scrollspyComment" class="commentSection pt-3">
                     
                     <!-- Post details icons -->
                     <div class="iconsWrapper d-flex justify-content-between my-4">

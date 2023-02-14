@@ -79,10 +79,10 @@
 
                 </div>
                 
-                <!-- Comfirm Password input -->
+                <!-- Confirm Password input -->
                 <div class="inputContentsWrapper">
                     <label for="confirmPassword">
-                        Comfirm password <b class="text-danger">*</b>
+                        Confirm password <b class="text-danger">*</b>
                         @if ($errors->has('confirmPassword'))
                             <span class="text-danger">{{ $errors->first('confirmPassword') }}</span>
                         @endif
@@ -96,7 +96,7 @@
                 <div class="createAcctBtn mt-4">
                     <button type="submit" class="btn rounded-1">Create your account</button>
                 </div>
-                
+
             </form>
 
         @endsection

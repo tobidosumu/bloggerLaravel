@@ -20,7 +20,7 @@ class CustomAuthController extends Controller
             'password' => 'required'
         ]);
    
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('name', 'email', 'password');
         if (Auth::attempt($credentials)) {
             return redirect()->intended('dashboard')->withSuccess('Signed in');
         }
@@ -44,7 +44,7 @@ class CustomAuthController extends Controller
         $data = $request->all();
         $check = $this->create($data);
          
-        return redirect("dashboard")->withSuccess('You are signed-in');
+        return redirect('dashboard')->withSuccess('You are signed-in');
     }
 
     public function create(array $data)
@@ -66,7 +66,7 @@ class CustomAuthController extends Controller
     }
     
     public function signOut() {
-        Session::flush();
+        // Session::flush();
         Auth::logout();
   
         return Redirect('login');

@@ -59,7 +59,7 @@
                 <div class="inputContentsWrapper"> <!-- Password input -->
 
                     <label for="password">
-                        Password address <b class="text-danger">*</b>
+                        Password <b class="text-danger">*</b>
                         @if ($errors->has('password'))
                             <span class="text-danger">{{ $errors->first('password') }}</span>
                         @endif

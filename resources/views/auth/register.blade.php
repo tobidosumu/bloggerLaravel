@@ -47,7 +47,7 @@
                         @endif
                     </label>
 
-                    <input type="text" name="name" placeholder="Enter name">
+                    <input type="text" name="name" placeholder="Enter name" value="{{ old('name') }}">
                 
                 </div>
                 
@@ -61,7 +61,7 @@
                         @endif
                     </label>
 
-                    <input type="text" name="email" placeholder="Enter email address">
+                    <input type="text" name="email" placeholder="Enter email address" value="{{ old('email') }}">
 
                 </div>
                 

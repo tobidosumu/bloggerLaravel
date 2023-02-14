@@ -46,19 +46,6 @@ body {
   border-width: 1px !important;
 }
 
-body .myAlert {
-  margin-top: 95px !important;
-  color: #121d2a;
-  background-color: #00e87c;
-}
-body .myAlert div {
-  display: flex;
-  align-items: center;
-}
-body .myAlert div i {
-  font-size: 25px;
-  margin-right: 10px;
-}
 body .mainContainer {
   max-width: 100%;
   background-color: #ffffff;
@@ -79,15 +66,9 @@ body .mainContainer header nav ul li a {
   font-size: 0.9rem;
   font-weight: 500;
 }
-body .mainContainer header nav ul .home a span {
-  position: absolute;
-  margin-left: -10px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  border-radius: 50%;
-  padding: 2px 8px;
-  border: 2px solid #ffffff;
-  background-color: #f4f4f5;
+body .mainContainer header nav ul .home a {
+  padding-top: 23px;
+  padding-bottom: 21px;
 }
 body .mainContainer header nav ul .home a i {
   font-size: 1.5rem;
@@ -112,8 +93,6 @@ body .mainContainer header nav ul .cart a i {
 body .mainContainer header nav ul .profile .profileLinkWrapper {
   padding: 4px;
   padding-right: 0;
-  border-radius: 50px;
-  background-color: rgb(215, 252, 246);
 }
 body .mainContainer header nav ul .profile .profileLinkWrapper i {
   color: #9d9d9d;
@@ -216,7 +195,6 @@ body .mainContainer header nav ul .profile:hover .caretIcon {
 body .mainContainer header nav ul .profile .notLoggedIn {
   border-radius: 50px;
   padding: 3px !important;
-  background-color: rgb(215, 252, 246);
 }
 body .mainContainer header nav ul .profile .notLoggedIn .caretIcon {
   position: relative;
@@ -250,9 +228,6 @@ body .mainContainer header nav ul .profile .notLoggedIn:hover {
   background-color: rgb(215, 252, 246);
 }
 body .mainContainer header nav ul .profile .notLoggedIn:hover .userIcon {
-  color: #121d2a;
-}
-body .mainContainer header nav ul .profile .notLoggedIn .userIcon {
   color: #121d2a;
 }
 body .mainContainer header nav ul .profile .notLoggedInProfileDropdown {
@@ -374,8 +349,8 @@ body .mainContainer header .searchDropDown span {
   width: 40px;
 }
 body .mainContainer .blogContents {
-  width: 100%;
-  padding: 0 12%;
+  width: 87%;
+  margin: auto;
 }
 body .mainContainer .blogContents nav ul li i {
   font-size: 0.7rem;
@@ -429,31 +404,21 @@ body .mainContainer .blogContents section .mainContentContainer .innerContainer 
   align-items: center;
 }
 body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv div a {
+  cursor: pointer;
   margin-bottom: 0.6px;
 }
 body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv div a i {
   font-size: 1.3rem;
-  font-weight: 600;
-  color: black;
-  border-radius: 50%;
-  padding: 8px 6px 3px 6px;
-  background-color: rgba(255, 255, 255, 0.527);
-  transition: all 0.4s;
-  font-size: 1.3rem;
   padding: 6px 8px 2px 8px;
-}
-body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv div a i:hover {
-  background-color: rgb(215, 252, 246);
 }
 body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv div a i:hover {
   background-color: #ffffff !important;
 }
 body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv div i {
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 400;
   color: black;
-  border-radius: 50%;
-  padding: 8px 6px 3px 6px;
+  border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.527);
   transition: all 0.4s;
   margin-bottom: 0px;
@@ -607,8 +572,9 @@ body .mainContainer .blogContents section .rightSideContentContainer .captionCar
   height: 50px;
 }
 body .mainContainer .blogContents section .rightSideContentContainer .captionCard i:first-child {
-  font-size: 30px;
+  font-size: 31px;
   color: #9d9d9d;
+  padding: 0 8px;
   background-color: rgb(242, 254, 255);
 }
 body .mainContainer .blogContents section .rightSideContentContainer .captionCard i:last-child {
@@ -621,6 +587,7 @@ body .mainContainer .blogContents section .rightSideContentContainer .captionCar
   font-weight: 500;
   text-transform: uppercase;
   color: #9d9d9d;
+  padding-left: 6px;
 }
 body .mainContainer .blogContents section .rightSideContentContainer .captionCard:hover {
   background-color: rgb(215, 252, 246);
@@ -730,21 +697,6 @@ body footer div:last-child ul li ul li a img {
 }
 body footer div:last-child ul .logoList a img {
   width: 100px;
-}
-body .postBtn {
-  position: fixed;
-  bottom: 70px;
-  right: 45px;
-  width: 70px;
-  height: 70px;
-  border-radius: 50px;
-  font-size: 30px;
-  color: #ffffff;
-  box-shadow: 0px 0px 30px #c70021;
-  background-color: #eb253f;
-}
-body .postBtn:hover {
-  background-color: #6025eb;
 }
 
 /*# sourceMappingURL=postDetails.css.map */

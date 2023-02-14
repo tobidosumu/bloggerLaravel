@@ -1,7 +1,7 @@
 @extends('layouts.guest')
 
 {{-- Session Status --}}
-{{-- <x-auth-session-status class="mb-4" :status="session('status')" /> --}}
+<x-auth-session-status class="mb-4" :status="session('status')" />
 
 <!-- Style/title for Login page -->
 @section('styles')
@@ -36,7 +36,9 @@
         @section('formContents')
 
             <h2 class="py-4">Login to your account</h2>
-            <form action="POST" method="{{ route('login') }}"> 
+            <form action="POST" method="{{ route('login.custom') }}"> 
+
+                @csrf
 
                 Email Address
                 <div>

@@ -48,7 +48,7 @@ body {
 
 body .mainContainer {
   max-width: 100%;
-  background-color: #f4f4f5;
+  background-color: #ffffff;
 }
 body .mainContainer header {
   padding: 0 12%;
@@ -492,11 +492,10 @@ body .mainContainer .blogContents section .mainContentContainer .postCard .postI
   align-items: center;
 }
 body .mainContainer .blogContents section .mainContentContainer .postCard .postIconsContainer .rightIconsDiv div i {
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 400;
   color: black;
-  border-radius: 50%;
-  padding: 8px 6px 3px 6px;
+  border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.527);
   transition: all 0.4s;
   margin-bottom: 0px;

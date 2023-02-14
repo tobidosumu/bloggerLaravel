@@ -6,8 +6,7 @@
 body {
 
     .mainContainer {
-        max-width: 100%;
-        background-color: $lightGrey;
+        @include mainContainer;
 
         header {
             @include header;

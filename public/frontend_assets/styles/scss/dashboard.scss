@@ -47,14 +47,14 @@ body {
             }
         } 
 
-        .hero { // hero
+        .dashboard { // dashboard
             width: 100% !important;
             height: 270px;
             display: flex;
             flex-direction: column;
             background-color: $lightGreenColor;
 
-            .caption {  // hero caption
+            .caption {  // dashboard caption
                 width: 100%;
                 height: 100%;
                 display: flex;

@@ -107,16 +107,16 @@ body section #rightAside .formWrapper .formContents h2 {
 body section #rightAside .formWrapper .formContents form {
   width: 80%;
 }
-body section #rightAside .formWrapper .formContents form div {
+body section #rightAside .formWrapper .formContents form .inputContentsWrapper {
   display: flex;
   flex-direction: column;
 }
-body section #rightAside .formWrapper .formContents form div label {
+body section #rightAside .formWrapper .formContents form .inputContentsWrapper label {
   color: #7a7a7a;
   padding: 14px 0 4px 12px;
   font-size: 0.9rem;
 }
-body section #rightAside .formWrapper .formContents form div input {
+body section #rightAside .formWrapper .formContents form .inputContentsWrapper input {
   height: 40px;
   border: none;
   color: #121d2a;
@@ -125,21 +125,37 @@ body section #rightAside .formWrapper .formContents form div input {
   padding-left: 12px;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.151);
 }
-body section #rightAside .formWrapper .formContents form div input::placeholder {
+body section #rightAside .formWrapper .formContents form .inputContentsWrapper input::placeholder {
   color: #7a7a7a;
   font-size: 0.8rem;
   font-weight: 500;
 }
-body section #rightAside .formWrapper .formContents form div input:focus {
+body section #rightAside .formWrapper .formContents form .inputContentsWrapper input:focus {
   outline: 1px solid #00e87c;
 }
-body section #rightAside .formWrapper .formContents form .createAcctBtn input {
-  font-weight: 600;
+body section #rightAside .formWrapper .formContents form .createAcctBtn button {
+  width: 100%;
   color: #ffffff;
+  padding: 7px 0;
+  font-weight: 600;
   background-color: #00e87c;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.151);
 }
-body section #rightAside .formWrapper .formContents form .createAcctBtn input:hover {
+body section #rightAside .formWrapper .formContents form .createAcctBtn button:hover {
   background-color: #6025eb;
+}
+body section #rightAside .formWrapper .formContents form .createAcctBtn .belowSubmitBtns .checkbox {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #121d2a;
+}
+body section #rightAside .formWrapper .formContents form .createAcctBtn a {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #00e87c;
+}
+body section #rightAside .formWrapper .formContents form .createAcctBtn a:hover {
+  color: #6025eb;
 }
 
 /*# sourceMappingURL=signup.css.map */

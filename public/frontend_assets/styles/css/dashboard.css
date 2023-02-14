@@ -170,22 +170,30 @@ body .mainContainer header nav ul .profile .profileDropdown {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.089);
   transition: all 1s ease;
 }
-body .mainContainer header nav ul .profile .profileDropdown ul a {
+body .mainContainer header nav ul .profile .profileDropdown ul li a {
   width: 100%;
   color: #121d2a;
   display: flex;
   margin: 7px 0;
   margin-bottom: 0;
-  font-size: 0.9rem;
-  padding: 7px 20px 0 20px;
-  border-left: 2px solid #ffffff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-weight: 500;
+  padding: 7px 20px;
 }
-body .mainContainer header nav ul .profile .profileDropdown ul a i {
+body .mainContainer header nav ul .profile .profileDropdown ul li a i {
   color: #121d2a;
   font-size: 1.05rem;
   font-weight: 400;
 }
-body .mainContainer header nav ul .profile .profileDropdown ul .logout {
+body .mainContainer header nav ul .profile .profileDropdown ul li a:hover {
+  color: #ffffff;
+  background-color: #00e87c;
+}
+body .mainContainer header nav ul .profile .profileDropdown ul li a:hover i {
+  color: #ffffff;
+}
+body .mainContainer header nav ul .profile .profileDropdown ul .logout a {
   font-size: 0.8rem;
   font-weight: 500;
   padding: 8px 20px;
@@ -194,94 +202,28 @@ body .mainContainer header nav ul .profile .profileDropdown ul .logout {
   border-bottom-right-radius: 4px;
   background-color: rgba(235, 37, 63, 0.2666666667);
 }
-body .mainContainer header nav ul .profile .profileDropdown ul .logout:hover {
+body .mainContainer header nav ul .profile .profileDropdown ul .logout a:hover {
   color: #ffffff;
   background-color: #eb253f;
 }
-body .mainContainer header nav ul .profile .profileDropdown ul .logout:hover i {
+body .mainContainer header nav ul .profile .profileDropdown ul .logout a:hover i {
   color: #ffffff;
+}
+body .mainContainer header nav ul .profile a {
+  padding: 23px 8px;
+  font-size: 0.9rem;
+  color: #121d2a;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+body .mainContainer header nav ul .profile a:hover {
+  color: #121d2a;
+  font-weight: 600;
+  transition: all 0.1s ease;
 }
 body .mainContainer header nav ul .profile:hover .caretIcon {
   color: #121d2a !important;
   background-color: rgb(215, 252, 246) !important;
-}
-body .mainContainer header nav ul .profile .notLoggedIn {
-  border-radius: 50px;
-  padding: 3px !important;
-}
-body .mainContainer header nav ul .profile .notLoggedIn .caretIcon {
-  position: relative;
-  top: -8px;
-  left: -14px;
-  margin-left: 2px;
-  border-radius: 50px;
-  color: #9d9d9d;
-  padding: 4px 6.5px !important;
-  font-size: 0.7rem;
-  font-weight: 500;
-  background-color: #ffffff;
-  border: 2px solid #ffffff;
-}
-body .mainContainer header nav ul .profile .notLoggedIn .caretIcon:hover {
-  color: #121d2a;
-}
-body .mainContainer header nav ul .profile .notLoggedIn a {
-  padding: 4px 3px !important;
-  color: #9d9d9d;
-}
-body .mainContainer header nav ul .profile .notLoggedIn a .userIcon {
-  position: relative;
-  top: 2px;
-  font-size: 2.3rem;
-}
-body .mainContainer header nav ul .profile .notLoggedIn a:hover {
-  border: 0 !important;
-}
-body .mainContainer header nav ul .profile .notLoggedIn:hover {
-  background-color: rgb(215, 252, 246);
-}
-body .mainContainer header nav ul .profile .notLoggedIn:hover .userIcon {
-  color: #121d2a;
-}
-body .mainContainer header nav ul .profile .notLoggedInProfileDropdown {
-  display: none;
-  position: absolute;
-  top: 70px;
-  right: 21%;
-  width: 10%;
-  padding-left: 0;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  background-color: #ffffff;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.089);
-  transition: all 1s ease;
-}
-body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li {
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  border-bottom: 1px solid #ced4da;
-}
-body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li a {
-  width: 100%;
-  border: none;
-  font-size: 0.8rem;
-  font-weight: 500;
-  padding: 10px;
-}
-body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li a i {
-  font-size: 1.05rem;
-  font-weight: 400;
-}
-body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li:hover {
-  color: #121d2a;
-  background-color: rgb(242, 254, 255);
-  border-bottom: 1px solid #121d2a;
-}
-body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li:first-child {
-  border-radius: 0 !important;
-}
-body .mainContainer header nav ul .profile .notLoggedInProfileDropdown ul li:first-child span {
-  margin-right: 14px;
 }
 body .mainContainer header nav ul .search i {
   color: #ffffff;
@@ -295,25 +237,6 @@ body .mainContainer header nav ul .search i {
 body .mainContainer header nav ul .search i:hover {
   background-color: rgba(0, 0, 0, 0.7176470588);
   transition: all 0.3s ease-in-out;
-}
-body .mainContainer header nav ul a {
-  width: 100px;
-  text-align: center;
-  padding: 23px 8px;
-  font-size: 0.9rem;
-  color: #121d2a;
-  letter-spacing: 0.5px;
-  font-weight: 600;
-}
-body .mainContainer header nav ul a:hover {
-  color: #121d2a;
-  font-weight: 500;
-  border-bottom: 2px solid #121d2a;
-}
-body .mainContainer header nav ul a:hover {
-  color: #121d2a;
-  font-weight: 600;
-  transition: all 0.1s ease;
 }
 body .mainContainer header .searchDropDown {
   display: none;
@@ -378,14 +301,14 @@ body .mainContainer header .profile .profileLinkWrapper i {
   border-radius: 50%;
   background-color: #ffffff;
 }
-body .mainContainer .hero {
+body .mainContainer .dashboard {
   width: 100% !important;
   height: 270px;
   display: flex;
   flex-direction: column;
   background-color: rgb(242, 254, 255);
 }
-body .mainContainer .hero .caption {
+body .mainContainer .dashboard .caption {
   width: 100%;
   height: 100%;
   display: flex;
@@ -393,11 +316,11 @@ body .mainContainer .hero .caption {
   flex-direction: column;
   justify-content: center;
 }
-body .mainContainer .hero .caption .dashboardView {
+body .mainContainer .dashboard .caption .dashboardView {
   width: 100%;
   height: 100%;
 }
-body .mainContainer .hero .caption .dashboardView .userProfile .userProfileAvatar .likeCount {
+body .mainContainer .dashboard .caption .dashboardView .userProfile .userProfileAvatar .likeCount {
   color: #121d2a;
   margin-left: -40px;
   margin-bottom: -60px;
@@ -405,22 +328,22 @@ body .mainContainer .hero .caption .dashboardView .userProfile .userProfileAvata
   border: 2px solid #ffffff;
   background-color: rgba(79, 227, 183, 0.768627451);
 }
-body .mainContainer .hero .caption .dashboardView .userProfile .userProfileAvatar img {
+body .mainContainer .dashboard .caption .dashboardView .userProfile .userProfileAvatar img {
   width: 120px;
   border-radius: 50%;
   border: 2px solid #ffffff;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
 }
-body .mainContainer .hero .caption .dashboardView .userProfile p {
+body .mainContainer .dashboard .caption .dashboardView .userProfile p {
   color: rgba(0, 0, 0, 0.7176470588);
   font-size: 0.9rem;
   font-weight: 500;
 }
-body .mainContainer .hero .caption .notLoggedIndashboardView {
+body .mainContainer .dashboard .caption .notLoggedIndashboardView {
   text-align: center;
   width: 100%;
 }
-body .mainContainer .hero .caption .notLoggedIndashboardView div .actionBtn {
+body .mainContainer .dashboard .caption .notLoggedIndashboardView div .actionBtn {
   width: 14%;
   font-size: 0.9rem;
   font-weight: 500;
@@ -429,7 +352,7 @@ body .mainContainer .hero .caption .notLoggedIndashboardView div .actionBtn {
   background-color: #121d2a;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
 }
-body .mainContainer .hero .caption .notLoggedIndashboardView div .actionBtn:hover {
+body .mainContainer .dashboard .caption .notLoggedIndashboardView div .actionBtn:hover {
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.7176470588);
 }

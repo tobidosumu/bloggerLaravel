@@ -389,6 +389,7 @@ $lightBlack: #000000b7;
       }
     }
   }
+
   .searchDropDown { // searchDropDown
     display: none;
     position: absolute;
@@ -439,6 +440,11 @@ $lightBlack: #000000b7;
       width: 40px;
     }
   } 
+}
+
+@mixin mainContainer {
+  max-width: 100%;
+  background-color: $white;
 }
 
 @mixin footer {
@@ -561,10 +567,10 @@ $lightBlack: #000000b7;
 }
 
 @mixin postIcon {
-  @include semiTertiaryFont;
+  @include semiPrimaryFont();
   color: black;
-  border-radius: 50%;
-  padding: 8px 6px 3px 6px;
+  border-radius: 50px;
+  // padding: 8px 6px 3px 6px;
   background-color: $slightTransparentWhite;
   transition: all 0.4s;
   &:hover {

@@ -52,7 +52,7 @@
                         @endif
                     </label>
 
-                    <input type="text" name="email" placeholder="Enter email address" autofocus>
+                    <input type="text" name="email" placeholder="Enter email address" value="{{ old('password') }}" autofocus>
 
                 </div>
 

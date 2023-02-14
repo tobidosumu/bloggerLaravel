@@ -34,13 +34,13 @@
 
                 @guest
                     <li>
-                        <a class="d-flex justify-content-even align-items-center" href="{{ route('login') }}">
+                        <a class="d-flex justify-content-even align-items-center border-top border-bottom" href="{{ route('login') }}">
                             <i class="bi bi-box-arrow-in-right pe-2"></i>Login
                         </a>
                     </li>
                     <li>
-                        <a class="d-flex justify-content-even align-items-center border-top" href="{{ route('register-user') }}">
-                            <i class="bi bi-box-arrow-in-right pe-2"></i>Register
+                        <a class="d-flex justify-content-even align-items-center border-top border-bottom" href="{{ route('register-user') }}">
+                        <i class="bi bi-door-open pe-2"></i>Register
                         </a>
                     </li>
                 @else

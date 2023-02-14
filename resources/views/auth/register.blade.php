@@ -81,7 +81,7 @@
                 
                 <!-- Confirm Password input -->
                 <div class="inputContentsWrapper">
-                    <label for="confirmPassword">
+                    <label for="confirm password">
                         Confirm password <b class="text-danger">*</b>
                         @if ($errors->has('confirmPassword'))
                             <span class="text-danger">{{ $errors->first('confirmPassword') }}</span>

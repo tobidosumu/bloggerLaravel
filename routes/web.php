@@ -1,8 +1,7 @@
 <?php
 
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CustomAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,25 +30,18 @@ Route::get('/categories', function () {
     return view('categories');
 });
 
-Route::get('/login', function () {
-    return view('login');
+Route::get('/postDetails', function () {
+    return view('postDetails');
 });
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 
-// Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-// Route::post('/register', [RegisterController::class, 'register']);
+Route::get('dashboard', [CustomAuthController::class, 'dashboard']); 
+Route::get('login', [CustomAuthController::class, 'index'])->name('login');
+Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
+Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
+Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
+Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
-// Route::middleware('auth')->group(function () {
-//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-// });
-
-require __DIR__.'/auth.php';
+// require __DIR__.'/auth.php';

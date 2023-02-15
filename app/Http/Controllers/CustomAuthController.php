@@ -36,8 +36,6 @@ class CustomAuthController extends Controller
     // Register page validation method
     public function customRegistration(Request $request)
     {
-        dump($request->password);
-        dump($request->password_confirmation);
         $request->validate([
             'name' => 'required|min:3|max:50',
             'email' => 'required|email|min:5|unique:users',

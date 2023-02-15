@@ -15,7 +15,7 @@ class CustomAuthController extends Controller
     public function customLogin(Request $request)
     {
         $request->validate([
-            'email' => 'required',
+            'email' => ['required', 'email', 'exists:users,email'],
             'password' => 'required'
         ]);
    
@@ -24,7 +24,6 @@ class CustomAuthController extends Controller
             return redirect()->intended('posts')->withSuccess('Signed in');
         }
   
-        // return redirect("login")->withSuccess('Login details are not valid');
         return redirect('login')->with('error', 'These credentials do not match our records.');
     }
 

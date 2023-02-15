@@ -21,7 +21,7 @@ class CustomAuthController extends Controller
    
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('/')->withSuccess('Signed in');
+            return redirect()->intended('posts')->withSuccess('Signed in');
         }
   
         // return redirect("login")->withSuccess('Login details are not valid');
@@ -36,6 +36,8 @@ class CustomAuthController extends Controller
     // Register page validation method
     public function customRegistration(Request $request)
     {
+        dump($request->password);
+        dump($request->password_confirmation);
         $request->validate([
             'name' => 'required|min:3|max:50',
             'email' => 'required|email|min:5|unique:users',
@@ -45,9 +47,9 @@ class CustomAuthController extends Controller
                 'regex:/^(?=.*[a-z])/m',
                 'regex:/^(?=.*[A-Z])/m',
                 'regex:/^(?=.*\d)/m',
-                // 'regex:/^(?=.*[^a-zA-Z\d])/m'
+                'confirmed',
             ],
-            // 'password_confirmation' => 'required_with:password|same:password',
+            'password_confirmation' => 'required_with:password|same:password',
         ], [
             'name.required' => 'Name cannot be empty.',
             'name.min' => 'Name must be at least :min characters.',
@@ -60,13 +62,14 @@ class CustomAuthController extends Controller
             'password.min' => 'Password must be at least :min characters.',
             'password.regex' => 'Password must contain at least one uppercase letter, one lowercase letter and one number',
             'password_confirmation.required_with' => 'Password confirmation field is required.',
-            'password_confirmation.same' => 'Password confirmation does not match the password.'
+            'password_confirmation.same' => 'Password confirmation does not match the password.',
+            'password_confirmation.confirmed' => 'Password confirmation does not match the password.'
         ]);
     
         $data = $request->all();
         $check = $this->create($data);
     
-        return redirect('dashboard')->withSuccess('You have signed-in');
+        return redirect('login')->withSuccess('You have signed-in');
     }    
 
     public function create(array $data)

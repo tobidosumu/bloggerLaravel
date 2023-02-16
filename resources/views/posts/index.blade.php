@@ -40,8 +40,8 @@
                     <div class="postPhoto">
             
                         <!-- Post photo -->
-                        <a href="{{ url('posts.postDetails') }}">
-                            <img src="{{ asset('frontend_assets/assets/images/parisOne.jfif') }}" alt="user account">
+                        <a href="posts/{{ $post->slug }}">
+                            <img src="/uploads/{{ $post->image_path }}">
                         </a>
             
                         <!-- Post: like, comment, share icons container/wrapper -->

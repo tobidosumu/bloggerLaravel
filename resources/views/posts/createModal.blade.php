@@ -5,14 +5,19 @@
 
         <div class="modal-content modalContent">
 
-            <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
+            <form 
+                action="{{ route('posts.store') }}" 
+                method="POST" 
+                enctype="multipart/form-data">
 
                 @csrf
 
                 <!-- Modal header -->
                 <div class="modal-header mx-4 my-3">
                     <h5 class="modal-title">Create Post</h5>
-                    <button type="button" onclick="closePostModal()" class="btn-close"><i class="bi bi-x-lg"></i></button>
+                    <button type="button" onclick="closePostModal()" 
+                        class="btn-close"><i class="bi bi-x-lg"></i>
+                    </button>
                 </div>
                 
                 <!-- Modal body -->
@@ -30,7 +35,13 @@
                         <span class="input-group-text" id="addon-wrapping">
                             <i class="bi bi-card-heading"></i>
                         </span>
-                        <input type="text" class="postModalValue form-control py-2" name="title" value="{{ old('title') }}" placeholder="Add blog title">
+                        <input 
+                            type="text" 
+                            class="postModalValue form-control py-2" 
+                            name="title" 
+                            value="{{ old('title') }}" 
+                            placeholder="Add blog title"
+                        >
                     </div>
                     
                     <!-- Blog category wrapper -->
@@ -82,7 +93,7 @@
                     <!-- Blog photo -->
                     <label for="photo">
                         Blog photo<b class="text-danger"> * </b>
-                        @error('photo')
+                        @error('image')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </label> 
@@ -92,7 +103,7 @@
                         <span class="input-group-text rounded-0 rounded-start border-end-0" id="addon-wrapping">
                             <i class="bi bi-card-image"></i>
                         </span>
-                        <input type="file" class="postModalValue form-control" name="image_path" value="{{ old('image_path') }}" aria-describedby="inputGroupFileAddon01" aria-label="Upload">
+                        <input type="file" class="postModalValue form-control" name="image" value="{{ old('image') }}" aria-describedby="inputGroupFileAddon01" aria-label="Upload">
                     </div>
 
                 </div>

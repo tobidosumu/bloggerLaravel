@@ -288,6 +288,7 @@ body .mainContainer .blogContents section .mainContentContainer .postCard {
   margin-bottom: 30px;
   transition: translate 0.5s ease;
   background-color: #ffffff;
+  border: 1px solid red;
 }
 body .mainContainer .blogContents section .mainContentContainer .postCard:hover {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.123);
@@ -459,6 +460,14 @@ body .mainContainer .blogContents section .mainContentContainer .postCard .postT
   letter-spacing: 1.5px;
   margin-bottom: 8px;
   text-transform: uppercase;
+}
+body .mainContainer .blogContents section .mainContentContainer .postCard .postTextWrapper .postTitle {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #121d2a;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-transform: capitalize;
 }
 body .mainContainer .blogContents section .mainContentContainer .postCard .postTextWrapper .postParagraph {
   display: flex;

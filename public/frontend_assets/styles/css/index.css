@@ -70,12 +70,18 @@ body .mainContainer header nav ul .home a {
   padding-top: 23px;
   padding-bottom: 21px;
 }
+body .mainContainer header nav ul .home a:hover {
+  border-bottom: 2px solid #121d2a;
+}
 body .mainContainer header nav ul .home a i {
   font-size: 1.5rem;
 }
 body .mainContainer header nav ul .cart a {
   padding-top: 23px;
   padding-bottom: 21px;
+}
+body .mainContainer header nav ul .cart a:hover {
+  border-bottom: 2px solid #121d2a;
 }
 body .mainContainer header nav ul .cart a span {
   position: absolute;

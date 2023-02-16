@@ -147,11 +147,14 @@ $lightBlack: #000000b7;
           font-weight: 500;
         }
       }
+      
       .home {
         a {
           padding-top: 23px;
           padding-bottom: 21px;
-
+          &:hover {
+            border-bottom: 2px solid $black;
+          }
           i {
             @include mainNavIcon
           }
@@ -162,7 +165,9 @@ $lightBlack: #000000b7;
         a {
           padding-top: 23px;
           padding-bottom: 21px;
-
+          &:hover {
+            border-bottom: 2px solid $black;
+          }
           span {
             position: absolute;
             margin-left: -10px;

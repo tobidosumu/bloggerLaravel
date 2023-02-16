@@ -1,6 +1,6 @@
 <!-- Logo container/wrapper -->
 <div class="logoContainer">
-    <a href="/">
+    <a href="{{ route('posts.index') }}">
         <img src="{{ asset('frontend_assets/assets/svg/bloggerLogoBlack.svg') }}" alt="blogger logo">
     </a>
 </div>

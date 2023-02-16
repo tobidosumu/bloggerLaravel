@@ -2,7 +2,7 @@
     
     <!-- Home link -->
     <li class="home">
-        <a href="/">
+        <a href="{{ url('posts') }}">
             <i class="bi bi-house"></i>
         </a>
     </li>

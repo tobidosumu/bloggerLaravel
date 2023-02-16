@@ -15,9 +15,11 @@ use App\Http\Controllers\PostsController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('index');
-// });
+Route::redirect('/', '/posts');
+
+Route::get('/posts', function () {
+    return view('posts.index');
+})->name('posts.index');
 
 Route::get('/cart', function () {
     return view('cart');

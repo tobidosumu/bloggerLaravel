@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\PostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,9 @@ use App\Http\Controllers\CustomAuthController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 
 Route::get('/cart', function () {
     return view('cart');
@@ -30,11 +31,9 @@ Route::get('/categories', function () {
     return view('categories');
 });
 
-Route::get('/postDetails', function () {
-    return view('postDetails');
-});
+Route::resource('/posts', PostsController::class);
 
-Route::get('dashboard', [CustomAuthController::class, 'dashboard']); 
+Route::get('index', [CustomAuthController::class, 'posts.index']); 
 Route::get('login', [CustomAuthController::class, 'index'])->name('login');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
 Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');

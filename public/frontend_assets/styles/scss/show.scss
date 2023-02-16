@@ -31,6 +31,17 @@ body {
                             }
                         }
                     }
+                    li:nth-child(3) {
+                        @include tinyFont;
+                        color: $grey;
+                        font-weight: 400;
+                    }
+                }
+                .bi-three-dots-vertical {
+                    padding: 4.5px 9px;
+                    border-radius: 50px;
+                    color: $lightBlack;
+                    background-color: $borderGrey;
                 }
             }
             
@@ -42,28 +53,20 @@ body {
                     padding-bottom: 150px;
                     // border: 1px solid red;
 
-                    nav {
-                        ul {
-                            li {
-                                @include primaryFont;
-                                color: $grey;
-                            }
-                        }
-                    }
-
                     .innerContainer { // photo, title, category div
                         margin-right: 43px;
+
                         .postImage {
                             img {
                                 height: 60vh;
                                 object-fit: cover;
                             }
 
-                            p {
+                            .postTime {
                                 position: absolute;
-                                top: 70px;
+                                top: 80px;
                                 left: 15px;
-                                @include tinyFont;
+                                @include veryLittleFont;
                                 color: $lightBlack;
                                 text-transform: none;
                                 border-radius: 50px;
@@ -279,46 +282,9 @@ body {
                 }
 
                 .rightSideContentContainer { // (aside) aside starts here
-                    width: 30%;
-                    height: 100vh;
-                    top: 100px;
-                    position: sticky;
 
-                    .captionCard { // captionCard link
-                        width: 100%;
-                        height: 50px;
+                    @include rightSideContentContainer;
 
-                        i:first-child {
-                            font-size: 31px;
-                            color: $veryLightGrey;
-                            padding: 0 8px;
-                            background-color: $lightGreenColor;
-                            // border: 1px solid red;
-                        } 
-                        i:last-child {
-                            @include primaryFont;
-                            color: $veryLightGrey;
-                        }
-                        h4 {
-                            @include primaryFont;
-                            letter-spacing: 2px;
-                            font-weight: 500;
-                            text-transform: uppercase;
-                            color: $veryLightGrey;
-                            padding-left: 6px;
-                        }
-                        &:hover {
-                            h4 {
-                                color: $black;
-                            }
-                            background-color: $veryLightGreenColor;
-                        }
-                    }       
-                    
-                    .productCard {
-                        @include productCard;
-                        // border: 1px solid red;
-                    }
                 }
             }
 
@@ -332,6 +298,17 @@ body {
 
     footer { // footer
         @include footer;
+    }
+    
+    // Create post modal
+    .customModal {
+        @include customModal;
+    }
+
+    // Black background behind opened modal
+    .blackModalBackground {
+        @include blackModalBackground;
+        z-index: 10;
     }
  
 }

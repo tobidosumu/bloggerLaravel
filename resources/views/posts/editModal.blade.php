@@ -1,21 +1,23 @@
-<!-- Create post modal -->
-<div class="customModal position-fixed top-50 start-50 translate-middle rounded-3 mt-5" id="postModal">
+<!-- Edit post modal -->
+<div class="customModal position-fixed top-50 start-50 translate-middle rounded-3 mt-5" id="editModal">
         
     <div class="modal-dialog modal-dialog-centered">
 
         <div class="modal-content modalContent">
 
             <form 
-                action="{{ route('posts.store') }}" 
+                action="/posts/{{ $post->slug }}" 
                 method="POST" 
                 enctype="multipart/form-data">
 
                 @csrf
 
+                @method('PUT')
+
                 <!-- Modal header -->
                 <div class="modal-header mx-4 my-3">
-                    <h5 class="modal-title">Create Post</h5>
-                    <button type="button" onclick="closePostModal()" 
+                    <h5 class="modal-title">Edit Post</h5>
+                    <button type="button" onclick="closeEditModal()" 
                         class="btn-close">
                     </button>
                 </div>
@@ -39,8 +41,7 @@
                             type="text" 
                             class="postModalValue form-control py-2" 
                             name="title" 
-                            value="{{ old('title') }}" 
-                            placeholder="Add blog title"
+                            value="{{ $post->title }}" 
                         >
                     </div>
                     
@@ -55,7 +56,10 @@
                         
                         <!-- Add category button -->
                         <span>
-                            <a href="{{ url('/categories') }}" target="_blank" class="addCatBtn btn btn-sm btn-outline-primary">
+                            <a href="{{ url('/categories') }}" 
+                                target="_blank" 
+                                class="addCatBtn btn btn-sm btn-outline-primary"
+                            >
                                 Add category <i class="bi bi-box-arrow-up-right ms-1"></i>
                             </a>
                         </span>
@@ -87,30 +91,27 @@
                         <span class="input-group-text rounded-0 rounded-start border-end-0" id="addon-wrapping">
                             <i class="bi bi-pencil-square"></i>
                         </span>
-                        <textarea class="postModalValue form-control rounded-0 rounded-end decriptionField" name="description" placeholder="Add blog description" id="floatingTextarea2" style="height: 100px">{{ old('description') }}</textarea>
-                    </div>
-                    
-                    <!-- Blog photo -->
-                    <label for="photo">
-                        Blog photo<b class="text-danger"> * </b>
-                        @error('image')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                    </label> 
-
-                    <!-- Blog photo upload -->
-                    <div class="input-group mt-2 mb-3">
-                        <span class="input-group-text rounded-0 rounded-start border-end-0" id="addon-wrapping">
-                            <i class="bi bi-card-image"></i>
-                        </span>
-                        <input type="file" class="postModalValue form-control" name="image" value="{{ old('image') }}" aria-describedby="inputGroupFileAddon01" aria-label="Upload">
+                        <textarea class="postModalValue form-control rounded-0 rounded-end decriptionField" 
+                            name="description" 
+                            placeholder="Add blog description" 
+                            id="floatingTextarea2" 
+                            style="height: 100px"
+                        >
+                            {{ $post->description }}
+                        </textarea>
                     </div>
 
                 </div>
 
                 <!-- Modal footer -->
                 <div class="modal-footer m-4">
-                    <button type="submit" id="submitBtn" onclick="submitPost()" name="insertPostData" class="sendPostBtn btn btn-primary">
+                    <button 
+                        type="submit" 
+                        id="submitBtn" 
+                        onclick="submitPost()" 
+                        name="insertPostData" 
+                        class="sendPostBtn btn btn-primary"
+                    >
                         Post <i class="bi bi-send"></i>
                     </button>
                 </div>
@@ -127,7 +128,7 @@
 @if ($errors->any())
     <script defer>
         $(document).ready(function(){
-            openPostModal();
+            openEditModal();
         });
     </script>
 @endif

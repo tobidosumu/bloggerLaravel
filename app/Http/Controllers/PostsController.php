@@ -17,7 +17,7 @@ class PostsController extends Controller
     public function index()
     {
         // Get the paginated results
-        $posts = Post::orderBy('updated_at', 'DESC')->paginate(2);
+        $posts = Post::orderBy('updated_at', 'DESC')->paginate(10);
 
         // Pass the results to the view using the with method
         return view('posts.index')->with([
@@ -32,7 +32,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        // return view('posts.create');
     }
 
     /**
@@ -81,24 +81,41 @@ class PostsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  string  $slug
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($slug)
     {
-        //
+        return view('posts.edit')
+            ->with('post', Post::where('slug', $slug)->first());
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  string  $slug
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $slug)
     {
-        //
+        $request->validate([
+            'title' => 'required|max:100',
+            'category' => 'required|max:40',
+            'description' => 'required|max:4000',
+        ]);
+
+        Post::where('slug', $slug)
+            ->update([
+                'user_id' => auth()->user()->id,
+                'title' => $request->input('title'),
+                'category' => $request->input('category'),
+                'description' => $request->input('description'),
+                'slug' => SlugService::createSlug(Post::class, 'slug', $request->title)
+            ]);
+
+        return redirect('/posts')
+            ->with('message', 'Post updated!');
     }
 
     /**
@@ -107,8 +124,12 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($slug)
     {
-        //
+        $post = Post::where('slug', $slug)->first();
+        $post->delete();
+
+        return redirect('/posts')
+            ->with('message', 'Post deleted.');
     }
 }

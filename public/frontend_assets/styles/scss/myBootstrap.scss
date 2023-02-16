@@ -248,7 +248,7 @@ $lightBlack: #000000b7;
           }
         } 
 
-        // Dropdown menu
+        // Main nav dropdown menu
         .profileDropdown {
           display: none;
           position: absolute;
@@ -510,6 +510,49 @@ $lightBlack: #000000b7;
   background-color: $white;
 }
 
+@mixin rightSideContentContainer {
+  width: 30%;
+  height: 100vh;
+  top: 100px;
+  position: sticky;
+
+  .captionCard { // captionCard link
+      width: 100%;
+      height: 50px;
+
+      i:first-child {
+          font-size: 31px;
+          color: $veryLightGrey;
+          padding: 0 8px;
+          background-color: $lightGreenColor;
+          // border: 1px solid red;
+      } 
+      i:last-child {
+          @include primaryFont;
+          color: $veryLightGrey;
+      }
+      h4 {
+          @include primaryFont;
+          letter-spacing: 2px;
+          font-weight: 500;
+          text-transform: uppercase;
+          color: $veryLightGrey;
+          padding-left: 6px;
+      }
+      &:hover {
+          h4 {
+              color: $black;
+          }
+          background-color: $veryLightGreenColor;
+      }
+  }       
+  
+  .productCard {
+      @include productCard;
+      // border: 1px solid red;
+  }
+}
+
 @mixin footer {
   height: 350px;
   background-color: $black;
@@ -715,12 +758,136 @@ $lightBlack: #000000b7;
   }
 }
 
-@mixin postModalBackground {
+// Modals
+@mixin customModal {
+  width: 37%;
+  z-index: 100;
+  display: none;
+  margin-top: 250px;
+  background-color: $white;
+
+  .modal-dialog {
+    max-width: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modalContent {
+      width: 600px;
+
+      form {
+
+        .modal-body {
+          label {
+            @include tinyFont;
+            font-weight: 400;
+            color: $veryLightGrey;
+          }
+          .addCatBtn {
+            color: $accentColor;
+            border-color: $accentColor;
+            &:hover {
+              color: $white;
+              background-color: $accentColor;
+            }
+          }
+          .input-group {
+            span {
+              i {
+                color: $accentColor;
+              }
+            }
+            input {
+              color: $lightBlack !important;
+              &::placeholder {
+                color: $veryLightGrey;
+                @include primaryFont;
+                font-weight: 400;
+              }
+            }
+            textarea {
+              color: $lightBlack !important;
+              &::placeholder {
+                color: $veryLightGrey;
+                @include primaryFont;
+                font-weight: 400;
+                position: relative;
+                top: 33px;
+              }
+            }
+          }
+        }
+        .modal-footer {
+          .sendPostBtn {
+            padding: 7px 20px;
+            @include accentColorBtn;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin infoModal {
+  .modal-dialog {
+    width: 25%;
+
+    .modal-body {
+      padding: 0;
+      .modalLinksWrapper {
+        width: 100%;
+        button {
+          width: 100%;
+          border: none;
+          background: none;
+          li {
+            color: $accentHoverColor;
+            padding: 14px 0;
+            @include tinyFont;
+            font-weight: 600;
+            border-bottom: 1px solid $borderGrey;
+
+            &:hover {
+              background-color: $lightGrey;
+            }
+          }
+        }
+        a {
+          li {
+            width: 100%;
+            color: $black;
+            padding: 14px 0;
+            @include tinyFont;
+            font-weight: 400;
+            border-bottom: 1px solid $borderGrey;
+
+            &:hover {
+              font-weight: 500;
+              background-color: $lightGrey;
+            }
+          }
+          .nthChild {
+            color: $accentHoverColor;
+            font-weight: 600;
+          }
+          .lastChild {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin blackModalBackground {
   width: 100%;
   height: 100vh;
   position: fixed;
   display: none;
+  margin: auto;
   top: 0px;
-  background-color: $lightBlack;
+  left: 0;
   z-index: 100;
+  background-color: $lightBlack;
 }

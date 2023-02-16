@@ -104,14 +104,24 @@ const hideSuccessMessage = () => {
   document.getElementById("hideSuccessMessage").style.display = "none";
 }
 
-let postModalBackground = document.getElementById('postModalBackground');
+let blackModalBackground = document.getElementById('blackModalBackground');
 
 const openPostModal = () => {
   document.getElementById('postModal').style.display = 'block';
-  postModalBackground.style.display = 'block';
+  blackModalBackground.style.display = 'block';
+}
+
+const openEditModal = () => {
+  document.getElementById('editModal').style.display = 'block';
+  blackModalBackground.style.display = 'block';
 }
 
 const closePostModal = () => {
   document.getElementById('postModal').style.display = 'none';
-  postModalBackground.style.display = 'none';
+  blackModalBackground.style.display = 'none';
+}
+
+const closeEditModal = () => {
+  document.getElementById('editModal').style.display = 'none';
+  blackModalBackground.style.display = 'none';
 }

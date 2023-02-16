@@ -20,18 +20,19 @@
                     <div class="postHeader">
                         
                         <div class="userAvater">
-                            <img src="{{ ('frontend_assets/assets/images/moji.png') }}" alt="">
+                            <img src="{{ ('frontend_assets/assets/images/moji.png') }}">
                             <p class="avaterDetails ms-3"> {{ $post->user->name }} </p>
                         </div>
                             
                         <div class="postInfo">
             
                             <p>{{ $post->created_at->diffForHumans() }}</p>
-                            {{-- <p>{{ date('jS M Y', strtotime($post->updated_at)) }}</p> --}}
             
+                            <!-- Link opens infoModal -->
                             <i class="bi bi-three-dots-vertical" data-bs-toggle="modal" data-bs-target="#moreInfoModal"></i>
                             
-                            <!-- More info modal goes here -->
+                            <!-- Three vertical dots on post modal -->
+                            @include('posts.infoModal')
             
                         </div>
             
@@ -39,11 +40,14 @@
             
                     <div class="postPhoto">
             
-                        <!-- Post photo -->
-                        <a href="posts/{{ $post->slug }}">
+                        <!-- URL to post details/show page -->
+                        <a href="/posts/{{ $post->slug }}">
+
+                            <!-- Post photo -->
                             <img src="/uploads/{{ $post->image_path }}">
+                            
                         </a>
-            
+
                         <!-- Post: like, comment, share icons container/wrapper -->
                         <div class="postIconsContainer d-flex justify-content-end">
                             
@@ -122,7 +126,7 @@
 
 <!-- Create post modal button -->
 <button type="button" onclick="openPostModal()" class="postBtn border-0">
-    <img src="{{ asset('frontend_assets/assets/svg/feather.svg') }}" alt="Click to post">
+    <img src="{{ asset('frontend_assets/assets/svg/feather.svg') }}">
 </button>
 
 
@@ -141,8 +145,7 @@
     </div>
 @endif
 
-
 <!-- Black background behind Post Modal -->
-<div id="postModalBackground" onclick="closePostModal()" class="postModalBackground"> 
+<div id="blackModalBackground" onclick="closePostModal()" class="blackModalBackground"> 
 
 </div>

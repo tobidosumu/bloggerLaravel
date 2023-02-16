@@ -281,6 +281,51 @@ body .mainContainer .blogContents section .mainContentContainer {
   padding-top: 30px;
   padding-bottom: 100px;
 }
+body .mainContainer .blogContents section .mainContentContainer .infoModal .modal-dialog {
+  width: 25%;
+}
+body .mainContainer .blogContents section .mainContentContainer .infoModal .modal-dialog .modal-body {
+  padding: 0;
+}
+body .mainContainer .blogContents section .mainContentContainer .infoModal .modal-dialog .modal-body .modalLinksWrapper {
+  width: 100%;
+}
+body .mainContainer .blogContents section .mainContentContainer .infoModal .modal-dialog .modal-body .modalLinksWrapper button {
+  width: 100%;
+  border: none;
+  background: none;
+}
+body .mainContainer .blogContents section .mainContentContainer .infoModal .modal-dialog .modal-body .modalLinksWrapper button li {
+  color: #eb253f;
+  padding: 14px 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-weight: 600;
+  border-bottom: 1px solid #ced4da;
+}
+body .mainContainer .blogContents section .mainContentContainer .infoModal .modal-dialog .modal-body .modalLinksWrapper button li:hover {
+  background-color: #f4f4f5;
+}
+body .mainContainer .blogContents section .mainContentContainer .infoModal .modal-dialog .modal-body .modalLinksWrapper a li {
+  width: 100%;
+  color: #121d2a;
+  padding: 14px 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-weight: 400;
+  border-bottom: 1px solid #ced4da;
+}
+body .mainContainer .blogContents section .mainContentContainer .infoModal .modal-dialog .modal-body .modalLinksWrapper a li:hover {
+  font-weight: 500;
+  background-color: #f4f4f5;
+}
+body .mainContainer .blogContents section .mainContentContainer .infoModal .modal-dialog .modal-body .modalLinksWrapper a .nthChild {
+  color: #eb253f;
+  font-weight: 600;
+}
+body .mainContainer .blogContents section .mainContentContainer .infoModal .modal-dialog .modal-body .modalLinksWrapper a .lastChild {
+  border-bottom: none;
+}
 body .mainContainer .blogContents section .mainContentContainer .postCard {
   width: 100%;
   word-break: break-all;
@@ -338,50 +383,6 @@ body .mainContainer .blogContents section .mainContentContainer .postCard .postH
   color: #121d2a;
   border-radius: 50%;
   background-color: #f4f4f5;
-}
-body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog {
-  width: 27%;
-}
-body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog .modal-body {
-  padding: 0;
-}
-body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog .modal-body form {
-  width: 100%;
-}
-body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog .modal-body form button {
-  width: 100%;
-  border: none;
-  background: none;
-}
-body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog .modal-body form button li {
-  color: #eb253f;
-  padding: 14px 0;
-  font-size: 0.8rem;
-  font-weight: 500;
-  font-weight: 600;
-  border-bottom: 1px solid #ced4da;
-}
-body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog .modal-body form button li:hover {
-  background-color: #f4f4f5;
-}
-body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog .modal-body form a li {
-  width: 100%;
-  color: #121d2a;
-  padding: 14px 0;
-  font-size: 0.8rem;
-  font-weight: 500;
-  font-weight: 400;
-  border-bottom: 1px solid #ced4da;
-}
-body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog .modal-body form a li:hover {
-  background-color: #f4f4f5;
-}
-body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog .modal-body form a .nthChild {
-  color: #eb253f;
-  font-weight: 600;
-}
-body .mainContainer .blogContents section .mainContentContainer .postCard .postHeader .postInfo .moreInfoModal .modal-dialog .modal-body form a .lastChild {
-  border-bottom: none;
 }
 body .mainContainer .blogContents section .mainContentContainer .postCard .postPhoto {
   overflow: hidden;
@@ -610,63 +611,63 @@ body footer div:last-child ul li ul li a img {
 body footer div:last-child ul .logoList a img {
   width: 100px;
 }
-body .postModal {
+body .customModal {
   width: 37%;
   z-index: 100;
   display: none;
   margin-top: 250px;
   background-color: #ffffff;
 }
-body .postModal .modal-dialog {
+body .customModal .modal-dialog {
   max-width: none !important;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body .postModal .modal-dialog .modalContent {
+body .customModal .modal-dialog .modalContent {
   width: 600px;
 }
-body .postModal .modal-dialog .modalContent form .modal-body label {
+body .customModal .modal-dialog .modalContent form .modal-body label {
   font-size: 0.8rem;
   font-weight: 500;
   font-weight: 400;
   color: #9d9d9d;
 }
-body .postModal .modal-dialog .modalContent form .modal-body .addCatBtn {
+body .customModal .modal-dialog .modalContent form .modal-body .addCatBtn {
   color: #6025eb;
   border-color: #6025eb;
 }
-body .postModal .modal-dialog .modalContent form .modal-body .addCatBtn:hover {
+body .customModal .modal-dialog .modalContent form .modal-body .addCatBtn:hover {
   color: #ffffff;
   background-color: #6025eb;
 }
-body .postModal .modal-dialog .modalContent form .modal-body .input-group span i {
+body .customModal .modal-dialog .modalContent form .modal-body .input-group span i {
   color: #6025eb;
 }
-body .postModal .modal-dialog .modalContent form .modal-body .input-group input {
+body .customModal .modal-dialog .modalContent form .modal-body .input-group input {
   color: rgba(0, 0, 0, 0.7176470588) !important;
 }
-body .postModal .modal-dialog .modalContent form .modal-body .input-group input::placeholder {
+body .customModal .modal-dialog .modalContent form .modal-body .input-group input::placeholder {
   color: #9d9d9d;
   font-size: 0.9rem;
   font-weight: 400;
 }
-body .postModal .modal-dialog .modalContent form .modal-body .input-group textarea {
+body .customModal .modal-dialog .modalContent form .modal-body .input-group textarea {
   color: rgba(0, 0, 0, 0.7176470588) !important;
 }
-body .postModal .modal-dialog .modalContent form .modal-body .input-group textarea::placeholder {
+body .customModal .modal-dialog .modalContent form .modal-body .input-group textarea::placeholder {
   color: #9d9d9d;
   font-size: 0.9rem;
   font-weight: 400;
   position: relative;
   top: 33px;
 }
-body .postModal .modal-dialog .modalContent form .modal-footer .sendPostBtn {
+body .customModal .modal-dialog .modalContent form .modal-footer .sendPostBtn {
   padding: 7px 20px;
   background-color: #eb253f;
   border: none;
 }
-body .postModal .modal-dialog .modalContent form .modal-footer .sendPostBtn:hover {
+body .customModal .modal-dialog .modalContent form .modal-footer .sendPostBtn:hover {
   background-color: #6025eb;
 }
 body .postBtn {
@@ -713,14 +714,16 @@ body .createPostTooltip.hide {
 body .createPostTooltip.hide p {
   visibility: hidden;
 }
-body .postModalBackground {
+body .blackModalBackground {
   width: 100%;
   height: 100vh;
   position: fixed;
   display: none;
+  margin: auto;
   top: 0px;
-  background-color: rgba(0, 0, 0, 0.7176470588);
+  left: 0;
   z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7176470588);
 }
 
 /*# sourceMappingURL=index.css.map */

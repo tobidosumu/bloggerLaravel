@@ -26,10 +26,23 @@
                         <li>Post Details</li>
                     </ul>
                     
-                    <!-- Show three dots edit button to authenticated users -->
+                    <!-- Show page three dots popup modal -->
                     @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
 
-                        <i class="bi bi-three-dots-vertical" onclick="openEditModal()"></i>
+                        <i class="bi bi-three-dots-vertical" onclick="openEditModal()">
+                        
+                            {{-- <a  href="/posts/{{ $post->slug }}">
+                                @include('posts.editModal')
+                            </a> --}}
+
+                            <!-- Keeps Create Post Modal open when there is error after form submission -->
+                            <script defer>
+                                $(document).ready(function(){
+                                    // openEditModal();
+                                });
+                            </script>
+
+                        </i>
                         
                     @endif
                         

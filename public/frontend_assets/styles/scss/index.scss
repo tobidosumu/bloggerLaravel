@@ -116,54 +116,10 @@ body {
 
                         .postIconsContainer {
                             .rightIconsDiv {
+                                @include postCardIcons;
                                 position: relative;
                                 bottom: 60px;
                                 margin: -180px 20px 0 0;
-                                // border: 1px solid red;
-                                div {
-                                    display: flex;
-                                    justify-content: center;
-                                    flex-direction: column;
-                                    align-items: center;
-
-                                    i {
-                                        @include postIcon;
-                                        // outline: 1px solid red;
-                                        margin-bottom: 0px;
-                                        transition: all .4s; 
-                                    }
-
-                                    p {
-                                        @include veryLittleFont;
-                                        font-weight: 600;
-                                        color: $black;
-                                        background-color: $slightTransparentWhite;
-                                        padding: 0 7px; 
-                                        border-radius: 3px;
-                                    }
-
-                                    &:hover {
-                                        i {
-                                            background-color: $white;
-                                        }
-                                    }
-                                    &:hover {
-                                        p {
-                                            background-color: $white;
-                                        }
-                                    }
-                                }
-
-                                .shares {
-                                    i {
-                                        transform: scaleX(-1);
-                                        transform-origin: 50% 50%;
-                                        -webkit-transform: scaleX(-1); /* Safari and Chrome */
-                                        -moz-transform: scaleX(-1); /* Firefox */
-                                        -ms-transform: scaleX(-1); /* Internet Explorer */
-                                        -o-transform: scaleX(-1); /* Opera */
-                                    }
-                                }
                             }
                         }
                         

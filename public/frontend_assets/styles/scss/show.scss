@@ -76,66 +76,11 @@ body {
                         }
 
                         .rightIconsDiv {
+                            @include postCardIcons;
                             position: absolute;
-                            right: 65px;
-                            top: 160px;
-                            height: 28vh;
-                            
-                            div {
-                                display: flex;
-                                justify-content: center;
-                                flex-direction: column;
-                                align-items: center;
-                                
-                                a {
-                                    cursor: pointer;
-                                    margin-bottom: 0.6px;
-                                    i {
-                                        font-size: 1.3rem;
-                                        padding: 6px 8px 2px 8px;
-                                        &:hover {
-                                          background-color: $white !important;
-                                        }
-                                    }
-                                }
-                                
-                                i {
-                                    @include postIcon;
-                                    margin-bottom: 0px;
-                                    transition: all .4s; 
-                                }
-
-                                p {
-                                    @include veryLittleFont;
-                                    font-weight: 600;
-                                    color: $black;
-                                    background-color: $slightTransparentWhite;
-                                    padding: 0 7px; 
-                                    border-radius: 3px;
-                                }
-
-                                &:hover {
-                                    i {
-                                        background-color: $white;
-                                    }
-                                }
-                                &:hover {
-                                    p {
-                                        background-color: $white;
-                                    }
-                                }
-                            }
-
-                            .shares {
-                                i {
-                                    transform: scaleX(-1);
-                                    transform-origin: 50% 50%;
-                                    -webkit-transform: scaleX(-1); /* Safari and Chrome */
-                                    -moz-transform: scaleX(-1); /* Firefox */
-                                    -ms-transform: scaleX(-1); /* Internet Explorer */
-                                    -o-transform: scaleX(-1); /* Opera */
-                                }
-                            }
+                            right: 75px;
+                            height: 30vh;
+                            top: 150px;
                         }
 
                         .categoryTitleContainer { // title, category container

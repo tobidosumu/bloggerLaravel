@@ -328,9 +328,9 @@ body .mainContainer .blogContents section .mainContentContainer .innerContainer 
 }
 body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv {
   position: absolute;
-  right: 65px;
-  top: 160px;
-  height: 28vh;
+  right: 75px;
+  height: 30vh;
+  top: 150px;
 }
 body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv div {
   display: flex;
@@ -354,6 +354,7 @@ body .mainContainer .blogContents section .mainContentContainer .innerContainer 
   font-weight: 400;
   color: black;
   border-radius: 50px;
+  padding: 8px 6px 3px 6px;
   background-color: rgba(255, 255, 255, 0.527);
   transition: all 0.4s;
   margin-bottom: 0px;
@@ -377,7 +378,7 @@ body .mainContainer .blogContents section .mainContentContainer .innerContainer 
 body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv div:hover p {
   background-color: #ffffff;
 }
-body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv .shares i {
+body .mainContainer .blogContents section .mainContentContainer .innerContainer .rightIconsDiv .shares a i {
   transform: scaleX(-1);
   transform-origin: 50% 50%;
   -webkit-transform: scaleX(-1); /* Safari and Chrome */

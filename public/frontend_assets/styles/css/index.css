@@ -718,7 +718,7 @@ body .createPostTooltip {
   transition: right 1.4s, width 1.4s;
   visibility: visible;
 }
-body .createPostTooltip p {
+body .createPostTooltip p, body .createPostTooltip a {
   font-size: 0.9rem;
   font-weight: 500;
   color: #121d2a;
@@ -729,7 +729,7 @@ body .createPostTooltip.hide {
   width: 0px;
   visibility: hidden;
 }
-body .createPostTooltip.hide p {
+body .createPostTooltip.hide p, body .createPostTooltip.hide a {
   visibility: hidden;
 }
 body .blackModalBackground {

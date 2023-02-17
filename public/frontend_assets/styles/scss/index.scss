@@ -274,7 +274,7 @@ body {
         transition: right 1.4s, width 1.4s;
         visibility: visible;
       
-        p {
+        p, a {
           @include semiTinyFont;
           color: $black;
           visibility: visible;
@@ -285,7 +285,7 @@ body {
           width: 0px;
           visibility: hidden;
       
-          p {
+          p, a {
             visibility: hidden;
           }
         }

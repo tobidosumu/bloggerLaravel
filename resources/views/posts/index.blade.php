@@ -143,6 +143,7 @@
     <div id="createPostTooltip" class="createPostTooltip">
         <a href="{{ url('/login') }}">Click to post</a>
     </div>
+    
 @endif
 
 <!-- Black background behind Post Modal -->

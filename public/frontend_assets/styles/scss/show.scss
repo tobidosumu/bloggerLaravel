@@ -41,7 +41,10 @@ body {
                     padding: 4.5px 9px;
                     border-radius: 50px;
                     color: $lightBlack;
-                    background-color: $borderGrey;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: $lightGrey;
+                    }
                 }
             }
             

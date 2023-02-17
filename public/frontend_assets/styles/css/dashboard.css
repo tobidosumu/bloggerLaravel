@@ -81,7 +81,7 @@ body .mainContainer header nav ul li a {
 }
 body .mainContainer header nav ul .home a {
   padding-top: 23px;
-  padding-bottom: 21px;
+  padding-bottom: 20px;
 }
 body .mainContainer header nav ul .home a:hover {
   border-bottom: 2px solid #121d2a;
@@ -91,13 +91,14 @@ body .mainContainer header nav ul .home a i {
 }
 body .mainContainer header nav ul .cart a {
   padding-top: 23px;
-  padding-bottom: 21px;
+  padding-bottom: 20px;
 }
 body .mainContainer header nav ul .cart a:hover {
   border-bottom: 2px solid #121d2a;
 }
 body .mainContainer header nav ul .cart a span {
   position: absolute;
+  bottom: 22px;
   margin-left: -10px;
   font-size: 0.8rem;
   font-weight: 500;

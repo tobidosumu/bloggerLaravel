@@ -26,7 +26,7 @@
                         <li>Post Details</li>
                     </ul>
                     
-                    <!-- Show three dots edit button to authenticated users -->
+                    <!-- Show three dots edit button to account owner -->
                     @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
 
                         <i class="bi bi-three-dots-vertical" onclick="openEditModal()"></i>

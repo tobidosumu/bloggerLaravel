@@ -41,16 +41,14 @@
         <!-- Dashboard contents -->
         <section class="mainContentContainer">   
 
-            {{-- @foreach ($posts as $post) --}}
+            {{-- @foreach ($posts as $post)  --}}
 
-                <div class="postCard border rounded-top rounded-3 pb-1">
+                {{-- <div class="postCard border rounded-top rounded-3 pb-1">
 
-                    <!-- Post card -->
                     <div class="postPhoto rounded-top">
 
                         <div class="upperInfo d-flex justify-content-between px-2">
                             <h5 class="postTime">
-                                {{-- {{ $post->created_at->diffForHumans() }} --}}
                             </h5>
                             <div class="moreInfo ms-3"><i class="bi bi-three-dots-vertical"></i></div> 
                         </div>
@@ -59,7 +57,7 @@
                         </div>
                         
                         <a href="">
-                            <img class="img-fluid rounded-top" src=""> <!-- fetches photo -->
+                            <img class="img-fluid rounded-top" src=""> 
                         </a>
 
                     </div>
@@ -79,7 +77,7 @@
                     <div class="postParagraph px-2">
                         <p></p> <!-- fetches description -->
                     </div>
-                </div>
+                </div> --}}
 
             {{-- @endforeach --}}
 

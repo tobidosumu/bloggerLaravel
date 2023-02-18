@@ -1,0 +1,137 @@
+@import "./reset";
+@import "./myBootstrap";
+
+body {
+    // Sidebar
+    .sidebarContainer {
+        width: 20%;
+        background-color: $lightAccentColorHover;
+
+        // Logo
+        .logoContainer {
+            img {
+                width: 60%;
+            }
+            p {
+                color: $white;
+                @include tinyFont;
+                font-weight: 400;
+                text-transform: capitalize;
+                span {
+                    border-radius: 50px;
+                    padding: 3px 7px;
+                    @include veryLittleFont;
+                    text-transform: uppercase;
+                    background-color: $accentHoverColor;
+                }
+            }
+        }
+
+        .navMenu {
+            ul {
+                height: 50vh;
+                a {
+                    color: $white;
+                    padding: 12px 0 12px 10%;
+                    i {
+                        @include semiPrimaryFont;
+                        margin-right: 5px;
+                    }
+                    span {
+                        @include tinyFont;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                    }
+                    &:hover {
+                        background-color: $accentHoverColor;
+                    }
+                }
+                .home {
+                    border-left: 2px solid $white;
+                    background-color: $accentHoverColor;
+                }
+            }
+        }
+    }
+
+    .mainContents {
+        width: 80%;
+        background-color: $lightGrey;
+
+        header {
+            width: 100%;
+            height: 60px;
+            background-color: $white;
+            .leftSection {
+                width: 12%;
+                height: 50%;
+                border-right: 1px solid $lightGrey;
+                select {
+                    @include tinyFont;
+                    text-transform: uppercase;
+                    color: $veryLightGrey;
+                    border: none;
+                }
+            }
+            .centerSection {
+                width: 70%;
+
+                // Search
+                form {
+                    width: 60%;
+                    input {
+                        width: 100%;
+                        color: $black;
+                        border-radius: 50px;
+                        padding: 8px 5px 8px 45px;
+                        background-color: $lightGrey;
+                        border: 1px solid $lightGrey;
+                        &::placeholder {
+                        @include tinyFont;
+                        font-weight: 400;
+                        color: $veryLightGrey;
+                        }
+                
+                        &:focus-within {
+                        border: 1px solid $veryLightGrey;
+                        outline: none;
+                        }
+                    }
+                    i { // Search icon
+                        position: relative;
+                        left: 40px;
+                        top: 15px;
+                        @include tinyFont;
+                        color: $veryLightGrey;
+                    }
+                }
+
+                button {
+                    border: none;
+                    background: none;
+                    @include tinyFont;
+                    color: $accentHoverColor;
+                    text-transform: uppercase;
+                    i {
+                        font: 700;
+                    }
+                }
+            }
+
+            .rightSection {
+                width: 12%;
+                height: 50%;
+                // border: 1px solid red;
+                border-left: 1px solid $lightGrey;
+                i {
+                    color: $veryLightGrey;
+                    padding-left: 40%;
+                }
+                img {
+                    width: 22px;
+                    border-radius: 50px;
+                }
+            }
+        }
+    }
+}

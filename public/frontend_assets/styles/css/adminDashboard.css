@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+*, img, a, ul, li, p, h2, h3, h4, h5, h6, input, textarea {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  resize: none !important;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}
+.form-control:focus {
+  box-shadow: none !important;
+}
+.form-control input[type=search]::-webkit-search-decoration,
+.form-control input[type=search]::-webkit-search-cancel-button,
+.form-control input[type=search]::-webkit-search-results-button,
+.form-control input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%239D9D9D' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #9d9d9d;
+  font-weight: 400;
+}
+.form-select option {
+  color: rgba(0, 0, 0, 0.7176470588);
+  font-weight: 500;
+}
+.form-select:focus {
+  box-shadow: none !important;
+  border-width: 1px !important;
+}
+
+body .sidebarContainer {
+  width: 20%;
+  background-color: #FF4669;
+}
+body .sidebarContainer .logoContainer img {
+  width: 60%;
+}
+body .sidebarContainer .logoContainer p {
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+body .sidebarContainer .logoContainer p span {
+  border-radius: 50px;
+  padding: 3px 7px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #eb253f;
+}
+body .sidebarContainer .navMenu ul {
+  height: 50vh;
+}
+body .sidebarContainer .navMenu ul a {
+  color: #ffffff;
+  padding: 12px 0 12px 10%;
+}
+body .sidebarContainer .navMenu ul a i {
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin-right: 5px;
+}
+body .sidebarContainer .navMenu ul a span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+body .sidebarContainer .navMenu ul a:hover {
+  background-color: #eb253f;
+}
+body .sidebarContainer .navMenu ul .home {
+  border-left: 2px solid #ffffff;
+  background-color: #eb253f;
+}
+body .mainContents {
+  width: 80%;
+  background-color: #f4f4f5;
+}
+body .mainContents header {
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+}
+body .mainContents header .leftSection {
+  width: 12%;
+  height: 50%;
+  border-right: 1px solid #f4f4f5;
+}
+body .mainContents header .leftSection select {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #9d9d9d;
+  border: none;
+}
+body .mainContents header .centerSection {
+  width: 70%;
+}
+body .mainContents header .centerSection form {
+  width: 60%;
+}
+body .mainContents header .centerSection form input {
+  width: 100%;
+  color: #121d2a;
+  border-radius: 50px;
+  padding: 8px 5px 8px 45px;
+  background-color: #f4f4f5;
+  border: 1px solid #f4f4f5;
+}
+body .mainContents header .centerSection form input::placeholder {
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-weight: 400;
+  color: #9d9d9d;
+}
+body .mainContents header .centerSection form input:focus-within {
+  border: 1px solid #9d9d9d;
+  outline: none;
+}
+body .mainContents header .centerSection form i {
+  position: relative;
+  left: 40px;
+  top: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #9d9d9d;
+}
+body .mainContents header .centerSection button {
+  border: none;
+  background: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #eb253f;
+  text-transform: uppercase;
+}
+body .mainContents header .centerSection button i {
+  font: 700;
+}
+body .mainContents header .rightSection {
+  width: 12%;
+  height: 50%;
+  border-left: 1px solid #f4f4f5;
+}
+body .mainContents header .rightSection i {
+  color: #9d9d9d;
+  padding-left: 40%;
+}
+body .mainContents header .rightSection img {
+  width: 22px;
+  border-radius: 50px;
+}
+
+/*# sourceMappingURL=adminDashboard.css.map */

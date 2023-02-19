@@ -5,50 +5,56 @@ body {
     // Sidebar
     .sidebarContainer {
         width: 20%;
-        background-color: $lightAccentColorHover;
+        height: 100vh;
+        background-color: $white;
+        border-right: 1px solid $borderGrey;
 
-        // Logo
-        .logoContainer {
+        .logoContainer { // Logo
             img {
                 width: 60%;
-            }
-            p {
-                color: $white;
-                @include tinyFont;
-                font-weight: 400;
-                text-transform: capitalize;
-                span {
-                    border-radius: 50px;
-                    padding: 3px 7px;
-                    @include veryLittleFont;
-                    text-transform: uppercase;
-                    background-color: $accentHoverColor;
-                }
             }
         }
 
         .navMenu {
             ul {
-                height: 50vh;
+                max-height: 55vh;
                 a {
-                    color: $white;
-                    padding: 12px 0 12px 10%;
+                    color: $grey;
+                    height: 50px;
+                    padding-left: 10%;
+                    margin-bottom: 10px;
                     i {
                         @include semiPrimaryFont;
-                        margin-right: 5px;
+                        margin-right: 14px;
                     }
                     span {
-                        @include tinyFont;
-                        text-transform: uppercase;
+                        font-weight: 500;
                         letter-spacing: 1px;
+                        @include veryLittleFont;
+                        text-transform: uppercase;
                     }
                     &:hover {
-                        background-color: $accentHoverColor;
+                        color: $green;
+                        background-color: $lightGreenColor;
                     }
                 }
                 .home {
-                    border-left: 2px solid $white;
-                    background-color: $accentHoverColor;
+                    color: $green;
+                    border-left: 3px solid $green;
+                    background-color: $lightGreenColor;
+                }
+            }
+
+            .logout {
+                width: 100%;
+                color: $grey;
+                @include tinyFont;
+                text-transform: uppercase;
+                a {
+                    color: $grey;
+                    i {
+                        @include semiPrimaryFont;
+                    }
                 }
             }
         }
@@ -63,28 +69,16 @@ body {
             height: 60px;
             background-color: $white;
             .leftSection {
-                width: 12%;
-                height: 50%;
-                border-right: 1px solid $lightGrey;
-                select {
-                    @include tinyFont;
-                    text-transform: uppercase;
-                    color: $veryLightGrey;
-                    border: none;
-                }
-            }
-            .centerSection {
-                width: 70%;
+                width: 80%;
 
-                // Search
-                form {
+                form { // Search
                     width: 60%;
                     input {
                         width: 100%;
+                        height: 40px;
                         color: $black;
-                        border-radius: 50px;
-                        padding: 8px 5px 8px 45px;
-                        background-color: $lightGrey;
+                        border-radius: 5px;
+                        padding-left: 45px;
                         border: 1px solid $lightGrey;
                         &::placeholder {
                         @include tinyFont;
@@ -93,8 +87,10 @@ body {
                         }
                 
                         &:focus-within {
-                        border: 1px solid $veryLightGrey;
-                        outline: none;
+                            outline: none;
+                            @include tinyFont;
+                            color: $lightBlack;
+                            border-color: $borderGrey;
                         }
                     }
                     i { // Search icon
@@ -105,31 +101,26 @@ body {
                         color: $veryLightGrey;
                     }
                 }
-
-                button {
-                    border: none;
-                    background: none;
-                    @include tinyFont;
-                    color: $accentHoverColor;
-                    text-transform: uppercase;
-                    i {
-                        font: 700;
-                    }
-                }
             }
 
             .rightSection {
-                width: 12%;
+                width: 20%;
                 height: 50%;
-                // border: 1px solid red;
-                border-left: 1px solid $lightGrey;
-                i {
+                .bi-bell-fill {
                     color: $veryLightGrey;
-                    padding-left: 40%;
                 }
-                img {
-                    width: 22px;
-                    border-radius: 50px;
+                a {
+                    img {
+                        width: 25px;
+                        border-radius: 50px;
+                    }
+                    p {
+                        color: $grey;
+                        @include tinyFont;
+                    }
+                    .bi-chevron-down {
+                        @include veryLittleFont;
+                    }
                 }
             }
         }

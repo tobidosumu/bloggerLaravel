@@ -163,5 +163,9 @@ body .mainContents header .rightSection a .bi-chevron-down {
   font-size: 0.7rem;
   font-weight: 500;
 }
+body .mainContents .dashboardContainer {
+  width: 100%;
+  border: 1px solid red;
+}
 
 /*# sourceMappingURL=adminDashboard.css.map */

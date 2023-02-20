@@ -48,5 +48,24 @@ Route::get('admin/dashboard', function () {
     return view('admin.dashboard');
 });
 
+Route::get('admin/category', function () {
+    return view('admin.category');
+});
+
+Route::get('admin/seller', function () {
+    return view('admin.seller');
+});
+
+Route::get('admin/product', function () {
+    return view('admin.product');
+});
+
+Route::get('admin/user', function () {
+    return view('admin.user');
+});
+
+Route::get('admin/report', function () {
+    return view('admin.report');
+});
 
 require __DIR__.'/auth.php';

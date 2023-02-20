@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+*, img, a, ul, li, p, h2, h3, h4, h5, h6, input, textarea {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  resize: none !important;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}
+.form-control:focus {
+  box-shadow: none !important;
+}
+.form-control input[type=search]::-webkit-search-decoration,
+.form-control input[type=search]::-webkit-search-cancel-button,
+.form-control input[type=search]::-webkit-search-results-button,
+.form-control input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%239D9D9D' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #9d9d9d;
+  font-weight: 400;
+}
+.form-select option {
+  color: rgba(0, 0, 0, 0.7176470588);
+  font-weight: 500;
+}
+.form-select:focus {
+  box-shadow: none !important;
+  border-width: 1px !important;
+}
+
+body .sidebarContainer {
+  position: fixed;
+  width: 20%;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 1;
+  border-right: 1px solid #ced4da;
+}
+body .sidebarContainer .logoContainer img {
+  width: 60%;
+}
+body .sidebarContainer .navMenu ul {
+  max-height: 55vh;
+}
+body .sidebarContainer .navMenu ul a {
+  color: #7a7a7a;
+  height: 50px;
+  padding-left: 10%;
+  margin-bottom: 10px;
+}
+body .sidebarContainer .navMenu ul a i {
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin-right: 14px;
+}
+body .sidebarContainer .navMenu ul a span {
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+body .sidebarContainer .navMenu ul a:hover {
+  color: #00835c;
+  background-color: rgb(242, 254, 255);
+}
+body .sidebarContainer .navMenu .logout {
+  width: 100%;
+  color: #7a7a7a;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+body .sidebarContainer .navMenu .logout a {
+  color: #7a7a7a;
+}
+body .sidebarContainer .navMenu .logout a i {
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+body .sidebarContainer .report {
+  color: #00835c;
+  border-left: 3px solid #00835c;
+  background-color: rgb(242, 254, 255);
+}
+body .mainContents {
+  width: 80%;
+  margin-left: 20%;
+  background-color: #f4f4f5;
+}
+body .mainContents header {
+  position: fixed;
+  width: 80%;
+  height: 60px;
+  background-color: #ffffff;
+}
+body .mainContents header .leftSection {
+  width: 80%;
+  margin-left: -15px;
+}
+body .mainContents header .leftSection form {
+  width: 60%;
+}
+body .mainContents header .leftSection form input {
+  width: 100%;
+  height: 40px;
+  color: #121d2a;
+  border-radius: 5px;
+  padding: 0 15px 0 45px;
+  border: 1px solid #f4f4f5;
+}
+body .mainContents header .leftSection form input::placeholder {
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-weight: 400;
+  color: #9d9d9d;
+}
+body .mainContents header .leftSection form input:focus-within {
+  outline: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7176470588);
+  border-color: rgb(215, 252, 246);
+}
+body .mainContents header .leftSection form i {
+  position: relative;
+  left: 40px;
+  top: 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #9d9d9d;
+}
+body .mainContents header .rightSection {
+  width: 20%;
+  height: 50%;
+}
+body .mainContents header .rightSection .bi-bell-fill {
+  color: #9d9d9d;
+}
+body .mainContents header .rightSection a img {
+  width: 25px;
+  border-radius: 50px;
+}
+body .mainContents header .rightSection a p {
+  color: #7a7a7a;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+body .mainContents header .rightSection a .bi-chevron-down {
+  margin-top: 3px;
+  color: #9d9d9d;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+body .mainContents .dashboardContainer {
+  width: 100%;
+  min-height: 700px;
+  margin-bottom: 50px;
+}
+body .mainContents .dashboardContainer h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7176470588);
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+body .mainContents .dashboardContainer .tableContainer {
+  height: 100vh;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.082);
+}
+body .mainContents .dashboardContainer .tableContainer table thead tr {
+  height: 45px;
+  text-align: center;
+  color: #7a7a7a;
+}
+body .mainContents .dashboardContainer .tableContainer table thead tr th {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+body .mainContents .dashboardContainer .tableContainer table thead tr th select {
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-weight: 600;
+  color: #7a7a7a;
+  text-transform: uppercase;
+}
+body .mainContents .dashboardContainer .tableContainer table thead tr th select:focus-visible {
+  outline: none;
+}
+body .mainContents .dashboardContainer .tableContainer table thead tr th select option {
+  font-weight: 500;
+}
+body .mainContents .dashboardContainer .tableContainer table tbody {
+  width: 100%;
+}
+body .mainContents .dashboardContainer .tableContainer table tbody tr th {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+body .mainContents .dashboardContainer .tableContainer table tbody tr td {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7176470588);
+}
+body .mainContents .dashboardContainer .tableContainer table tbody tr td a {
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.678);
+}
+body .mainContents .dashboardContainer .tableContainer table tbody tr td a:first-child {
+  padding: 4px 5.8px;
+  color: #00835c;
+}
+body .mainContents .dashboardContainer .tableContainer table tbody tr td a:first-child:hover {
+  color: #ffffff;
+  background-color: #00e87c;
+}
+body .mainContents .dashboardContainer .tableContainer table tbody tr td a:nth-child(2) {
+  padding: 4px 8px;
+  color: #eb253f;
+}
+body .mainContents .dashboardContainer .tableContainer table tbody tr td a:nth-child(2):hover {
+  color: #ffffff;
+  background-color: #eb253f;
+}
+
+/*# sourceMappingURL=adminReport.css.map */

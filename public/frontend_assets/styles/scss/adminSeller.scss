@@ -1,0 +1,36 @@
+@import "./reset";
+@import "./myBootstrap";
+
+body {
+    // Sidebar
+    .sidebarContainer {
+        
+        @include sidebar;
+
+        .seller {
+            color: $green;
+            border-left: 3px solid $green;
+            background-color: $lightGreenColor;
+        }
+    }
+
+    .mainContents {
+
+        @include mainContents;
+
+        header {
+            @include adminHeader;
+        }
+
+        .dashboardContainer {
+
+            @include dashboardContainer;
+
+            .tableContainer {
+
+                @include tableContainer;
+
+            }
+        }
+    }
+}

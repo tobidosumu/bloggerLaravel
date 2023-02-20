@@ -13,15 +13,6 @@
             
     <section class="mainContentContainer"> 
 
-        <!-- Logged out user view -->
-        <!-- <div class="notLoggedIndashboardView border d-flex flex-column justify-content-center">
-            <div class="d-flex justify-content-evenly">
-                <a href="./signup.php" class="actionBtn rounded-1">Sign up</a> 
-                <a href="./login.php" class="actionBtn rounded-1">Login</a> 
-            </div>
-            <p class="mt-5">Sign up or Login to see all your cart items.</p>
-        </div> -->
-
         <!-- Logged in user view -->
         <div class="loggedInCartContents d-flex justify-content-between">
             

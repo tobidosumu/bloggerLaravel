@@ -4,130 +4,125 @@
 body {
     // Sidebar
     .sidebarContainer {
-        width: 20%;
-        height: 100vh;
-        background-color: $white;
-        border-right: 1px solid $borderGrey;
-
-        .logoContainer { // Logo
-            img {
-                width: 60%;
-            }
-        }
-
-        .navMenu {
-            ul {
-                max-height: 55vh;
-                a {
-                    color: $grey;
-                    height: 50px;
-                    padding-left: 10%;
-                    margin-bottom: 10px;
-                    i {
-                        @include semiPrimaryFont;
-                        margin-right: 14px;
-                    }
-                    span {
-                        font-weight: 500;
-                        letter-spacing: 1px;
-                        @include veryLittleFont;
-                        text-transform: uppercase;
-                    }
-                    &:hover {
-                        color: $green;
-                        background-color: $lightGreenColor;
-                    }
-                }
-                .home {
-                    color: $green;
-                    border-left: 3px solid $green;
-                    background-color: $lightGreenColor;
-                }
-            }
-
-            .logout {
-                width: 100%;
-                color: $grey;
-                @include tinyFont;
-                text-transform: uppercase;
-                a {
-                    color: $grey;
-                    i {
-                        @include semiPrimaryFont;
-                    }
-                }
-            }
+        @include sidebar;
+        .home {
+            color: $green;
+            border-left: 3px solid $green;
+            background-color: $lightGreenColor;
         }
     }
 
     .mainContents {
-        width: 80%;
-        background-color: $lightGrey;
+
+        @include mainContents;
 
         header {
-            width: 100%;
-            height: 60px;
-            background-color: $white;
-            .leftSection {
-                width: 80%;
-
-                form { // Search
-                    width: 60%;
-                    input {
-                        width: 100%;
-                        height: 40px;
-                        color: $black;
-                        border-radius: 5px;
-                        padding-left: 45px;
-                        border: 1px solid $lightGrey;
-                        &::placeholder {
-                        @include tinyFont;
-                        font-weight: 400;
-                        color: $veryLightGrey;
-                        }
-                
-                        &:focus-within {
-                            outline: none;
-                            @include tinyFont;
-                            color: $lightBlack;
-                            border-color: $borderGrey;
-                        }
-                    }
-                    i { // Search icon
-                        position: relative;
-                        left: 40px;
-                        top: 15px;
-                        @include tinyFont;
-                        color: $veryLightGrey;
-                    }
-                }
-            }
-
-            .rightSection {
-                width: 20%;
-                height: 50%;
-                .bi-bell-fill {
-                    color: $veryLightGrey;
-                }
-                a {
-                    img {
-                        width: 25px;
-                        border-radius: 50px;
-                    }
-                    p {
-                        color: $grey;
-                        @include tinyFont;
-                    }
-                    .bi-chevron-down {
-                        @include veryLittleFont;
-                    }
-                }
-            }
+            @include adminHeader;
         }
 
         .dashboardContainer {
-            width: 100%;
-            border: 1px solid red;
+
+            @include dashboardContainer;
+            
+            // First row of overview 
+            .firstRowOverview {
+
+                .overview {
+                    width: 23%;
+                    height: 80px;
+                    border-radius: 5px;
+                    background-color: $white;
+                    @include boxShadowLightOne;
+                    svg {
+                        fill: $white;
+                        width: 40px;
+                        height: 40px;
+                        padding: 8px;
+                        border-radius: 5px;
+                        @include boxShadowLightTwo;
+                        background-color: $primaryColor;
+                    }
+                    .overviewIcon {
+                        color: $white;
+                        padding: 2px 8px;
+                        border-radius: 5px;
+                        @include mainNavIcon;
+                        @include boxShadowLightTwo;
+                    }
+                    .iconTwo {
+                        background-color: $accentColor;
+                    }                    
+                    .iconThree {
+                        background-color: $accentHoverColor;
+                    }
+                    .iconFour {
+                        background-color: $green;
+                    }
+                    .overviewDetails {
+                        h3 {
+                            @include semiTinyFont;
+                            font-weight: 600;
+                            color: $primaryColor;
+                        }
+                        .statTwo {
+                            color: $accentColor;
+                        }             
+                        .statThree {
+                            color: $accentHoverColor;
+                        }
+                        .statFour {
+                            color: $green;
+                        }
+                        p {
+                            @include tinyFont;
+                            color: $grey;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+
+            // Second row of overview 
+            .secondRowOverview {
+
+                .firstCol {
+                    width: 62.5%;
+                    height: 240px;
+                    border-radius: 5px;
+                    background-color: $white;
+                    @include boxShadowLightOne;
+
+                }                
+                .secondCol {
+                    width: 35%;
+                    height: 240px;
+                    border-radius: 5px;
+                    background-color: $white;
+                    @include boxShadowLightOne;
+                }
+            }
+
+            // Third row of overview 
+            .thirdRowOverview {
+                width: 100%;
+                height: 300px;
+
+                .colOne {
+                    width: 48.6%;
+                    height: 100%;
+                    border-radius: 5px;
+                    background-color: $white;
+                    @include boxShadowLightOne;
+                }
+                
+                .colTwo {
+                    width: 48.6%;
+                    height: 100%;
+                    border-radius: 5px;
+                    background-color: $white;
+                    @include boxShadowLightOne;
+                }
+            }
         }
     }
 }

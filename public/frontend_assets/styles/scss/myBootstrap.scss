@@ -57,6 +57,11 @@ $lightBlack: #000000b7;
   font-weight: 300;
 }
 
+@mixin semiSecondaryFont {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
 @mixin semiTertiaryFont {
   font-size: 1.3rem;
   font-weight: 600;
@@ -124,6 +129,14 @@ $lightBlack: #000000b7;
 
 @mixin focusInput {
   outline: 1px solid $primaryColor;
+}
+
+@mixin boxShadowLightOne {
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.082);
+}
+
+@mixin boxShadowLightTwo {
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.247);
 }
 
 // Default header style
@@ -912,4 +925,218 @@ $lightBlack: #000000b7;
   left: 0;
   z-index: 100;
   background-color: $lightBlack;
+}
+
+// admin dashboard
+@mixin sidebar {
+  position: fixed;
+  width: 20%;
+  height: 100vh;
+  background-color: $white;
+  z-index: 1;
+  border-right: 1px solid $borderGrey;
+
+  .logoContainer { // Logo
+    img {
+      width: 60%;
+    }
+  }
+
+  .navMenu {
+    ul {
+      max-height: 55vh;
+      a {
+        color: $grey;
+        height: 50px;
+        padding-left: 10%;
+        margin-bottom: 10px;
+        i {
+          @include semiPrimaryFont;
+          margin-right: 14px;
+        }
+        span {
+          font-weight: 500;
+          letter-spacing: 1px;
+          @include veryLittleFont;
+          text-transform: uppercase;
+        }
+        &:hover {
+          color: $green;
+          background-color: $lightGreenColor;
+        }
+      }                
+    }
+
+    .logout {
+      width: 100%;
+      color: $grey;
+      @include tinyFont;
+      text-transform: uppercase;
+      a {
+        color: $grey;
+        i {
+          @include semiPrimaryFont;
+        }
+      }
+    }
+  }
+}
+
+@mixin mainContents {
+  width: 80%;
+  margin-left: 20%;
+  background-color: $lightGrey;
+}
+
+@mixin adminHeader {
+  position: fixed;
+  width: 80%;
+  height: 60px;
+  background-color: $white;
+  .leftSection {
+    width: 80%;
+    margin-left: -15px;
+
+    form { // Search
+      width: 60%;
+      input {
+        width: 100%;
+        height: 40px;
+        color: $black;
+        border-radius: 5px;
+        padding: 0 15px 0 45px;
+        border: 1px solid $lightGrey;
+        &::placeholder {
+        @include tinyFont;
+        font-weight: 400;
+        color: $veryLightGrey;
+        }
+
+        &:focus-within {
+          outline: none;
+          @include tinyFont;
+          color: $lightBlack;
+          border-color: $veryLightGreenColor;
+        }
+      }
+      i { // Search icon
+        position: relative;
+        left: 40px;
+        top: 10px;
+        @include tinyFont;
+        color: $veryLightGrey;
+      }
+    }
+  }
+
+  .rightSection {
+    width: 20%;
+    height: 50%;
+    .bi-bell-fill {
+      color: $veryLightGrey;
+    }
+    a {
+      img {
+        width: 25px;
+        border-radius: 50px;
+      }
+      p {
+        color: $grey;
+        @include tinyFont;
+      }
+      .bi-chevron-down {
+        margin-top: 3px;
+        color: $veryLightGrey;
+        @include veryLittleFont;
+      }
+    }
+  }
+}
+
+@mixin dashboardContainer {
+  width: 100%;
+  min-height: 700px;
+  margin-bottom: 50px;
+
+  h2 {
+    @include semiTertiaryFont;
+    font-weight: 500;
+    color: $lightBlack;
+    margin-top: 70px;
+    margin-bottom: 30px;
+  }
+}
+
+// Table 
+@mixin tableContainer {
+  height: 100vh;
+  border-radius: 5px;
+  background-color: $white;
+  @include boxShadowLightOne;
+
+  table {
+
+    thead {
+
+      tr {
+        height: 45px;
+        text-align: center;
+        color: $grey;
+
+        th {
+          @include tinyFont;
+          text-transform: uppercase;
+          font-weight: 600;
+          select {
+            border: none;
+            @include tinyFont;
+            font-weight: 600;
+            color: $grey;
+            text-transform: uppercase;
+            &:focus-visible {
+              outline: none;
+            }
+            option {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+
+    tbody {
+      width: 100%;
+      tr {
+        th {
+          @include tinyFont;
+          text-align: center;
+        }
+        td {
+          text-align: center;
+          @include tinyFont;
+          color: $lightBlack;
+          a {
+          border-radius: 50px;
+          background-color: $transparentWhite;
+          &:first-child {
+            padding: 4px 5.8px;
+            color: $green;
+            &:hover {
+              color: $white;
+              background-color: $primaryColor;
+            }
+          }
+          &:nth-child(2) {
+              padding: 4px 8px;
+              color: $accentHoverColor;
+              &:hover {
+                color: $white;
+                background-color: $accentHoverColor;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

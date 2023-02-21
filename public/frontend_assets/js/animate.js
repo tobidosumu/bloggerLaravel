@@ -125,3 +125,14 @@ const closeEditModal = () => {
   document.getElementById('editModal').style.display = 'none';
   blackModalBackground.style.display = 'none';
 }
+
+// Admin modals
+const openAddCategoryModal = () => {
+  document.getElementById('addCategoryModal').style.display = 'block';
+  blackModalBackground.style.display = 'block';
+}
+
+const closeAddCategoryModal = () => {
+  document.getElementById('addCategoryModal').style.display = 'none';
+  blackModalBackground.style.display = 'none';
+}

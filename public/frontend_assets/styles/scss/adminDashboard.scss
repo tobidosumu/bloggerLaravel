@@ -22,7 +22,9 @@ body {
 
         .dashboardContainer {
 
-            @include dashboardContainer;
+            .dashboardCaption {
+                @include dashboardCaption;
+            }
             
             // First row of overview 
             .firstRowOverview {

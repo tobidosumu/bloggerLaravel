@@ -4,7 +4,7 @@
         <!-- Search -->
         <form action="" method="GET" class="d-flex align-item-start">
             <i class="bi bi-search"></i>
-            <input type="search" name="search" placeholder="...search for anything">
+            <input type="search" name="search" placeholder="...search Blogger" autocomplete="off">
         </form>
     </div>
 

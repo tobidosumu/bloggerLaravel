@@ -2,26 +2,21 @@
 @import "./myBootstrap";
 
 body {
-    .myAlert {
-        div {
-            display: flex;
-            align-items: center;
-            i {
-                font-size: 25px;
-                margin-right: 10px;
-            }
-        }
-        margin-top: 95px !important;
-        color: $black;
-        background-color: $primaryColor;
-    }
 
     .mainContainer {
-        max-width: 100%;
+
+        @include mainContainer;
         background-color: $lightGrey;
 
         header {
+            
             @include header;
+
+            li {
+                a {
+                    padding-bottom: 21px !important;
+                }
+            }
             .cart {
                 a {
                     border-bottom: 2px solid $black;
@@ -34,6 +29,7 @@ body {
             @include blogContents;
 
             section {
+                
                 .mainContentContainer {
                     padding: 30px 0 150px 0;
     

@@ -51,57 +51,53 @@ body .mainContainer {
   background-color: #ffffff;
 }
 body .mainContainer header {
-  padding: 0 12%;
+  width: 100%;
   height: 70px;
   background-color: #ffffff;
 }
-body .mainContainer header .logoContainer img {
-  width: 60%;
-}
-body .mainContainer header nav {
+body .mainContainer header .logoContainer {
   width: 50%;
+  padding-left: 12%;
 }
-body .mainContainer header nav ul li a {
-  color: black;
+body .mainContainer header .logoContainer img {
+  width: 30%;
+}
+body .mainContainer header .headerMenuContainer {
+  width: 50%;
+  padding-right: 12%;
+}
+body .mainContainer header .headerMenuContainer ul {
+  width: 100%;
+}
+body .mainContainer header .headerMenuContainer ul li a {
+  color: #121d2a;
+  padding-top: 23px;
+  padding-bottom: 22px;
   font-size: 0.9rem;
   font-weight: 500;
 }
-body .mainContainer header nav ul .home a {
-  padding-top: 23px;
-  padding-bottom: 20px;
-}
-body .mainContainer header nav ul .home a:hover {
+body .mainContainer header .headerMenuContainer ul li a:hover {
   border-bottom: 2px solid #121d2a;
 }
-body .mainContainer header nav ul .home a i {
-  font-size: 1.5rem;
-}
-body .mainContainer header nav ul .cart a {
-  padding-top: 23px;
-  padding-bottom: 20px;
-}
-body .mainContainer header nav ul .cart a:hover {
-  border-bottom: 2px solid #121d2a;
-}
-body .mainContainer header nav ul .cart a span {
+body .mainContainer header .headerMenuContainer ul li span {
+  bottom: 30px;
   position: absolute;
-  bottom: 22px;
   margin-left: -10px;
   font-size: 0.8rem;
   font-weight: 500;
-  border-radius: 50%;
   padding: 2px 8px;
+  border-radius: 50%;
   border: 2px solid #ffffff;
   background-color: #f4f4f5;
 }
-body .mainContainer header nav ul .cart a i {
+body .mainContainer header .headerMenuContainer ul li i {
   font-size: 1.5rem;
 }
-body .mainContainer header nav ul .profile .profileLinkWrapper {
+body .mainContainer header .headerMenuContainer ul .profile .profileLinkWrapper {
   padding: 4px;
   padding-right: 0;
 }
-body .mainContainer header nav ul .profile .profileLinkWrapper i {
+body .mainContainer header .headerMenuContainer ul .profile .profileLinkWrapper i {
   color: #9d9d9d;
   margin-left: -12px;
   border: 2px solid #ffffff;
@@ -111,47 +107,47 @@ body .mainContainer header nav ul .profile .profileLinkWrapper i {
   border-radius: 50%;
   background-color: #ffffff;
 }
-body .mainContainer header nav ul .profile .profileLinkWrapper i:hover {
+body .mainContainer header .headerMenuContainer ul .profile .profileLinkWrapper i:hover {
   color: #121d2a;
   background-color: rgba(235, 37, 63, 0.2666666667);
 }
-body .mainContainer header nav ul .profile .profileLinkWrapper a img {
+body .mainContainer header .headerMenuContainer ul .profile .profileLinkWrapper a img {
   width: 40px;
   height: 40px;
   object-fit: cover;
   border-radius: 50px;
   border: 1px solid #ffffff;
 }
-body .mainContainer header nav ul .profile .profileLinkWrapper a:hover {
+body .mainContainer header .headerMenuContainer ul .profile .profileLinkWrapper a:hover {
   border: none;
 }
-body .mainContainer header nav ul .profile .profileLinkWrapper:hover {
+body .mainContainer header .headerMenuContainer ul .profile .profileLinkWrapper:hover {
   border-radius: 50px;
   background-color: rgb(215, 252, 246);
 }
-body .mainContainer header nav ul .profile .profileLinkWrapper:hover .caretIcon {
+body .mainContainer header .headerMenuContainer ul .profile .profileLinkWrapper:hover .caretIcon {
   background-color: #ffffff;
 }
-body .mainContainer header nav ul .profile form button {
+body .mainContainer header .headerMenuContainer ul .profile form button {
   width: 100%;
   margin-top: 10px;
 }
-body .mainContainer header nav ul .profile form button i {
+body .mainContainer header .headerMenuContainer ul .profile form button i {
   color: #121d2a;
   font-size: 0.9rem;
 }
-body .mainContainer header nav ul .profile form button span {
+body .mainContainer header .headerMenuContainer ul .profile form button span {
   font-size: 0.8rem;
   font-weight: 500;
 }
-body .mainContainer header nav ul .profile:hover .caretIcon {
+body .mainContainer header .headerMenuContainer ul .profile:hover .caretIcon {
   color: #121d2a;
   background-color: rgba(235, 37, 63, 0.2666666667);
 }
-body .mainContainer header nav ul .profile:hover .caretIcon:hover {
+body .mainContainer header .headerMenuContainer ul .profile:hover .caretIcon:hover {
   background-color: rgba(235, 37, 63, 0.2666666667);
 }
-body .mainContainer header nav ul .profile .profileDropdown {
+body .mainContainer header .headerMenuContainer ul .profile .profileDropdown {
   display: none;
   position: absolute;
   top: 70px;
@@ -164,7 +160,7 @@ body .mainContainer header nav ul .profile .profileDropdown {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.089);
   transition: all 1s ease;
 }
-body .mainContainer header nav ul .profile .profileDropdown ul li a {
+body .mainContainer header .headerMenuContainer ul .profile .profileDropdown ul li a {
   width: 100%;
   color: #121d2a;
   display: flex;
@@ -176,48 +172,48 @@ body .mainContainer header nav ul .profile .profileDropdown ul li a {
   padding: 7px 20px;
   background-color: rgb(215, 252, 246);
 }
-body .mainContainer header nav ul .profile .profileDropdown ul li a i {
+body .mainContainer header .headerMenuContainer ul .profile .profileDropdown ul li a i {
   color: #121d2a;
   font-size: 1.05rem;
   font-weight: 400;
 }
-body .mainContainer header nav ul .profile .profileDropdown ul li a:hover {
+body .mainContainer header .headerMenuContainer ul .profile .profileDropdown ul li a:hover {
   color: #ffffff;
   background-color: #00835c;
 }
-body .mainContainer header nav ul .profile .profileDropdown ul li a:hover i {
+body .mainContainer header .headerMenuContainer ul .profile .profileDropdown ul li a:hover i {
   color: #ffffff;
 }
-body .mainContainer header nav ul .profile .profileDropdown ul .logout a {
+body .mainContainer header .headerMenuContainer ul .profile .profileDropdown ul .logout a {
   font-size: 0.8rem;
   font-weight: 500;
   padding: 8px 20px;
   background-color: rgba(235, 37, 63, 0.2666666667);
 }
-body .mainContainer header nav ul .profile .profileDropdown ul .logout a:hover {
+body .mainContainer header .headerMenuContainer ul .profile .profileDropdown ul .logout a:hover {
   color: #ffffff;
   background-color: #eb253f;
 }
-body .mainContainer header nav ul .profile .profileDropdown ul .logout a:hover i {
+body .mainContainer header .headerMenuContainer ul .profile .profileDropdown ul .logout a:hover i {
   color: #ffffff;
 }
-body .mainContainer header nav ul .profile a {
+body .mainContainer header .headerMenuContainer ul .profile a {
   padding: 23px 8px;
   font-size: 0.9rem;
   color: #121d2a;
   letter-spacing: 0.5px;
   font-weight: 600;
 }
-body .mainContainer header nav ul .profile a:hover {
+body .mainContainer header .headerMenuContainer ul .profile a:hover {
   color: #121d2a;
   font-weight: 600;
   transition: all 0.1s ease;
 }
-body .mainContainer header nav ul .profile:hover .caretIcon {
+body .mainContainer header .headerMenuContainer ul .profile:hover .caretIcon {
   color: #121d2a !important;
   background-color: rgb(215, 252, 246) !important;
 }
-body .mainContainer header nav ul .search i {
+body .mainContainer header .headerMenuContainer ul .search i {
   color: #ffffff;
   font-size: 13px;
   text-align: center;
@@ -226,7 +222,7 @@ body .mainContainer header nav ul .search i {
   -webkit-text-stroke: 0.5px;
   border-radius: 4px;
 }
-body .mainContainer header nav ul .search i:hover {
+body .mainContainer header .headerMenuContainer ul .search i:hover {
   background-color: rgba(0, 0, 0, 0.7176470588);
   transition: all 0.3s ease-in-out;
 }
@@ -487,7 +483,8 @@ body .modal-dialog .modalContent form .modal-footer .sendPostBtn {
   border: none;
 }
 body .modal-dialog .modalContent form .modal-footer .sendPostBtn:hover {
-  background-color: #6025eb;
+  color: #ffffff;
+  background-color: #e21530;
 }
 body .postBtn {
   position: fixed;
@@ -502,7 +499,8 @@ body .postBtn {
   background-color: #eb253f;
 }
 body .postBtn:hover {
-  background-color: #6025eb;
+  color: #ffffff;
+  background-color: #e21530;
 }
 
 /*# sourceMappingURL=categories.css.map */

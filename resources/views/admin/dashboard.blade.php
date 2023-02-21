@@ -10,7 +10,9 @@
 
     <div class="dashboardContainer pt-5 px-5 p-4">
 
-        <h2>Admin Dashboard</h2>
+        <div class="dashboardCaption d-flex justify-content-between align-items-center">
+            <h2 class="pt-2">Admin Dashboard</h2>
+        </div>
 
         {{-- First row overview --}}
         <div class="firstRowOverview mt-4 d-flex justify-content-between">

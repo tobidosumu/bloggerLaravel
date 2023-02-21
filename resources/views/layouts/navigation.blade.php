@@ -1,7 +1,7 @@
-<ul class="d-flex justify-content-between align-items-center wrap">
+<ul class="d-flex justify-content-between align-items-center">
     
     <!-- Home link -->
-    <li class="home">
+    <li class="active d-flex align-items-center">
         <a href="{{ url('posts') }}">
             <i class="bi bi-house"></i>
         </a>

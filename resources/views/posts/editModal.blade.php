@@ -107,12 +107,10 @@
                 <div class="modal-footer m-4">
                     <button 
                         type="submit" 
-                        id="submitBtn" 
-                        onclick="submitPost()" 
                         name="insertPostData" 
                         class="sendPostBtn btn btn-primary"
                     >
-                        Post <i class="bi bi-send"></i>
+                        Update <i class="bi bi-pencil-square ms-2"></i>
                     </button>
                 </div>
 

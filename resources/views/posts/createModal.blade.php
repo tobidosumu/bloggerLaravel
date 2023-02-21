@@ -14,7 +14,7 @@
 
                 <!-- Modal header -->
                 <div class="modal-header mx-4 my-3">
-                    <h5 class="modal-title">Create Post</h5>
+                    <h5 class="modal-title">Add Post</h5>
                     <button type="button" onclick="closePostModal()" 
                         class="btn-close">
                     </button>
@@ -55,7 +55,7 @@
                         
                         <!-- Add category button -->
                         <span>
-                            <a href="{{ url('/categories') }}" target="_blank" class="addCatBtn btn btn-sm btn-outline-primary">
+                            <a href="{{ url('/admin/category') }}" target="_blank" class="addCatBtn btn btn-sm btn-outline-primary">
                                 Add category <i class="bi bi-box-arrow-up-right ms-1"></i>
                             </a>
                         </span>
@@ -110,7 +110,7 @@
 
                 <!-- Modal footer -->
                 <div class="modal-footer m-4">
-                    <button type="submit" id="submitBtn" onclick="submitPost()" name="insertPostData" class="sendPostBtn btn btn-primary">
+                    <button type="submit" name="insertPostData" class="sendPostBtn btn btn-primary">
                         Post <i class="bi bi-send"></i>
                     </button>
                 </div>

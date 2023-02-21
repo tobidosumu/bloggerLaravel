@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\Admin\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,29 +44,15 @@ Route::get('registration', [CustomAuthController::class, 'registration'])->name(
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 
-
-Route::get('admin/dashboard', function () {
-    return view('admin.dashboard');
+Route::middleware(['auth'])->prefix('admin')->group(function () {
+    Route::get('dashboard', [AdminController::class, 'dashboard']);
+    Route::get('category', [AdminController::class, 'category']);
+    Route::get('seller', [AdminController::class, 'seller']);
+    Route::get('product', [AdminController::class, 'product']);
+    Route::get('user', [AdminController::class, 'user']);
+    Route::get('report', [AdminController::class, 'report']);
 });
 
-Route::get('admin/category', function () {
-    return view('admin.category');
-});
-
-Route::get('admin/seller', function () {
-    return view('admin.seller');
-});
-
-Route::get('admin/product', function () {
-    return view('admin.product');
-});
-
-Route::get('admin/user', function () {
-    return view('admin.user');
-});
-
-Route::get('admin/report', function () {
-    return view('admin.report');
-});
+Route::resource('/category', CategoryController::class);
 
 require __DIR__.'/auth.php';

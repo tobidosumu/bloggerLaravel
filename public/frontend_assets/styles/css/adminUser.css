@@ -104,6 +104,7 @@ body .sidebarContainer .blogger {
 body .mainContents {
   width: 80%;
   margin-left: 20%;
+  padding-bottom: 50px;
   background-color: #f4f4f5;
 }
 body .mainContents header {
@@ -138,12 +139,12 @@ body .mainContents header .leftSection form input:focus-within {
   font-size: 0.8rem;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.7176470588);
-  border-color: rgb(215, 252, 246);
+  border-color: rgba(79, 227, 183, 0.768627451);
 }
 body .mainContents header .leftSection form i {
   position: relative;
   left: 40px;
-  top: 10px;
+  top: 14px;
   font-size: 0.8rem;
   font-weight: 500;
   color: #9d9d9d;
@@ -170,21 +171,35 @@ body .mainContents header .rightSection a .bi-chevron-down {
   font-size: 0.7rem;
   font-weight: 500;
 }
-body .mainContents .dashboardContainer {
+body .mainContents .dashboardContainer .dashboardCaption {
   width: 100%;
-  min-height: 700px;
-  margin-bottom: 50px;
+  margin-top: 60px;
+  margin-bottom: 30px;
 }
-body .mainContents .dashboardContainer h2 {
+body .mainContents .dashboardContainer .dashboardCaption h2 {
   font-size: 1.3rem;
   font-weight: 600;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.7176470588);
-  margin-top: 70px;
-  margin-bottom: 30px;
+}
+body .mainContents .dashboardContainer .dashboardCaption button {
+  width: 16%;
+  height: 40px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-weight: 500;
+  color: #ffffff;
+  border: none;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.247);
+  background-color: #00e87c;
+}
+body .mainContents .dashboardContainer .dashboardCaption button:hover {
+  color: #00e87c;
+  background-color: rgb(242, 254, 255);
 }
 body .mainContents .dashboardContainer .tableContainer {
-  height: 100vh;
+  min-height: 100vh;
   border-radius: 5px;
   background-color: #ffffff;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.082);

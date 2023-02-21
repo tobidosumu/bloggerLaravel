@@ -104,6 +104,7 @@ body .sidebarContainer .category {
 body .mainContents {
   width: 80%;
   margin-left: 20%;
+  padding-bottom: 50px;
   background-color: #f4f4f5;
 }
 body .mainContents header {
@@ -138,12 +139,12 @@ body .mainContents header .leftSection form input:focus-within {
   font-size: 0.8rem;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.7176470588);
-  border-color: rgb(215, 252, 246);
+  border-color: rgba(79, 227, 183, 0.768627451);
 }
 body .mainContents header .leftSection form i {
   position: relative;
   left: 40px;
-  top: 10px;
+  top: 14px;
   font-size: 0.8rem;
   font-weight: 500;
   color: #9d9d9d;
@@ -170,21 +171,35 @@ body .mainContents header .rightSection a .bi-chevron-down {
   font-size: 0.7rem;
   font-weight: 500;
 }
-body .mainContents .dashboardContainer {
+body .mainContents .dashboardContainer .dashboardCaption {
   width: 100%;
-  min-height: 700px;
-  margin-bottom: 50px;
+  margin-top: 60px;
+  margin-bottom: 30px;
 }
-body .mainContents .dashboardContainer h2 {
+body .mainContents .dashboardContainer .dashboardCaption h2 {
   font-size: 1.3rem;
   font-weight: 600;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.7176470588);
-  margin-top: 70px;
-  margin-bottom: 30px;
+}
+body .mainContents .dashboardContainer .dashboardCaption button {
+  width: 16%;
+  height: 40px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-weight: 500;
+  color: #ffffff;
+  border: none;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.247);
+  background-color: #00e87c;
+}
+body .mainContents .dashboardContainer .dashboardCaption button:hover {
+  color: #00e87c;
+  background-color: rgb(242, 254, 255);
 }
 body .mainContents .dashboardContainer .tableContainer {
-  height: 100vh;
+  min-height: 100vh;
   border-radius: 5px;
   background-color: #ffffff;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.082);
@@ -247,6 +262,76 @@ body .mainContents .dashboardContainer .tableContainer table tbody tr td a:nth-c
 body .mainContents .dashboardContainer .tableContainer table tbody tr td a:nth-child(2):hover {
   color: #ffffff;
   background-color: #eb253f;
+}
+body .customModal {
+  width: 37%;
+  z-index: 1000;
+  display: none;
+  background-color: #ffffff;
+}
+body .customModal .modal-dialog {
+  max-width: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .customModal .modal-dialog .modalContent {
+  width: 600px;
+}
+body .customModal .modal-dialog .modalContent form .modal-body label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-weight: 400;
+  color: #9d9d9d;
+}
+body .customModal .modal-dialog .modalContent form .modal-body .addCatBtn {
+  color: #6025eb;
+  border-color: #6025eb;
+}
+body .customModal .modal-dialog .modalContent form .modal-body .addCatBtn:hover {
+  color: #ffffff;
+  background-color: #6025eb;
+}
+body .customModal .modal-dialog .modalContent form .modal-body .input-group span i {
+  color: #6025eb;
+}
+body .customModal .modal-dialog .modalContent form .modal-body .input-group input {
+  color: rgba(0, 0, 0, 0.7176470588) !important;
+}
+body .customModal .modal-dialog .modalContent form .modal-body .input-group input::placeholder {
+  color: #9d9d9d;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+body .customModal .modal-dialog .modalContent form .modal-body .input-group textarea {
+  color: rgba(0, 0, 0, 0.7176470588) !important;
+}
+body .customModal .modal-dialog .modalContent form .modal-body .input-group textarea::placeholder {
+  color: #9d9d9d;
+  font-size: 0.9rem;
+  font-weight: 400;
+  position: relative;
+  top: 33px;
+}
+body .customModal .modal-dialog .modalContent form .modal-footer .sendPostBtn {
+  padding: 7px 20px;
+  background-color: #eb253f;
+  border: none;
+}
+body .customModal .modal-dialog .modalContent form .modal-footer .sendPostBtn:hover {
+  color: #ffffff;
+  background-color: #e21530;
+}
+body .blackModalBackground {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  margin: auto;
+  top: 0px;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7176470588);
 }
 
 /*# sourceMappingURL=adminCategory.css.map */

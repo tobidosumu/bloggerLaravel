@@ -24,7 +24,9 @@ body {
 
         .dashboardContainer {
 
-            @include dashboardContainer;
+            .dashboardCaption {
+                @include dashboardCaption;
+            }
 
             .tableContainer {
 

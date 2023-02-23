@@ -136,3 +136,13 @@ const closeAddCategoryModal = () => {
   document.getElementById('addCategoryModal').style.display = 'none';
   blackModalBackground.style.display = 'none';
 }
+
+const openEditCategoryModal = () => {
+  document.getElementById('editCategoryModal').style.display = 'block';
+  blackModalBackground.style.display = 'block';
+}
+
+const closeEditCategoryModal = () => {
+  document.getElementById('editCategoryModal').style.display = 'none';
+  blackModalBackground.style.display = 'none';
+}
